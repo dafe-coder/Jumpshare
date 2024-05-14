@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'GeneralSans-semibold';
+		font-style: normal;
+		font-weight: 600;
+		font-display: swap;
+		src:
+			url('./fonts/GeneralSans-Semibold.otf') format('opentype'),
+			url('./fonts/GeneralSans-Semibold.woff') format('woff'),
+			url('./fonts/GeneralSans-Semibold.woff') format('woff2');
+	}
+}
+
+@layer base {
+	html {
+		font-family: Inter, system-ui, sans-serif;
+		@apply text-blue-900;
+	}
+}
