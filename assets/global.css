@@ -18,6 +18,12 @@
 @layer base {
 	html {
 		font-family: Inter, system-ui, sans-serif;
-		@apply text-blue-900;
+		@apply text-blue-900 tracking-normal;
 	}
+}
+
+.icon {
+	width: 50px;
+	height: 50px;
+	margin: 0.5em;
 }
