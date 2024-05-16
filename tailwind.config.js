@@ -65,7 +65,8 @@ module.exports = {
 				30: '7.5625rem', // 121px
 			},
 			backgroundImage: {
-				'main-bg': "url('/assets/images/main-bg.png')",
+				main: "url('/assets/images/main-bg.png')",
+				'card-right': "url('/assets/images/bg-card-right.png')",
 				// 'main-card-gradient': "url('/assets/images/bg-card-blue.png')",
 			},
 		},
@@ -171,7 +172,7 @@ module.exports = {
 				},
 				'.card-gradient': {
 					backgroundImage:
-						'linear-gradient(to bottom, #f3f0ff -8%, #efebff00 53%), linear-gradient(to bottom, #fff, #fff);',
+						'linear-gradient(180deg, rgba(243, 240, 255, 0.5) -7.92%, rgba(239, 235, 255, 0) 53.46%)',
 				},
 			}),
 				addBase({
@@ -195,10 +196,18 @@ module.exports = {
 						color: theme('colors.blue[950]'),
 					},
 					h3: {
+						fontFamily: 'GeneralSans-semibold',
 						fontSize: '2rem',
 						fontWeight: 600,
 						lineHeight: '2.4rem',
 						letterSpacing: '-0.32px',
+						color: theme('colors.blue[950]'),
+					},
+					h5: {
+						fontSize: '1.375rem',
+						letterSpacing: '-0.22px',
+						lineHeight: '1.65rem',
+						fontFamily: 'GeneralSans-semibold',
 						color: theme('colors.blue[950]'),
 					},
 				})
