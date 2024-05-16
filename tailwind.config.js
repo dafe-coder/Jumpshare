@@ -25,8 +25,16 @@ module.exports = {
 			gray: {
 				100: '#F8F9FC',
 				150: '#D3D6DC',
+				300: '#999cb2',
 				400: '#59657E',
 				700: '#122345cc',
+				700: '#181729',
+			},
+			orange: {
+				100: '#faf6f3',
+				500: '#FE6E2B',
+				900: 'rgba(30, 12, 4, 0.8)',
+				950: '#1e0c04',
 			},
 			blue: {
 				500: '#2F76FF',
@@ -35,10 +43,15 @@ module.exports = {
 			},
 			violet: {
 				500: '#6259EB',
-				900: '#130c3ecc',
+				600: '#9452FF',
+				800: '#130c3ecc',
+				900: '#060515',
 			},
 		},
 		extend: {
+			backgroundPosition: {
+				'center-top': 'center top',
+			},
 			letterSpacing: {
 				0.4: '-0.4px',
 				0.13: '-0.13px',
@@ -53,6 +66,9 @@ module.exports = {
 				'inset-3xl':
 					'inset 0px -0.876389px 0.876389px 0.876389px rgba(17, 34, 69, 0.12)',
 				card: '0 2px 8px -1px #130c3e0a, inset 0 3px 0 -1px #ffffff75, 0 0 0 1px #130c3e1c, 0 4px 4px -5px #130c3e40;',
+				'card-dark': '0px 1px 7px rgba(15, 28, 53, 0.04)',
+				'card-orange':
+					'0px 4px 4px -5px rgba(30, 12, 4, 0.25), 0px 0px 0px 1px rgba(34, 14, 5, 0.08), 0px 1px 7px rgba(30, 12, 4, 0.04)',
 			},
 			dropShadow: {
 				'3xl':
@@ -67,6 +83,8 @@ module.exports = {
 			backgroundImage: {
 				main: "url('/assets/images/main-bg.png')",
 				'card-right': "url('/assets/images/bg-card-right.png')",
+				'video-ai': "url('/assets/images/video-ai-bg.png')",
+				'card-dark-center': "url('/assets/images/bg-card-dark.png')",
 				// 'main-card-gradient': "url('/assets/images/bg-card-blue.png')",
 			},
 		},
@@ -113,13 +131,17 @@ module.exports = {
 					height: '2.25rem',
 					padding: '0 1rem',
 					color: theme('colors.white'),
+					backgroundColor: theme('colors.violet[500]'),
 					gap: '0.5rem',
 					borderRadius: '5.625rem',
 					fontSize: '1.125rem',
-					backgroundColor: theme('colors.violet[500]'),
 					fontWeight: 500,
 					lineHeight: '1.25rem',
 					letterSpacing: '-0.36px',
+				},
+				'.btn-gradient': {
+					backgroundImage:
+						'linear-gradient(to bottom, #9452ff, #9452ff), linear-gradient(to bottom, #9c5fff, #d884ff), linear-gradient(to bottom, #9059eb, #bc59eb), linear-gradient(to bottom, #fff, #fff)',
 				},
 				'.btn-m': {
 					height: '2.937rem',
@@ -174,6 +196,10 @@ module.exports = {
 					backgroundImage:
 						'linear-gradient(180deg, rgba(243, 240, 255, 0.5) -7.92%, rgba(239, 235, 255, 0) 53.46%)',
 				},
+				'.card-gradient-orange': {
+					backgroundImage:
+						'linear-gradient(180deg, rgba(255, 247, 240, 0.5) -7.92%, rgba(239, 235, 255, 0) 53.46%)',
+				},
 			}),
 				addBase({
 					h1: {
@@ -188,6 +214,7 @@ module.exports = {
 					},
 					h2: {
 						fontSize: '3rem',
+						textAlign: 'center',
 						fontWeight: 600,
 						fontStretch: 'normal',
 						fontStyle: 'normal',
