@@ -19,10 +19,14 @@ module.exports = {
 		},
 		colors: {
 			white: colors.white,
+			black: colors.black,
 			yellow: {
+				400: '#DDB51E',
 				500: '#FBC045',
+				600: '#FFBC03',
 			},
 			gray: {
+				50: '#FBFBFD',
 				100: '#F8F9FC',
 				150: '#D3D6DC',
 				300: '#999cb2',
@@ -37,9 +41,12 @@ module.exports = {
 				950: '#1e0c04',
 			},
 			blue: {
+				100: '#f2f6ff',
 				500: '#2F76FF',
 				900: '#122345',
 				950: '#130c3e',
+				970: 'rgba(9, 19, 41, 0.8)',
+				1000: '#091329',
 			},
 			violet: {
 				500: '#6259EB',
@@ -49,6 +56,19 @@ module.exports = {
 			},
 		},
 		extend: {
+			ringWidth: {
+				2.5: '2.5px',
+			},
+			fontFamily: {
+				'sans-semi': ['GeneralSans-semibold', ...defaultTheme.fontFamily.sans],
+				'sans-medium': ['GeneralSans-medium', ...defaultTheme.fontFamily.sans],
+			},
+			fontSize: {
+				'2.5xl': ['1.75rem', '2.45rem'],
+			},
+			zIndex: {
+				1: '1',
+			},
 			backgroundPosition: {
 				'center-top': 'center top',
 			},
@@ -57,7 +77,9 @@ module.exports = {
 				0.13: '-0.13px',
 				0.14: '-0.14px',
 				0.16: '-0.16px',
+				0.18: '-0.18px',
 				normal: '-0.32px',
+				0.56: '-0.56px',
 			},
 			borderRadius: {
 				'2.5xl': '20px',
@@ -69,6 +91,9 @@ module.exports = {
 				'card-dark': '0px 1px 7px rgba(15, 28, 53, 0.04)',
 				'card-orange':
 					'0px 4px 4px -5px rgba(30, 12, 4, 0.25), 0px 0px 0px 1px rgba(34, 14, 5, 0.08), 0px 1px 7px rgba(30, 12, 4, 0.04)',
+				'card-white':
+					'0px 1px 6.3px -1px rgba(18, 35, 69, 0.1), 0px 0px 0px 1px rgba(18, 35, 69, 0.075)',
+				img: '0 23.8px 30.3px 0 #0f1c3511, 0 0 0 0.8px #12234513, 0 0.8px 5px -0.8px #12234519, 0 3.2px 3.2px -4px #12234540, 0 0.8px 1.6px 0 #1223450f, 0 -2px 20.6px 0 #0000000c',
 			},
 			dropShadow: {
 				'3xl':
@@ -78,6 +103,7 @@ module.exports = {
 				4.5: '1.125rem', // 18px
 				13: '3.25rem', // 52px
 				15.5: '3.875rem', // 62px
+				22: '5.625rem', // 121px
 				30: '7.5625rem', // 121px
 			},
 			backgroundImage: {
@@ -91,10 +117,7 @@ module.exports = {
 	},
 	fontFamily: {
 		inter: ['Inter', ...defaultTheme.fontFamily.sans],
-		'generalSans-semibold': [
-			'GeneralSans-semibold',
-			...defaultTheme.fontFamily.sans,
-		],
+		'sans-medium': ['GeneralSans-semibold', ...defaultTheme.fontFamily.sans],
 	},
 	plugins: [
 		require('tailwindcss'),
@@ -200,6 +223,14 @@ module.exports = {
 					backgroundImage:
 						'linear-gradient(180deg, rgba(255, 247, 240, 0.5) -7.92%, rgba(239, 235, 255, 0) 53.46%)',
 				},
+				'.card-gradient-blue': {
+					backgroundImage:
+						'linear-gradient(180deg, rgba(219, 232, 255, 0.6) -7.92%, rgba(219, 232, 255, 0) 53.46%)',
+				},
+				'.gradient-white': {
+					backgroundImage:
+						'linear-gradient(180deg, rgba(255,255,255,0) 24%, rgba(255,255,255,1) 100%)',
+				},
 			}),
 				addBase({
 					h1: {
@@ -213,6 +244,7 @@ module.exports = {
 						color: theme('colors.blue[900]'),
 					},
 					h2: {
+						fontFamily: 'GeneralSans-semibold',
 						fontSize: '3rem',
 						textAlign: 'center',
 						fontWeight: 600,
