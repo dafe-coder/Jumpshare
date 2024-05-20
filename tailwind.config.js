@@ -28,9 +28,11 @@ module.exports = {
 			gray: {
 				50: '#FBFBFD',
 				100: '#F8F9FC',
+				125: '#E8E9ED',
 				150: '#D3D6DC',
 				300: '#999cb2',
 				400: '#59657E',
+				500: '#495057',
 				700: '#122345cc',
 				700: '#181729',
 			},
@@ -56,6 +58,20 @@ module.exports = {
 			},
 		},
 		extend: {
+			animation: {
+				fade: 'fadeIn .3s ease-in-out forwards',
+				fadeOut: 'fadeOut .3s ease-in-out forwards',
+			},
+			keyframes: {
+				fadeIn: {
+					from: { opacity: 0 },
+					to: { opacity: 1 },
+				},
+				fadeOut: {
+					from: { opacity: 1 },
+					to: { opacity: 0 },
+				},
+			},
 			ringWidth: {
 				2.5: '2.5px',
 			},
@@ -65,6 +81,8 @@ module.exports = {
 			},
 			fontSize: {
 				'2.5xl': ['1.75rem', '2.45rem'],
+				m: ['0.9375rem', '1.5rem'],
+				s: ['0.8125rem', '1.0562rem'],
 			},
 			zIndex: {
 				1: '1',
