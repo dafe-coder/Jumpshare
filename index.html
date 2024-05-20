@@ -8,22 +8,25 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
-		<link rel="stylesheet" href="./dist/output7.css" />
+		<link rel="stylesheet" href="./dist/output.css" />
 	</head>
 	<body
 		class="bg-main bg-[length:67.5rem_34.43rem] bg-[center_top_2rem] bg-no-repeat"
 	>
-		<header>
-			<div class="container flex justify-between items-center py-4.5">
+		<header
+			id="header"
+			class="container fixed top-0 left-1/2 -translate-x-1/2 z-50 transition-all"
+		>
+			<div class="flex justify-between items-center py-4.5">
 				<a href="/">
 					<img class="h-6" src="./assets/images/logo.svg" alt="Jumpshare" />
 				</a>
 				<nav>
 					<ul class="flex gap-3 font-medium">
-						<li>
+						<li class="relative">
 							<a
 								class="flex gap-2 px-4 rounded-lg items-center h-10 hover:bg-gray-100 text-gray-700 transition-all"
 								href="#"
@@ -51,6 +54,22 @@
 									</defs>
 								</svg>
 							</a>
+							<ul class="bg-white rounded-xl p-1.5 shadow-menu-item">
+								<li>
+									<a href="#" class="flex gap-4">
+										<div>
+											<img src="" alt="" />
+										</div>
+										<div>
+											<p>Screen Recording</p>
+											<p>
+												Include videos in your sales, marketing, and team
+												communication strategy to bring clarity.
+											</p>
+										</div>
+									</a>
+								</li>
+							</ul>
 						</li>
 						<li>
 							<a
@@ -111,7 +130,7 @@
 			</div>
 		</header>
 		<main>
-			<section class="pt-16 relative">
+			<section class="pt-40 relative">
 				<div class="container flex">
 					<div class="w-[33rem]">
 						<h1>
@@ -226,7 +245,7 @@
 					<div
 						class="absolute -bottom-10 right-0 h-[35rem] w-[50vw] main-gradient bg-no-repeat rounded-tl-2xl"
 					>
-						<div class="w-[24.37rem] relative -mt-24 ml-32 p-0">
+						<div class="w-[24.37rem] relative -mt-24 ml-28 p-0">
 							<div
 								class="absolute w-0.5 h-3 bg-blue-500 top-2 left-2 -rotate-45 rounded-lg"
 							>
@@ -238,7 +257,7 @@
 								></div>
 							</div>
 							<img
-								height="510px"
+								height="31.87rem"
 								src="./assets/images/card-main.png"
 								alt="card"
 							/>
@@ -459,7 +478,7 @@
 							<br />
 							and response rates
 						</h2>
-						<p class="text-center text-lg mt-5 text-violet-800">
+						<p class="text-center text-lg mt-6 text-violet-800">
 							Include videos in your sales, marketing, customer support, and
 							team communication strategy to bring clarity. People understand
 							and retain far more information from video than text.
@@ -470,20 +489,20 @@
 					>
 						<div class="py-16 pl-16 max-w-[30.68rem] relative z-1">
 							<h3>Guide your audience with personalized videos</h3>
-							<p class="mt-4 font-medium">
+							<p class="mt-3 font-medium">
 								Record your screen in video or GIF instead of writing a thousand
 								words. Use screen recording with drawing, webcam, and audio to
 								guide others quickly.
 							</p>
 							<div
-								class="bg-[rgba(244,243,251,0.75)] p-5 rounded-xl max-w-[26.6rem] mt-7"
+								class="bg-[rgba(244,243,251,0.75)] p-5 rounded-xl max-w-[26.6rem] mt-12"
 							>
 								<p class="tracking-tight font-medium text-blue-950">
 									“From recording videos to capturing GIFs, Jumpshare does it
 									all. I use it regularly for sales outreach and can't get over
 									how helpful it is.”
 								</p>
-								<div class="flex gap-4 items-center mt-5">
+								<div class="flex gap-4 items-center mt-3">
 									<div class="block size-13 rounded-xl overflow-hidden">
 										<img
 											class="size-full object-cover"
@@ -582,7 +601,7 @@
 					</div>
 					<div class="flex mt-6 gap-5">
 						<div
-							class="card-gradient shadow-card rounded-2.5xl overflow-hidden p-10 pl-9 pt-[22%] flex flex-col justify-end relative basis-[46.4%]"
+							class="card-gradient shadow-card rounded-2.5xl overflow-hidden p-10 pl-9 pt-[21%] flex flex-col justify-end relative basis-[45.5%]"
 						>
 							<img
 								class="absolute top-0 left-1/2 -translate-x-1/2 max-h-[22.4375rem]"
@@ -598,7 +617,7 @@
 							</div>
 						</div>
 						<div
-							class="card-gradient shadow-card overflow-hidden rounded-2.5xl relative p-10 pb-[21%] basis-[53.6%]"
+							class="card-gradient shadow-card overflow-hidden rounded-2.5xl relative p-10 pb-[21%] basis-[54.5%]"
 						>
 							<img
 								class="absolute bottom-0 left-0"
@@ -621,8 +640,8 @@
 			>
 				<div class="container bg-card-dark-center bg-[bottom_-156px_center]">
 					<div class="max-w-[44.8rem] mx-auto">
-						<button class="btn-long mx-auto mb-4 btn-gradient">
-							Screen Recording
+						<button class="btn-long mx-auto mb-4 btn-gradient tracking-0.36">
+							Jumpshare AI
 							<svg
 								width="13"
 								height="12"
@@ -653,11 +672,11 @@
 								</defs>
 							</svg>
 						</button>
-						<h2 class="text-white">
+						<h2 class="text-white tracking-1.44">
 							Supercharge your videos <br />
 							with <span class="text-violet-600">Jumpshare AI</span>
 						</h2>
-						<p class="text-center text-gray-300 mt-6">
+						<p class="text-lg text-center text-gray-300 mt-6 tracking-0.36">
 							Jumpshare AI is your powerful companion that will automatically
 							name the video, generate a transcription, write a summary, and
 							create chapters. It works like magic.
@@ -681,7 +700,7 @@
 							</div>
 						</div>
 						<div
-							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-gray-700 overflow-hidden rounded-2.5xl relative p-10 pt-[27.5%] basis-[56%] flex flex-col justify-end"
+							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-gray-700 overflow-hidden rounded-2.5xl relative p-10 pb-9 pt-[27.9%] basis-[56%] flex flex-col justify-end"
 						>
 							<img
 								class="absolute top-0 right-0"
@@ -699,7 +718,7 @@
 					</div>
 					<div class="flex mt-6 gap-5">
 						<div
-							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-gray-700 rounded-2.5xl overflow-hidden p-10 pl-9 pb-[24%] flex flex-col justify-start relative basis-[58.8%]"
+							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-gray-700 rounded-2.5xl overflow-hidden p-10 pl-9 pb-[24%] flex flex-col justify-start relative basis-[58.87%]"
 						>
 							<img
 								class="absolute w-full bottom-0 right-0"
@@ -715,7 +734,7 @@
 							</div>
 						</div>
 						<div
-							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-gray-700 overflow-hidden rounded-2.5xl relative p-10 pt-[27.5%] basis-[41.2%] flex flex-col justify-end"
+							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-gray-700 overflow-hidden rounded-2.5xl relative p-10 pt-[27.5%] basis-[41.13%] flex flex-col justify-end"
 						>
 							<img
 								class="absolute top-0 left-0"
@@ -736,7 +755,7 @@
 			<section class="pb-4 pt-30">
 				<div class="container">
 					<div class="max-w-[44.18rem] mx-auto">
-						<button class="btn-long mx-auto mb-4 bg-orange-500">
+						<button class="btn-long mx-auto mb-2 bg-orange-500">
 							Screenshot Capture<svg
 								width="13"
 								height="12"
@@ -767,12 +786,12 @@
 								</defs>
 							</svg>
 						</button>
-						<h2>
+						<h2 class="font-size-[3.25rem]/[4.06rem] text-white tracking-1.56">
 							Goodbye misunderstandings,<br />
 							hello
 							<span class="text-orange-500">Clarity</span>
 						</h2>
-						<p class="text-center mt-6 text-orange-900">
+						<p class="text-lg/[1.5rem] text-center mt-8 text-orange-900">
 							Use screenshots to give precise feedback, report bugs, showcase
 							features, <br />
 							and improve tutorials. Save time and eliminate back and forth.
@@ -820,7 +839,7 @@
 						</div>
 					</div>
 					<div class="flex mt-5 gap-5">
-						<div class="basis-1/2 flex-grow">
+						<div class="basis-[50.8%] flex-grow">
 							<div
 								class="h-full card-gradient-orange shadow-card-orange overflow-hidden rounded-2.5xl relative p-10 pb-[25%]"
 							>
@@ -831,14 +850,14 @@
 								/>
 								<div class="relative z-1">
 									<h5 class="text-orange-950">Capture scrolling screenshot</h5>
-									<p class="text-orange-900 font-medium mt-2.5 tracking-0.16">
+									<p class="text-orange-900 font-medium mt-2.5 tracking-0.32">
 										Capture content that doesn’t fit your screen <br />
 										like a large code, design or chat history.
 									</p>
 								</div>
 							</div>
 						</div>
-						<div class="basis-1/2 flex flex-col gap-5">
+						<div class="basis-[49.2%] flex flex-col gap-5">
 							<div
 								class="card-gradient-orange shadow-card-orange overflow-hidden rounded-2.5xl relative p-10 pt-[46%] flex flex-col justify-end"
 							>
@@ -897,8 +916,9 @@
 			<section class="pb-22 pt-30 overflow-hidden">
 				<div class="container">
 					<div class="max-w-[44.18rem] mx-auto">
-						<button class="btn-long mx-auto mb-4 bg-blue-500">
-							File Sharing & Collaboration<svg
+						<button class="btn-long mx-auto mb-4 bg-blue-500 tracking-0.36">
+							File Sharing & Collaboration
+							<svg
 								width="13"
 								height="12"
 								viewBox="0 0 13 12"
@@ -928,12 +948,12 @@
 								</defs>
 							</svg>
 						</button>
-						<h2 class="text-blue-1000">
+						<h2 class="text-blue-1000 tracking-1.44">
 							Make better decisions with<br /><span class="text-blue-500"
 								>Creative Collaboration</span
 							>
 						</h2>
-						<p class="text-center mt-6 text-blue-970">
+						<p class="text-lg text-center mt-3.5 text-blue-970 tracking-0.18">
 							Share videos, images, and audio projects with stakeholders for
 							review and approval,<br />
 							promoting better alignment from start to finish. No third-party
@@ -988,10 +1008,10 @@
 					</div>
 					<div class="flex mt-5 gap-5">
 						<div
-							class="card-gradient-blue shadow-card rounded-2.5xl overflow-hidden p-10 pl-9 pt-[24%] flex flex-col justify-end relative basis-[54%]"
+							class="card-gradient-blue shadow-card rounded-2.5xl overflow-hidden p-10 pl-9 pt-[24%] flex flex-col justify-end relative basis-[55.6%]"
 						>
 							<img
-								class="absolute top-[17%] left-1/2 -translate-x-1/2"
+								class="absolute top-[15%] left-1/2 -translate-x-1/2"
 								src="./assets/images/card-preview.png"
 								alt="preview"
 							/>
@@ -1006,10 +1026,10 @@
 							</div>
 						</div>
 						<div
-							class="card-gradient-blue shadow-card overflow-hidden rounded-2.5xl relative p-10 pb-[28%] basis-[46%]"
+							class="card-gradient-blue shadow-card overflow-hidden rounded-2.5xl relative p-10 pb-[28%] basis-[44.4%]"
 						>
 							<img
-								class="absolute bottom-0 right-0"
+								class="absolute bottom-3 right-0"
 								src="./assets/images/card-history.png"
 								alt="history"
 							/>
@@ -1026,7 +1046,7 @@
 					</div>
 					<div class="flex mt-5 gap-5">
 						<div
-							class="card-gradient-blue shadow-card rounded-2.5xl overflow-hidden p-10 pl-9 pt-[24%] flex flex-col justify-end relative basis-[43.3%]"
+							class="card-gradient-blue shadow-card rounded-2.5xl overflow-hidden p-10 pl-9 pt-[24%] flex flex-col justify-end relative basis-[43.9%]"
 						>
 							<img
 								class="absolute top-0 left-0"
@@ -1044,7 +1064,7 @@
 							</div>
 						</div>
 						<div
-							class="card-gradient-blue shadow-card overflow-hidden rounded-2.5xl relative p-10 pb-[28%] basis-[56.7%]"
+							class="card-gradient-blue shadow-card overflow-hidden rounded-2.5xl relative p-10 pb-[28%] basis-[56.1%]"
 						>
 							<img
 								class="absolute bottom-0 right-0"
@@ -1052,12 +1072,12 @@
 								alt="files"
 							/>
 							<div class="relative z-1">
-								<h5 class="text-blue-1000">
-									Track changes with version history
+								<h5 class="text-blue-1000 tracking-0.22">
+									Receive files from others quickly
 								</h5>
 								<p class="text-blue-970 font-medium mt-2.5 tracking-0.16">
-									Track every version of your video - complete <br />
-									with their edits, comments and markups.
+									Collect files from those who're not part of your<br />
+									team workspace with Inbox.
 								</p>
 							</div>
 						</div>
@@ -1068,12 +1088,12 @@
 				<div class="container">
 					<div class="shadow-card-white rounded-3xl bg-white pt-24 pb-6">
 						<div class="max-w-[59.625rem] mx-auto">
-							<h2 class="text-blue-900">
+							<h2 class="text-blue-900 tracking-0.96">
 								Consolidate tools, cut costs, <br />
 								and be more productive
 							</h2>
 							<p
-								class="text-center text-blue-970 mt-5 font-medium text-lg tracking-0.18"
+								class="text-center text-blue-970 mt-4.5 font-medium text-lg/[1.5rem] tracking-0.18"
 							>
 								No more juggling multiple tools or subscriptions. Jumpshare
 								combines all <br />
@@ -1090,48 +1110,50 @@
 					</div>
 				</div>
 			</section>
-			<section class="bg-gray-50 py-20">
+			<section class="bg-gray-50 pt-20 pb-40">
 				<div class="container">
 					<div class="flex flex-col items-center">
-						<h2 class="text-blue-900">Trusted by over a million users</h2>
-						<p class="mt-5 text-blue-970">
+						<h2 class="text-blue-900 tracking-0.96">
+							Trusted by over a million users
+						</h2>
+						<p class="mt-4.5 text-blue-970 tracking-0.18 text-lg">
 							Our users love us and so will you. Here’s what they are saying.
 						</p>
 						<div class="flex gap-4 mt-7">
-							<div class="flex items-center mt-0.5">
+							<div class="flex items-center -mt-0.5">
 								<img
-									class="w-6"
+									class="w-8"
 									src="./assets/images/star_shadow.png"
 									alt="star"
 								/>
 								<img
-									class="w-6"
+									class="w-8"
 									src="./assets/images/star_shadow.png"
 									alt="star"
 								/>
 								<img
-									class="w-6"
+									class="w-8"
 									src="./assets/images/star_shadow.png"
 									alt="star"
 								/>
 								<img
-									class="w-6"
+									class="w-8"
 									src="./assets/images/star_shadow.png"
 									alt="star"
 								/>
 								<img
-									class="w-6"
+									class="w-8"
 									src="./assets/images/star_shadow.png"
 									alt="star"
 								/>
 							</div>
 							<p class="text-blue-970 tracking-0.16">
-								<strong class="text-blue-900">4.9/5</strong> based on our user
-								reviews
+								<strong class="text-blue-900 font-medium">4.9/5</strong> based
+								on our user reviews
 							</p>
 						</div>
 					</div>
-					<div class="shadow-card-white rounded-3xl bg-white mt-14 relative">
+					<div class="shadow-card-white rounded-3xl bg-white mt-12 relative">
 						<div class="py-16 pl-16 max-w-[37.8rem]">
 							<img
 								class="size-7 mb-4"
@@ -1143,10 +1165,12 @@
 								installing on our new laptops. We use it every day to
 								communicate internally and with our customers.
 							</p>
-							<p class="text-blue-900 font-medium mt-8 text-lg">Dan Corkill</p>
-							<p class="text-blue-900 text-sm">CEO at Follow Up Boss</p>
+							<p class="text-blue-900 font-medium mt-7 text-lg">Dan Corkill</p>
+							<p class="text-blue-900 tracking-normal text-[0.93rem]">
+								CEO at Follow Up Boss
+							</p>
 						</div>
-						<div class="absolute bottom-0 right-14">
+						<div class="absolute bottom-0 right-15.5">
 							<div
 								class="absolute overflow-hidden -left-13 rounded-2.5xl shadow-img z-10 bottom-20 size-60"
 							>
@@ -1168,8 +1192,419 @@
 							</div>
 						</div>
 					</div>
+					<div class="flex mt-8 gap-5">
+						<div class="shadow-card-white rounded-2.5xl p-8 basis-1/3">
+							<div class="flex gap-4 items-center">
+								<div class="size-14 rounded-xl overflow-hidden">
+									<img
+										class="size-full object-cover"
+										src="./assets/images/review-blake.png"
+										alt="blake"
+									/>
+								</div>
+								<div>
+									<p
+										class="text-lg font-semibold mb-0 text-blue-900 tracking-0.36"
+									>
+										Blake Beus
+									</p>
+									<p class="tracking-0.14 text-blue-900 text-[0.93rem]">
+										Application Security Engineer
+									</p>
+								</div>
+							</div>
+							<div class="mt-8">
+								<p class="text-lg/[1.6875rem] tracking-0.18 text-blue-900">
+									I can't believe that I used to run my business without
+									Jumpshare. My clients are VERY impressed that I<br />
+									can quickly take videos, GIFs, and screenshots showing them
+									what we need to do or give them feedback <br />on project
+									requirements.
+								</p>
+							</div>
+							<div class="flex mt-5">
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+							</div>
+						</div>
+						<div class="shadow-card-white rounded-2.5xl p-8 basis-1/3">
+							<div class="flex gap-4 items-center">
+								<div class="size-14 rounded-xl overflow-hidden">
+									<img
+										class="size-full object-cover"
+										src="./assets/images/review-qwantel.png"
+										alt="qwantel"
+									/>
+								</div>
+								<div>
+									<p
+										class="text-lg font-semibold mb-0 text-blue-900 tracking-0.36"
+									>
+										Qwantel Latay
+									</p>
+									<p class="tracking-0.14 text-blue-900 text-[0.93rem]">
+										Online Business Manager
+									</p>
+								</div>
+							</div>
+							<div class="mt-8">
+								<p class="text-lg/[1.6875rem] tracking-0.18 text-blue-900">
+									Jumpshare is one of those "where have you been my whole life"
+									tools. They combined tools that I'd been using all into one
+									cohesive little network when sharing files. Such a genius
+									product, and I hope they stay around forever!
+								</p>
+							</div>
+							<div class="flex mt-5">
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+							</div>
+						</div>
+						<div class="shadow-card-white rounded-2.5xl p-8 basis-1/3">
+							<div class="flex gap-4 items-center">
+								<div class="size-14 rounded-xl overflow-hidden">
+									<img
+										class="size-full object-cover"
+										src="./assets/images/review-dave.png"
+										alt="Dave"
+									/>
+								</div>
+								<div>
+									<p
+										class="text-lg font-semibold mb-1 text-blue-900 tracking-0.36"
+									>
+										Dave Baxter
+									</p>
+									<p class="tracking-0.14 text-blue-900 text-[0.93rem]">
+										Estate Agent
+									</p>
+								</div>
+							</div>
+							<div class="mt-8">
+								<p class="text-lg/[1.6875rem] tracking-0.18 text-blue-900">
+									Jumpshare saves me a ton of time and allows me to work on my
+									schedule. Customers love getting detailed screencasts from me
+									with a call-to-action link for appointments. It's a beautiful
+									workflow. You cannot afford to NOT use Jumpshare.
+								</p>
+							</div>
+							<div class="flex mt-5">
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+								<img
+									class="size-6"
+									src="./assets/images/star_shadow.png"
+									alt="star"
+								/>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
+			<section class="bg-gray-50 pb-32">
+				<div class="container">
+					<div
+						class="bg-white shadow-banner rounded-3xl py-16 px-8 bg-banner-round bg-center bg-no-repeat relative overflow-hidden"
+					>
+						<div
+							class="h-[100%] banner-gradient-top absolute left-0 top-0 right-0 w-full z-1"
+						></div>
+						<div
+							class="h-[25%] banner-gradient-bottom absolute left-0 bottom-0 right-0 w-full z-1 rotate-180"
+						></div>
+						<img
+							class="max-w-[19.25rem] absolute left-7 top-5"
+							src="./assets/images/banner/1.png"
+							alt="file 1"
+						/>
+						<img
+							class="max-w-[22.5rem] absolute -left-11 bottom-4"
+							src="./assets/images/banner/2.png"
+							alt="file 2"
+						/>
+						<img
+							class="max-w-[25rem] absolute -right-24 top-0"
+							src="./assets/images/banner/3.png"
+							alt="file 3"
+						/>
+						<img
+							class="max-w-[24rem] absolute right-0 bottom-0"
+							src="./assets/images/banner/4.png"
+							alt="file 4"
+						/>
+						<div class="relative z-10 flex flex-col items-center">
+							<h2>
+								Ready to improve<br />
+								your productivity?
+							</h2>
+							<p class="text-xl mt-5 text-center text-blue-970 tracking-0.22">
+								Get Jumpshare to communicate better with<br />
+								your teammates and customers today
+							</p>
+							<button
+								class="text-base btn btn-primary mt-12 h-12 px-5 font-normal tracking-0.36"
+							>
+								Get Jumpshare Free
+								<svg
+									width="13"
+									height="12"
+									viewBox="0 0 13 12"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<g clip-path="url(#clip0_4582_2289)">
+										<path
+											d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
+											stroke="white"
+											stroke-width="1.24444"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+										<path
+											d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
+											stroke="white"
+											stroke-width="1.24444"
+											stroke-linecap="round"
+											stroke-linejoin="round"
+										/>
+									</g>
+									<defs>
+										<clipPath id="clip0_4582_2289">
+											<rect width="13" height="12" fill="white" />
+										</clipPath>
+									</defs>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer class="py-14">
+				<div class="container flex justify-between">
+					<div class="mr-[3%] flex-grow">
+						<a href="/">
+							<img src="./assets/images/logo.svg" alt="Jumpshare" />
+						</a>
+						<p class="mt-5 text-xs tracking-0.13">
+							©2024 Jumpshare. All Rights Reserved.
+						</p>
+						<ul class="mt-24 flex gap-3">
+							<li>
+								<a
+									href="#"
+									class="flex items-center justify-center rounded-full size-8 shadow-social"
+								>
+									<svg
+										width="14"
+										height="14"
+										viewBox="0 0 14 14"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<mask
+											id="mask0_743_17729"
+											style="mask-type: luminance"
+											maskUnits="userSpaceOnUse"
+											x="0"
+											y="0"
+											width="14"
+											height="14"
+										>
+											<path
+												d="M0.333984 0.333496H13.6673V13.6668H0.333984V0.333496Z"
+												fill="white"
+											/>
+										</mask>
+										<g mask="url(#mask0_743_17729)">
+											<path
+												d="M13.6673 2.86587C13.1681 3.08694 12.6385 3.23189 12.0962 3.29587C12.6679 2.95441 13.0956 2.41644 13.2995 1.78254C12.7624 2.10145 12.1747 2.32617 11.5618 2.44698C11.1495 2.00802 10.604 1.71723 10.0097 1.61967C9.41544 1.5221 8.80559 1.6232 8.2746 1.9073C7.7436 2.1914 7.3211 2.64265 7.07251 3.19117C6.82392 3.73968 6.76313 4.35486 6.89954 4.94143C5.81218 4.88676 4.74846 4.6041 3.77739 4.11177C2.80633 3.61945 1.94963 2.92846 1.26287 2.08365C0.913421 2.68572 0.806344 3.39828 0.963405 4.07647C1.12047 4.75466 1.52988 5.3476 2.10843 5.73476C1.67408 5.72116 1.24928 5.60382 0.86954 5.39254C0.861784 6.03003 1.07675 6.65024 1.47737 7.14619C1.87798 7.64214 2.43912 7.98273 3.06398 8.1092C2.66114 8.21899 2.23855 8.23533 1.82843 8.15698C2.00325 8.70042 2.34358 9.17562 2.8018 9.5161C3.26002 9.85658 3.81321 10.0453 4.38398 10.0559C3.23743 10.9553 1.78082 11.3629 0.333984 11.1892C1.58482 11.9929 3.04056 12.4195 4.52732 12.4181C9.60621 12.4181 12.4751 8.1292 12.3029 4.28143C12.838 3.89423 13.3001 3.41491 13.6673 2.86587Z"
+												fill="#122345"
+												fill-opacity="0.8"
+											/>
+										</g>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a
+									href="#"
+									class="flex items-center justify-center rounded-full size-8 shadow-social"
+								>
+									<svg
+										width="20"
+										height="20"
+										viewBox="0 0 20 20"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path
+											d="M8.33268 7.77794H6.66602V10.0002H8.33268V16.6668H11.1105V10.0002H13.1338L13.3327 7.77794H11.1105V6.85127C11.1105 6.32127 11.2171 6.11127 11.7293 6.11127H13.3327V3.3335H11.2171C9.21935 3.3335 8.33268 4.2135 8.33268 5.89683V7.77794Z"
+											fill="#122345"
+											fill-opacity="0.8"
+										/>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="flex text-nowrap">
+						<ul
+							class="font-normal space-y-2 text-blue-970 text-[13px] mr-13 w-32"
+						>
+							<li class="text-blue-900 mb-4 font-semibold font-sans-semi">
+								Features
+							</li>
+							<li><a href="#">Screen Recording</a></li>
+							<li><a href="#">Screenshot Capture</a></li>
+							<li><a href="#">GIF Capture</a></li>
+							<li><a href="#">Creative Collaboration</a></li>
+							<li><a href="#">Jumpshare AI</a></li>
+						</ul>
+						<ul
+							class="font-normal space-y-2 text-blue-970 text-[13px] mr-10 w-32"
+						>
+							<li class="text-blue-900 mb-4 font-semibold font-sans-semi">
+								Use Cases
+							</li>
+							<li><a href="#">Sales</a></li>
+							<li><a href="#">Marketing</a></li>
+							<li><a href="#">Customer Support</a></li>
+							<li><a href="#">Design</a></li>
+							<li><a href="#">Engineering</a></li>
+							<li><a href="#">Education</a></li>
+							<li><a href="#">Team Collaboration</a></li>
+							<li><a href="#">Product Management</a></li>
+						</ul>
+						<ul class="font-normal space-y-2 text-blue-970 text-[13px] w-32">
+							<li class="text-blue-900 mb-4 font-semibold font-sans-semi">
+								Download
+							</li>
+							<li><a href="#">Windows</a></li>
+							<li><a href="#">Mac</a></li>
+							<li><a href="#">iPhone</a></li>
+							<li><a href="#">Apps</a></li>
+						</ul>
+						<ul class="font-normal space-y-2 text-blue-970 text-[13px] w-32">
+							<li class="text-blue-900 mb-4 font-semibold font-sans-semi">
+								Learn More
+							</li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Pricing</a></li>
+							<li><a href="#">Plus</a></li>
+							<li><a href="#">Business</a></li>
+							<li><a href="#">File Formats</a></li>
+						</ul>
+						<ul class="font-normal space-y-2 text-blue-970 text-[13px] w-32">
+							<li class="text-blue-900 mb-4 font-semibold font-sans-semi">
+								Compare
+							</li>
+							<li><a href="#">Loom</a></li>
+							<li><a href="#">Zight</a></li>
+							<li><a href="#">Droplr</a></li>
+							<li><a href="#">Dropbox</a></li>
+							<li><a href="#">Wistia</a></li>
+							<li><a href="#">Vimeo</a></li>
+							<li><a href="#">Vidyard</a></li>
+							<li><a href="#">Frame.io</a></li>
+						</ul>
+						<ul class="font-normal space-y-2 text-blue-970 text-[13px]">
+							<li class="text-blue-900 mb-4 font-semibold font-sans-semi">
+								Support
+							</li>
+							<li><a href="#">Help Center</a></li>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="#">DPA (GDPR)</a></li>
+							<li><a href="#">Security</a></li>
+							<li><a href="#">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+			</footer>
 		</main>
 	</body>
+	<script>
+		'use strict'
+
+		const siteHeader = document.getElementById('header')
+		const siteHeaderHeight = siteHeader.offsetHeight
+
+		window.addEventListener(
+			'scroll',
+			() => {
+				const top =
+					document.documentElement.scrollTop || document.body.scrollTop
+				if (top > siteHeaderHeight) {
+					siteHeader.classList.add('active-header')
+				} else {
+					siteHeader.classList.remove('active-header')
+				}
+			},
+			false
+		)
+	</script>
 </html>

@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+	html {
+		font-family: Inter, system-ui, sans-serif;
+		@apply text-blue-900 tracking-normal;
+	}
 	@font-face {
 		font-family: 'GeneralSans-semibold';
 		font-style: normal;
@@ -25,15 +29,11 @@
 	}
 }
 
-@layer base {
-	html {
-		font-family: Inter, system-ui, sans-serif;
-		@apply text-blue-900 tracking-normal;
-	}
-}
-
-.icon {
-	width: 50px;
-	height: 50px;
-	margin: 0.5em;
+.active-header {
+	@apply rounded-2.5xl bg-white top-4 max-w-[1160px];
+	box-shadow:
+		0px -1.85px 19.48px 0px rgba(0, 0, 0, 0.05),
+		0px 6px 11.8px -4px rgba(13, 34, 71, 0.02),
+		0px 0px 0px 1px rgba(18, 35, 69, 0.1),
+		0px 11px 10.7px -6px rgba(18, 35, 69, 0.04);
 }

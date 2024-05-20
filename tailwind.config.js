@@ -78,8 +78,13 @@ module.exports = {
 				0.14: '-0.14px',
 				0.16: '-0.16px',
 				0.18: '-0.18px',
+				0.22: '-0.22px',
 				normal: '-0.32px',
+				0.36: '-0.36px',
 				0.56: '-0.56px',
+				0.96: '-0.96px',
+				1.44: '-1.44px',
+				1.56: '-1.56px',
 			},
 			borderRadius: {
 				'2.5xl': '20px',
@@ -94,6 +99,12 @@ module.exports = {
 				'card-white':
 					'0px 1px 6.3px -1px rgba(18, 35, 69, 0.1), 0px 0px 0px 1px rgba(18, 35, 69, 0.075)',
 				img: '0 23.8px 30.3px 0 #0f1c3511, 0 0 0 0.8px #12234513, 0 0.8px 5px -0.8px #12234519, 0 3.2px 3.2px -4px #12234540, 0 0.8px 1.6px 0 #1223450f, 0 -2px 20.6px 0 #0000000c',
+				banner:
+					'0px 1px 3px rgba(18, 35, 69, 0.1), 0px 1px 2px rgba(18, 35, 69, 0.06), inset 0px 0px 0px 1px rgba(18, 35, 69, 0.1)',
+				social:
+					' 0px 6px 4px -2px rgba(18, 35, 69, 0.03), 0px 5.01227px 40.0982px -1px rgba(100, 109, 134, 0.06), 0px 1px 2px rgba(18, 35, 69, 0.05), 0px 0px 0px 1px rgba(217, 222, 231, 0.4)',
+				'menu-item':
+					'0px 2px 7px -1px rgba(15, 28, 53, 0.04),inset 0px 3px 0px -1px rgba(255, 255, 255, 0.46),inset 0px 0px 0px 1px rgba(18, 35, 69, 0.1),0px 11.47px 23.78px -5.02px rgba(18, 35, 69, 0.07)',
 			},
 			dropShadow: {
 				'3xl':
@@ -111,6 +122,7 @@ module.exports = {
 				'card-right': "url('/assets/images/bg-card-right.png')",
 				'video-ai': "url('/assets/images/video-ai-bg.png')",
 				'card-dark-center': "url('/assets/images/bg-card-dark.png')",
+				'banner-round': "url('/assets/images/banner-bg.png')",
 				// 'main-card-gradient': "url('/assets/images/bg-card-blue.png')",
 			},
 		},
@@ -230,6 +242,16 @@ module.exports = {
 				'.gradient-white': {
 					backgroundImage:
 						'linear-gradient(180deg, rgba(255,255,255,0) 24%, rgba(255,255,255,1) 100%)',
+				},
+				'.banner-gradient-top': {
+					backgroundImage:
+						'linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100.65%)',
+					opacity: 0.6,
+				},
+				'.banner-gradient-bottom': {
+					backgroundImage:
+						'linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
+					opacity: 0.6,
 				},
 			}),
 				addBase({
