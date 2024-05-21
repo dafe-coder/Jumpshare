@@ -7,6 +7,12 @@
 		font-family: Inter, system-ui, sans-serif;
 		@apply text-blue-900 tracking-normal;
 	}
+	@media screen and (max-width: 640px) {
+		p {
+			font-size: 14px;
+			line-height: 19.6px;
+		}
+	}
 	@font-face {
 		font-family: 'GeneralSans-semibold';
 		font-style: normal;
@@ -30,7 +36,7 @@
 }
 
 .active-header {
-	@apply rounded-2.5xl bg-white top-4 max-w-[1160px];
+	@apply bg-white;
 	box-shadow:
 		0px -1.85px 19.48px 0px rgba(0, 0, 0, 0.05),
 		0px 6px 11.8px -4px rgba(13, 34, 71, 0.02),

@@ -35,6 +35,7 @@ module.exports = {
 				500: '#495057',
 				700: '#122345cc',
 				700: '#181729',
+				850: 'rgba(18, 35, 69, 0.08)',
 			},
 			orange: {
 				100: '#faf6f3',
@@ -152,6 +153,7 @@ module.exports = {
 	plugins: [
 		require('tailwindcss'),
 		require('autoprefixer'),
+		require('tailwind-hamburgers'),
 		plugin(function ({ addComponents, addBase, theme }) {
 			addComponents({
 				'.btn': {
@@ -277,11 +279,15 @@ module.exports = {
 						fontFamily: 'GeneralSans-semibold',
 						fontSize: '3.25rem',
 						fontWeight: 600,
-						fontStretch: 'normal',
-						fontStyle: 'normal',
 						lineHeight: '3.81rem',
 						letterSpacing: '-1.56px',
 						color: theme('colors.blue[900]'),
+						'@media not all and (min-width: 480px)': {
+							fontSize: '2.25rem',
+							fontWeight: 600,
+							lineHeight: '2.6437rem',
+							textAlign: 'center',
+						},
 					},
 					h2: {
 						fontFamily: 'GeneralSans-semibold',
@@ -293,6 +299,12 @@ module.exports = {
 						lineHeight: '3.75rem',
 						letterSpacing: '-1.44px',
 						color: theme('colors.blue[950]'),
+						'@media not all and (min-width: 480px)': {
+							fontFamily: 'GeneralSans-medium',
+							fontSize: '2.25rem',
+							lineHeight: '2.8125rem',
+							letterSpacing: '-1.08px',
+						},
 					},
 					h3: {
 						fontFamily: 'GeneralSans-semibold',
@@ -301,6 +313,10 @@ module.exports = {
 						lineHeight: '2.4rem',
 						letterSpacing: '-0.32px',
 						color: theme('colors.blue[950]'),
+						'@media not all and (min-width: 480px)': {
+							fontSize: '1rem',
+							lineHeight: '1.3rem',
+						},
 					},
 					h5: {
 						fontSize: '1.375rem',
@@ -308,6 +324,10 @@ module.exports = {
 						lineHeight: '1.65rem',
 						fontFamily: 'GeneralSans-semibold',
 						color: theme('colors.blue[950]'),
+						'@media not all and (min-width: 480px)': {
+							fontSize: '1rem',
+							lineHeight: '1.3rem',
+						},
 					},
 				})
 		}),
