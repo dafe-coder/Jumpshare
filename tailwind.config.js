@@ -33,8 +33,8 @@ module.exports = {
 				300: '#999cb2',
 				400: '#59657E',
 				500: '#495057',
-				700: '#122345cc',
-				700: '#181729',
+				700: 'rgba(18, 35, 69, 0.8)',
+				800: '#181729',
 				850: 'rgba(18, 35, 69, 0.08)',
 			},
 			orange: {
@@ -46,6 +46,7 @@ module.exports = {
 			blue: {
 				100: '#f2f6ff',
 				500: '#2F76FF',
+				600: '#4C78EA',
 				900: '#122345',
 				950: '#130c3e',
 				970: 'rgba(9, 19, 41, 0.8)',
@@ -78,12 +79,21 @@ module.exports = {
 			},
 			fontFamily: {
 				'sans-semi': ['GeneralSans-semibold', ...defaultTheme.fontFamily.sans],
+				'sans-variable': [
+					'GeneralSans-Variable',
+					...defaultTheme.fontFamily.sans,
+				],
 				'sans-medium': ['GeneralSans-medium', ...defaultTheme.fontFamily.sans],
 			},
 			fontSize: {
 				'2.5xl': ['1.75rem', '2.45rem'],
 				m: ['0.9375rem', '1.5rem'],
 				s: ['0.8125rem', '1.0562rem'],
+			},
+			lineHeight: {
+				5.5: '1.4rem', // 22.4px
+				6: '1.575rem', // 25.2px
+				9.5: '2.4rem', // 38.4px
 			},
 			zIndex: {
 				1: '1',
@@ -98,7 +108,9 @@ module.exports = {
 				0.16: '-0.16px',
 				0.18: '-0.18px',
 				0.22: '-0.22px',
+				0.24: '-0.24px',
 				normal: '-0.32px',
+				base: 'normal',
 				0.36: '-0.36px',
 				0.56: '-0.56px',
 				0.96: '-0.96px',
@@ -111,7 +123,7 @@ module.exports = {
 			boxShadow: {
 				'inset-3xl':
 					'inset 0px -0.876389px 0.876389px 0.876389px rgba(17, 34, 69, 0.12)',
-				card: '0 2px 8px -1px #130c3e0a, inset 0 3px 0 -1px #ffffff75, 0 0 0 1px #130c3e1c, 0 4px 4px -5px #130c3e40;',
+				card: '0 2px 8px -1px #130c3e0a, 0 0 0 1px #130c3e1c, 0 4px 4px -5px #130c3e40;',
 				'card-dark': '0px 1px 7px rgba(15, 28, 53, 0.04)',
 				'card-orange':
 					'0px 4px 4px -5px rgba(30, 12, 4, 0.25), 0px 0px 0px 1px rgba(34, 14, 5, 0.08), 0px 1px 7px rgba(30, 12, 4, 0.04)',
@@ -133,8 +145,12 @@ module.exports = {
 				4.5: '1.125rem', // 18px
 				13: '3.25rem', // 52px
 				15.5: '3.875rem', // 62px
-				22: '5.625rem', // 121px
+				16.5: '4.25rem', // 68px
+				17: '4.5rem', // 72px
+				22: '5.625rem', // 90px
+				25: '105px', // 105px
 				30: '7.5625rem', // 121px
+				34: '8.5rem', // 136px
 			},
 			backgroundImage: {
 				main: "url('/assets/images/main-bg.png')",
@@ -147,7 +163,7 @@ module.exports = {
 		},
 	},
 	fontFamily: {
-		inter: ['Inter', ...defaultTheme.fontFamily.sans],
+		inter: ['Inter'],
 		'sans-medium': ['GeneralSans-semibold', ...defaultTheme.fontFamily.sans],
 	},
 	plugins: [
@@ -203,12 +219,12 @@ module.exports = {
 				},
 				'.replies-avatars': {
 					display: 'flex',
-					paddingRight: '0.625rem',
+					paddingRight: '0.5625rem',
 					'> li': {
 						borderWidth: '2px',
 						borderColor: theme('colors.gray[100]'),
 						position: 'relative',
-						marginRight: '-0.625rem',
+						marginRight: '-0.5625rem',
 						display: 'block',
 						width: theme('spacing[9]'),
 						height: theme('spacing[9]'),

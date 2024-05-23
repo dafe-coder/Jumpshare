@@ -4,7 +4,9 @@
 
 @layer base {
 	html {
-		font-family: Inter, system-ui, sans-serif;
+		font-family: Inter;
+		-webkit-font-smoothing: antialiased; /* Smoothing improvement */
+		-moz-osx-font-smoothing: grayscale;
 		@apply text-blue-900 tracking-normal;
 	}
 	@media screen and (max-width: 640px) {
@@ -22,6 +24,15 @@
 			url('./fonts/GeneralSans-Semibold.otf') format('opentype'),
 			url('./fonts/GeneralSans-Semibold.woff') format('woff'),
 			url('./fonts/GeneralSans-Semibold.woff') format('woff2');
+	}
+	@font-face {
+		font-family: 'GeneralSans-Variable';
+		src:
+			url('./fonts/GeneralSans-Variable.woff2') format('woff2'),
+			url('./fonts/GeneralSans-Variable.woff') format('woff');
+		font-weight: 200 700;
+		font-display: swap;
+		font-style: normal;
 	}
 	@font-face {
 		font-family: 'GeneralSans-medium';
