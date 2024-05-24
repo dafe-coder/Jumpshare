@@ -28,6 +28,7 @@ module.exports = {
 			gray: {
 				50: '#FBFBFD',
 				100: '#F8F9FC',
+				110: '#f1f2f5',
 				125: '#E8E9ED',
 				150: '#D3D6DC',
 				300: '#999cb2',
@@ -47,6 +48,7 @@ module.exports = {
 				100: '#f2f6ff',
 				500: '#2F76FF',
 				600: '#4C78EA',
+				700: '#1c5ddf',
 				900: '#122345',
 				950: '#130c3e',
 				970: 'rgba(9, 19, 41, 0.8)',
@@ -189,12 +191,20 @@ module.exports = {
 					boxShadow:
 						'0 5px 4.5px -1px rgba(18, 35, 69, 0.04), 0 1px 2px 0 rgba(18, 35, 69, 0.05), 0 0 0 1px rgba(18, 35, 69, 0.08)',
 					backgroundColor: theme('colors.white'),
+					transition: 'all ease .2s',
+					'&:hover': {
+						backgroundColor: theme('colors.gray[100]'),
+					},
 				},
 				'.btn-primary': {
 					boxShadow:
 						'0 1px 2px 0 rgba(18, 35, 69, 0.08), 0 0 0 1px rgba(22, 83, 202, 0.8), 0 2px 4.3px -1px rgba(22, 83, 202, 0.4)',
 					backgroundColor: theme('colors.blue[500]'),
 					color: theme('colors.white'),
+					transition: 'all ease .2s',
+					'&:hover': {
+						backgroundColor: theme('colors.blue[700]'),
+					},
 				},
 				'.btn-long': {
 					display: 'flex',
