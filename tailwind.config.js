@@ -30,6 +30,7 @@ module.exports = {
 				100: '#F8F9FC',
 				110: '#f1f2f5',
 				125: '#E8E9ED',
+				130: '#D9DEE7',
 				150: '#D3D6DC',
 				300: '#999cb2',
 				400: '#59657E',
@@ -138,6 +139,8 @@ module.exports = {
 					' 0px 6px 4px -2px rgba(18, 35, 69, 0.03), 0px 5.01227px 40.0982px -1px rgba(100, 109, 134, 0.06), 0px 1px 2px rgba(18, 35, 69, 0.05), 0px 0px 0px 1px rgba(217, 222, 231, 0.4)',
 				'menu-item':
 					'0px 2px 7px -1px rgba(15, 28, 53, 0.04),inset 0px 3px 0px -1px rgba(255, 255, 255, 0.46),inset 0px 0px 0px 1px rgba(18, 35, 69, 0.1),0px 11.47px 23.78px -5.02px rgba(18, 35, 69, 0.07)',
+				video:
+					'0px 11.4701px 23.7768px -5.01619px rgba(18, 35, 69, 0.07), inset 0px -0.866597px 0.866597px 0.866597px rgba(17, 34, 69, 0.12)',
 			},
 			dropShadow: {
 				'3xl':
@@ -299,6 +302,17 @@ module.exports = {
 						'linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
 					opacity: 0.6,
 				},
+				'.card-title': {
+					fontSize: '1.375rem',
+					letterSpacing: '-0.22px',
+					lineHeight: '1.65rem',
+					fontFamily: 'GeneralSans-semibold',
+					color: theme('colors.blue[950]'),
+					'@media not all and (min-width: 480px)': {
+						fontSize: '1rem',
+						lineHeight: '1.3rem',
+					},
+				},
 			}),
 				addBase({
 					h1: {
@@ -344,7 +358,7 @@ module.exports = {
 							lineHeight: '1.3rem',
 						},
 					},
-					h5: {
+					h4: {
 						fontSize: '1.375rem',
 						letterSpacing: '-0.22px',
 						lineHeight: '1.65rem',

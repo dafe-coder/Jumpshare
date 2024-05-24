@@ -11,11 +11,33 @@
 			href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap"
 			rel="stylesheet"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-		/>
 		<link rel="stylesheet" href="./dist/output.css" />
+		<link
+			rel="preload"
+			fetchpriority="high"
+			as="image"
+			href="./assets/images/card-main.png"
+			type="image/png"
+		/>
+		<link
+			rel="preload"
+			fetchpriority="high"
+			as="image"
+			href="./assets/images/main-bg.jpg"
+			type="image/png"
+		/>
+		<link
+			rel="preload"
+			id="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+			as="style"
+			onload="this.rel='stylesheet'"
+		/>
+		<noscript
+			><link
+				rel="stylesheet"
+				href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/></noscript>
 	</head>
 	<body>
 		<header
@@ -24,7 +46,12 @@
 		>
 			<div class="container flex justify-between items-center py-4.5">
 				<a href="/">
-					<img class="max-h-7" src="./assets/images/logo.svg" alt="Jumpshare" />
+					<img
+						loading="lazy"
+						class="max-h-7"
+						src="./assets/images/logo.svg"
+						alt="Jumpshare"
+					/>
 				</a>
 				<div
 					class="header-mobile flex items-center max-lg:fixed max-lg:top-full max-lg:left-0 max-lg:h-[calc(100vh_-_61px)] max-lg:bg-white max-lg:w-screen max-lg:flex-col max-lg:justify-start max-lg:px-5 max-lg:pt-3 max-lg:overflow-y-scroll max-lg:overflow-x-hidden max-lg:opacity-0"
@@ -199,52 +226,6 @@
 											<li>
 												<a
 													href="#"
-													class="flex gap-3 items-center py-3 px-3.5 rounded-md hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0 max-lg:pt-1"
-												>
-													<svg
-														class="bg-white rounded-md"
-														width="20"
-														height="20"
-														viewBox="0 0 20 20"
-														fill="none"
-														xmlns="http://www.w3.org/2000/svg"
-													>
-														<g opacity="0.4">
-															<g clip-path="url(#clip0_772_126527)">
-																<rect
-																	width="20"
-																	height="20"
-																	rx="5.45455"
-																	fill="white"
-																/>
-																<path
-																	d="M10.0002 9.99955V17.0829M10.0002 9.99955L3.75 6.48391M10.0002 9.99955L16.0522 6.59515M16.875 7.10709V12.892C16.875 13.4941 16.5502 14.0494 16.0254 14.3446L10.8171 17.2743C10.3098 17.5597 9.69025 17.5597 9.18292 17.2743L3.97457 14.3446C3.44977 14.0494 3.125 13.4941 3.125 12.892V7.10709C3.125 6.50498 3.44977 5.94967 3.97457 5.65447L9.18292 2.72479C9.69025 2.43939 10.3098 2.43939 10.8171 2.72479L16.0254 5.65447C16.5502 5.94967 16.875 6.50498 16.875 7.10709Z"
-																	stroke="#414F6A"
-																	stroke-width="1.2"
-																	stroke-linecap="round"
-																	stroke-linejoin="round"
-																/>
-															</g>
-														</g>
-														<defs>
-															<clipPath id="clip0_772_126527">
-																<rect
-																	width="20"
-																	height="20"
-																	rx="5.45455"
-																	fill="white"
-																/>
-															</clipPath>
-														</defs>
-													</svg>
-													<span class="text-black text-m font-sans-medium"
-														>Product Management</span
-													>
-												</a>
-											</li>
-											<li>
-												<a
-													href="#"
 													class="flex gap-3 items-center py-3 px-3.5 rounded-md hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0"
 												>
 													<svg
@@ -256,7 +237,7 @@
 														xmlns="http://www.w3.org/2000/svg"
 													>
 														<g opacity="0.4">
-															<g clip-path="url(#clip0_772_126521)">
+															<g clip-path="url(#clip0_772_126470)">
 																<rect
 																	width="20"
 																	height="20"
@@ -264,16 +245,21 @@
 																	fill="white"
 																/>
 																<path
-																	d="M3.95768 8.12533V7.91699C3.95768 4.81039 6.66263 2.29199 9.99935 2.29199C13.3361 2.29199 16.041 4.81039 16.041 7.91699V8.12533M9.99935 16.3694V16.8753C9.99935 17.3356 10.3724 17.7087 10.8327 17.7087H12.4993C14.5704 17.7087 16.2493 16.0297 16.2493 13.9587M3.54102 8.12533H4.79102V13.542H3.54102C2.85066 13.542 2.29102 12.9823 2.29102 12.292V9.37533C2.29102 8.68499 2.85066 8.12533 3.54102 8.12533ZM15.2077 8.12533H16.4577C17.148 8.12533 17.7077 8.68499 17.7077 9.37533V12.292C17.7077 12.9823 17.148 13.542 16.4577 13.542H15.2077V8.12533Z"
+																	d="M2.29199 9.30117V3.95817C2.29199 3.0377 3.03818 2.2915 3.95866 2.2915H9.30166C9.74366 2.2915 10.1676 2.4671 10.4802 2.77966L17.1552 9.45467C17.806 10.1055 17.806 11.1608 17.1552 11.8117L11.8122 17.1547C11.1613 17.8055 10.106 17.8055 9.45516 17.1547L2.78015 10.4797C2.46758 10.1671 2.29199 9.74317 2.29199 9.30117Z"
 																	stroke="#414F6A"
 																	stroke-width="1.2"
-																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																/>
+																<path
+																	d="M6.875 6.25C6.875 6.59517 6.59517 6.875 6.25 6.875C5.90483 6.875 5.625 6.59517 5.625 6.25C5.625 5.90483 5.90483 5.625 6.25 5.625C6.59517 5.625 6.875 5.90483 6.875 6.25Z"
+																	stroke="#414F6A"
+																	stroke-width="1.2"
 																	stroke-linejoin="round"
 																/>
 															</g>
 														</g>
 														<defs>
-															<clipPath id="clip0_772_126521">
+															<clipPath id="clip0_772_126470">
 																<rect
 																	width="20"
 																	height="20"
@@ -284,7 +270,7 @@
 														</defs>
 													</svg>
 													<span class="text-black text-m font-sans-medium"
-														>Customer Support</span
+														>Sales</span
 													>
 												</a>
 											</li>
@@ -348,7 +334,7 @@
 														xmlns="http://www.w3.org/2000/svg"
 													>
 														<g opacity="0.4">
-															<g clip-path="url(#clip0_772_126470)">
+															<g clip-path="url(#clip0_772_126521)">
 																<rect
 																	width="20"
 																	height="20"
@@ -356,21 +342,16 @@
 																	fill="white"
 																/>
 																<path
-																	d="M2.29199 9.30117V3.95817C2.29199 3.0377 3.03818 2.2915 3.95866 2.2915H9.30166C9.74366 2.2915 10.1676 2.4671 10.4802 2.77966L17.1552 9.45467C17.806 10.1055 17.806 11.1608 17.1552 11.8117L11.8122 17.1547C11.1613 17.8055 10.106 17.8055 9.45516 17.1547L2.78015 10.4797C2.46758 10.1671 2.29199 9.74317 2.29199 9.30117Z"
+																	d="M3.95768 8.12533V7.91699C3.95768 4.81039 6.66263 2.29199 9.99935 2.29199C13.3361 2.29199 16.041 4.81039 16.041 7.91699V8.12533M9.99935 16.3694V16.8753C9.99935 17.3356 10.3724 17.7087 10.8327 17.7087H12.4993C14.5704 17.7087 16.2493 16.0297 16.2493 13.9587M3.54102 8.12533H4.79102V13.542H3.54102C2.85066 13.542 2.29102 12.9823 2.29102 12.292V9.37533C2.29102 8.68499 2.85066 8.12533 3.54102 8.12533ZM15.2077 8.12533H16.4577C17.148 8.12533 17.7077 8.68499 17.7077 9.37533V12.292C17.7077 12.9823 17.148 13.542 16.4577 13.542H15.2077V8.12533Z"
 																	stroke="#414F6A"
 																	stroke-width="1.2"
-																	stroke-linejoin="round"
-																/>
-																<path
-																	d="M6.875 6.25C6.875 6.59517 6.59517 6.875 6.25 6.875C5.90483 6.875 5.625 6.59517 5.625 6.25C5.625 5.90483 5.90483 5.625 6.25 5.625C6.59517 5.625 6.875 5.90483 6.875 6.25Z"
-																	stroke="#414F6A"
-																	stroke-width="1.2"
+																	stroke-linecap="round"
 																	stroke-linejoin="round"
 																/>
 															</g>
 														</g>
 														<defs>
-															<clipPath id="clip0_772_126470">
+															<clipPath id="clip0_772_126521">
 																<rect
 																	width="20"
 																	height="20"
@@ -381,7 +362,53 @@
 														</defs>
 													</svg>
 													<span class="text-black text-m font-sans-medium"
-														>Sales</span
+														>Customer Support</span
+													>
+												</a>
+											</li>
+											<li>
+												<a
+													href="#"
+													class="flex gap-3 items-center py-3 px-3.5 rounded-md hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0 max-lg:pt-1"
+												>
+													<svg
+														class="bg-white rounded-md"
+														width="20"
+														height="20"
+														viewBox="0 0 20 20"
+														fill="none"
+														xmlns="http://www.w3.org/2000/svg"
+													>
+														<g opacity="0.4">
+															<g clip-path="url(#clip0_772_126527)">
+																<rect
+																	width="20"
+																	height="20"
+																	rx="5.45455"
+																	fill="white"
+																/>
+																<path
+																	d="M10.0002 9.99955V17.0829M10.0002 9.99955L3.75 6.48391M10.0002 9.99955L16.0522 6.59515M16.875 7.10709V12.892C16.875 13.4941 16.5502 14.0494 16.0254 14.3446L10.8171 17.2743C10.3098 17.5597 9.69025 17.5597 9.18292 17.2743L3.97457 14.3446C3.44977 14.0494 3.125 13.4941 3.125 12.892V7.10709C3.125 6.50498 3.44977 5.94967 3.97457 5.65447L9.18292 2.72479C9.69025 2.43939 10.3098 2.43939 10.8171 2.72479L16.0254 5.65447C16.5502 5.94967 16.875 6.50498 16.875 7.10709Z"
+																	stroke="#414F6A"
+																	stroke-width="1.2"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																/>
+															</g>
+														</g>
+														<defs>
+															<clipPath id="clip0_772_126527">
+																<rect
+																	width="20"
+																	height="20"
+																	rx="5.45455"
+																	fill="white"
+																/>
+															</clipPath>
+														</defs>
+													</svg>
+													<span class="text-black text-m font-sans-medium"
+														>Product Management</span
 													>
 												</a>
 											</li>
@@ -791,6 +818,10 @@
 								class="max-h-[35.4rem] max-lg:h-auto"
 								src="./assets/images/card-main.png"
 								alt="card"
+								srcset="
+									./assets/images/card-main.png    1x,
+									./assets/images/card-main-2x.png 2x
+								"
 							/>
 						</div>
 					</div>
@@ -999,8 +1030,7 @@
 				<div class="container">
 					<div class="max-w-[50rem] mx-auto">
 						<button
-							class="btn-long mx-auto mb-4 wow animate__animated animate__fadeIn"
-							data-wow-duration="1s"
+							class="btn-long mx-auto mb-4 wow animate__animated animate__slideInUp"
 							data-wow-delay=".2s"
 						>
 							Screen Recording
@@ -1089,13 +1119,25 @@
 							</div>
 						</div>
 						<div
-							class="h-[502px] w-[800px] absolute -right-36 top-1/2 -translate-y-1/2 flex-grow flex items-center max-xl:w-[50vw] max-xl:-right-[6vw] max-md:relative max-md:w-full max-md:top-auto max-md:right-auto max-md:translate-y-0 max-md:order-1 max-md:mr-0 max-md:h-auto"
+							class="flex-grow flex items-center max-md:w-full max-md:order-1 relative max-md:px-5 max-md:pt-5"
 						>
-							<img
-								loading="lazy"
-								src="./assets/images/card-chart.png"
-								alt="chart"
-							/>
+							<div
+								class="absolute top-1/2 -translate-y-1/2 -right-[12%] max-h-[410px] w-[667px] max-w-full shadow-video border border-gray-130 rounded-2.5xl max-md:top-auto max-md:right-auto max-md:mr-0 max-md:h-auto max-md:translate-y-0 max-md:relative"
+							>
+								<div
+									class="absolute w-[120%] h-[130%] left-0 top-1/2 -translate-y-[46%] bg-card-right bg-no-repeat bg-center bg-contain -z-1"
+								></div>
+								<img
+									class="object-contain max-h-full rounded-2.5xl overflow-hidden"
+									loading="lazy"
+									src="./assets/images/card-chart.png"
+									srcset="
+										./assets/images/card-chart.png    1x,
+										./assets/images/card-chart-2x.png 2x
+									"
+									alt="chart"
+								/>
+							</div>
 						</div>
 					</div>
 					<div class="flex mt-6 gap-5 max-sm:flex-wrap">
@@ -1105,10 +1147,10 @@
 							<div
 								class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6 max-sm:-mb-10"
 							>
-								<h5>
+								<h3 class="card-title">
 									Add CTA to turn prospects <br />
 									into customers
-								</h5>
+								</h3>
 								<p
 									class="leading-5.5 text-violet-800 font-medium mt-3 tracking-0.16"
 								>
@@ -1135,7 +1177,7 @@
 							<div
 								class="relative z-1 p-10 pt-0 max-md:px-5 max-md:pb-6 max-sm:-mt-2"
 							>
-								<h5>Edit your videos to perfection</h5>
+								<h3 class="card-title">Edit your videos to perfection</h3>
 								<p
 									class="leading-5.5 text-violet-800 font-medium mt-3 tracking-0.16"
 								>
@@ -1158,7 +1200,9 @@
 							<div
 								class="relative z-1 p-10 pb-9 pl-9 pt-0 max-md:px-5 max-md:pb-6 max-sm:-mt-7"
 							>
-								<h5>Pick the right thumbnail for higher click-through rate</h5>
+								<h3 class="card-title">
+									Pick the right thumbnail for higher click-through rate
+								</h3>
 								<p
 									class="leading-5.5 text-violet-800 font-medium mt-3 tracking-0.16"
 								>
@@ -1179,10 +1223,10 @@
 							<div
 								class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1"
 							>
-								<h5>
+								<h3 class="card-title">
 									See the full picture with <br />
 									engagement insights
-								</h5>
+								</h3>
 								<p
 									class="leading-5.5 text-violet-800 font-medium mt-3 tracking-0.16"
 								>
@@ -1203,7 +1247,7 @@
 								alt="thumbnail"
 							/>
 							<div class="relative z-1 p-10 pt-0 max-md:px-5 max-md:pb-6">
-								<h5>Zoom in to focus on the action</h5>
+								<h3 class="card-title">Zoom in to focus on the action</h3>
 								<p
 									class="leading-5.5 text-violet-800 font-medium mt-3 tracking-0.16"
 								>
@@ -1224,7 +1268,9 @@
 							<div
 								class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1 max-sm:pb-4"
 							>
-								<h5>Customize the player to match your brand</h5>
+								<h3 class="card-title">
+									Customize the player to match your brand
+								</h3>
 								<p
 									class="leading-5.5 text-violet-800 font-medium mt-3 tracking-0.16"
 								>
@@ -1246,38 +1292,31 @@
 				>
 					<div class="max-w-[44.8rem] mx-auto">
 						<button
-							class="btn-long mx-auto mb-4 btn-gradient tracking-0.36 wow animate__animated animate__fadeIn"
+							class="btn-long mx-auto mb-4 btn-gradient tracking-0.36 wow animate__animated animate__slideInUp"
 							data-wow-delay=".2s"
 						>
 							Jumpshare AI
 							<svg
-								width="13"
-								height="12"
-								viewBox="0 0 13 12"
+								width="17"
+								height="16"
+								viewBox="0 0 17 16"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<g clip-path="url(#clip0_4582_2289)">
-									<path
-										d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
-										stroke="white"
-										stroke-width="1.24444"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
-										stroke="white"
-										stroke-width="1.24444"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</g>
-								<defs>
-									<clipPath id="clip0_4582_2289">
-										<rect width="13" height="12" fill="white" />
-									</clipPath>
-								</defs>
+								<path
+									d="M3.83398 7.99992H13.1673M13.1673 7.99992L8.50065 3.33325M13.1673 7.99992L8.50065 12.6666"
+									stroke="white"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M3.83398 7.99992H13.1673M13.1673 7.99992L8.50065 3.33325M13.1673 7.99992L8.50065 12.6666"
+									stroke="white"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
 							</svg>
 						</button>
 						<h2 class="font-semibold font-sans-variable text-white">
@@ -1308,7 +1347,7 @@
 							<div
 								class="relative z-1 p-10 pl-9 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1 max-sm:-mb-12"
 							>
-								<h5 class="text-white">Personalized video titles</h5>
+								<h3 class="card-title text-white">Personalized video titles</h3>
 								<p
 									class="leading-5.5 text-gray-300 font-medium mt-3 tracking-0.16"
 								>
@@ -1329,7 +1368,9 @@
 							<div
 								class="relative z-1 p-10 pb-9 pt-0 max-md:px-5 max-md:pb-6 max-sm:-mt-12"
 							>
-								<h5 class="text-white">Flawless captions and transcriptions</h5>
+								<h3 class="card-title text-white">
+									Flawless captions and transcriptions
+								</h3>
 								<p
 									class="leading-5.5 text-gray-300 font-medium mt-3 tracking-0.16"
 								>
@@ -1350,7 +1391,9 @@
 							<div
 								class="relative z-1 p-10 pl-9 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1 max-sm:-mb-7"
 							>
-								<h5 class="text-white">Engaging speaker summaries</h5>
+								<h3 class="card-title text-white">
+									Engaging speaker summaries
+								</h3>
 								<p
 									class="leading-5.5 text-gray-300 font-medium mt-3 tracking-0.16"
 								>
@@ -1369,7 +1412,7 @@
 								alt="captions"
 							/>
 							<div class="relative z-1 p-10 pt-0 max-sm:-mt-28">
-								<h5 class="text-white">Contextual video chapters</h5>
+								<h3 class="card-title text-white">Contextual video chapters</h3>
 								<p
 									class="leading-5.5 text-gray-300 font-medium mt-3 tracking-0.16"
 								>
@@ -1387,7 +1430,7 @@
 				<div class="container">
 					<div class="max-w-[44.18rem] mx-auto">
 						<button
-							class="btn-long mx-auto mb-2 bg-orange-500 wow animate__animated animate__fadeIn"
+							class="btn-long mx-auto mb-2 bg-orange-500 wow animate__animated animate__slideInUp"
 							data-wow-delay=".2s"
 						>
 							Screenshot Capture<svg
@@ -1499,7 +1542,9 @@
 								<div
 									class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6 max-sm:pb-5 max-sm:order-1"
 								>
-									<h5 class="text-orange-950">Capture scrolling screenshot</h5>
+									<h3 class="card-title text-orange-950">
+										Capture scrolling screenshot
+									</h3>
 									<p
 										class="leading-5.5 text-orange-900 font-medium mt-3 tracking-0.32"
 									>
@@ -1521,7 +1566,9 @@
 									alt="sensitive"
 								/>
 								<div class="relative z-1 p-10 pt-0 max-md:px-5 max-sm:pb-6">
-									<h5 class="text-orange-950">Redact sensitive information</h5>
+									<h3 class="card-title text-orange-950">
+										Redact sensitive information
+									</h3>
 									<p class="leading-5.5 text-orange-950 font-medium mt-3">
 										Automatically redact emails, passwords, IPs and credit card
 										numbers from your screenshots in just one-click.
@@ -1540,7 +1587,9 @@
 								<div
 									class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1 max-sm:-mb-5"
 								>
-									<h5 class="text-orange-950">Add beautiful backgrounds</h5>
+									<h3 class="card-title text-orange-950">
+										Add beautiful backgrounds
+									</h3>
 									<p class="leading-5.5 text-orange-900 font-medium mt-2.5">
 										Make your screenshots pop with backgrounds for social
 										<br class="max-sm:hidden" />
@@ -1562,11 +1611,11 @@
 						<div
 							class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1 max-sm:pb-2"
 						>
-							<h5
-								class="text-[1.5rem] text-orange-950 tracking-0.24 max-sm:text-base"
+							<p
+								class="card-title text-[1.5rem] text-orange-950 tracking-0.24 max-sm:text-base"
 							>
 								Meet the most advanced annotation tool
-							</h5>
+							</p>
 							<p class="leading-5.5 text-orange-900 font-medium mt-3">
 								Get your message across with a powerful annotation toolkit,
 								which includes <br class="max-sm:hidden" />arrow, text,
@@ -1582,7 +1631,7 @@
 				<div class="container">
 					<div class="max-w-[44.18rem] mx-auto">
 						<button
-							class="btn-long mx-auto mb-4 bg-blue-500 tracking-0.36 wow animate__animated animate__fadeIn"
+							class="btn-long mx-auto mb-4 bg-blue-500 tracking-0.36 wow animate__animated animate__slideInUp"
 							data-wow-delay=".2s"
 						>
 							File Sharing & Collaboration
@@ -1704,9 +1753,9 @@
 							<div
 								class="relative z-1 p-10 pt-0 max-md:px-5 max-md:pb-6 max-sm:-mt-[5vw]"
 							>
-								<h5 class="text-blue-1000">
+								<h3 class="card-title text-blue-1000">
 									Preview over 200 file formats online
-								</h5>
+								</h3>
 								<p
 									class="leading-5.5 text-blue-970 font-medium mt-3 tracking-0.16"
 								>
@@ -1726,9 +1775,9 @@
 								alt="history"
 							/>
 							<div class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6">
-								<h5 class="text-blue-1000">
+								<h3 class="card-title text-blue-1000">
 									Track changes with version history
-								</h5>
+								</h3>
 								<p
 									class="leading-5.5 text-blue-970 font-medium mt-3 tracking-0.16"
 								>
@@ -1752,9 +1801,9 @@
 							<div
 								class="relative z-1 p-10 pt-0 max-md:px-5 max-md:pb-6 max-sm:-mt-[7vw]"
 							>
-								<h5 class="text-blue-1000">
+								<h3 class="card-title text-blue-1000">
 									Stay on top with Advanced Analytics
-								</h5>
+								</h3>
 								<p
 									class="leading-5.5 text-blue-970 font-medium mt-3 tracking-0.16"
 								>
@@ -1776,9 +1825,9 @@
 							<div
 								class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1 max-sm:pb-3"
 							>
-								<h5 class="text-blue-1000 tracking-0.22">
+								<h3 class="card-title text-blue-1000 tracking-0.22">
 									Receive files from others quickly
-								</h5>
+								</h3>
 								<p
 									class="leading-5.5 text-blue-970 font-medium mt-3 tracking-0.16"
 								>
@@ -2238,6 +2287,7 @@
 								<a
 									href="#"
 									class="flex items-center justify-center rounded-full size-8 shadow-social"
+									aria-label="Our Twitter"
 								>
 									<svg
 										width="14"
@@ -2274,6 +2324,7 @@
 								<a
 									href="#"
 									class="flex items-center justify-center rounded-full size-8 shadow-social"
+									aria-label="Our Facebook"
 								>
 									<svg
 										width="20"
@@ -2522,7 +2573,10 @@
 			</footer>
 		</main>
 	</body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script
+		defer
+		src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
+	></script>
 	<script>
 		'use strict'
 		document.addEventListener('DOMContentLoaded', () => {
@@ -2642,17 +2696,23 @@
 				}
 			}
 
+			let hideTimeout
+			let showTimeout
+
 			function handleDesktopMouseEnter(e) {
 				e.preventDefault()
+				hideMenuBody()
 				const item = e.currentTarget
 				const menuDropdownBody = item
 					.closest('li')
 					.querySelector('.menu-dropdown-body')
 
-				hideMenuBody()
-				item.classList.add('expand')
+				clearTimeout(hideTimeout)
+				menuDropdownBody.classList.remove('animate-fadeOut')
 				menuDropdownBody.classList.remove('hidden')
-				setTimeout(() => {
+
+				item.classList.add('expand')
+				showTimeout = setTimeout(() => {
 					menuDropdownBody.classList.add('animate-fade')
 				}, 10)
 			}
@@ -2664,10 +2724,12 @@
 					.closest('li')
 					.querySelector('.menu-dropdown-body')
 
-				item.classList.remove('expand')
+				clearTimeout(showTimeout)
 				menuDropdownBody.classList.remove('animate-fade')
+
+				item.classList.remove('expand')
 				menuDropdownBody.classList.add('animate-fadeOut')
-				setTimeout(() => {
+				hideTimeout = setTimeout(() => {
 					menuDropdownBody.classList.add('hidden')
 				}, 300)
 			}
@@ -2681,7 +2743,7 @@
 			}
 
 			function initMobileMenu() {
-				removeEventListeners() // Удаляем все существующие обработчики
+				removeEventListeners() // Delete all existing handlers
 				menuDropdown.forEach(item => {
 					const menuDropdownBody = item
 						.closest('li')
@@ -2695,7 +2757,7 @@
 			}
 
 			function initDesktopMenu() {
-				removeEventListeners() // Удаляем все существующие обработчики
+				removeEventListeners() // Delete all existing handlers
 				menuDropdown.forEach(item => {
 					const menuDropdownBody = item
 						.closest('li')
@@ -2725,14 +2787,14 @@
 				}
 			}
 
-			// Инициализация при загрузке страницы
+			// Initialization on page load
 			if (hasReached1024) {
 				initMobileMenu()
 			} else {
 				initDesktopMenu()
 			}
 
-			// Добавление обработчика события resize
+			// Add resize event handler
 			window.addEventListener('resize', onResize)
 
 			const handleClickOutside = event => {
