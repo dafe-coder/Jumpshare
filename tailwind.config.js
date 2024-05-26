@@ -36,7 +36,6 @@ module.exports = {
 				400: '#59657E',
 				500: '#495057',
 				700: 'rgba(18, 35, 69, 0.8)',
-				800: '#181729',
 				850: 'rgba(18, 35, 69, 0.08)',
 			},
 			orange: {
@@ -59,6 +58,7 @@ module.exports = {
 				500: '#6259EB',
 				600: '#9452FF',
 				800: '#130c3ecc',
+				850: '#181729',
 				900: '#060515',
 			},
 		},
@@ -160,6 +160,8 @@ module.exports = {
 			backgroundImage: {
 				main: "url('/assets/images/main-bg.png')",
 				'card-right': "url('/assets/images/bg-card-right.png')",
+				'card-left-orange': "url('/assets/images/card-bg-orange.png')",
+				'card-right-blue': "url('/assets/images/card-bg-blue.png')",
 				'video-ai': "url('/assets/images/video-ai-bg.png')",
 				'card-dark-center': "url('/assets/images/bg-card-dark.png')",
 				'banner-round': "url('/assets/images/banner-bg.png')",

@@ -47,10 +47,22 @@
 }
 
 .active-header {
-	@apply bg-white;
+	@apply bg-white top-0;
 	box-shadow:
 		0px -1.85px 19.48px 0px rgba(0, 0, 0, 0.05),
 		0px 6px 11.8px -4px rgba(13, 34, 71, 0.02),
 		0px 0px 0px 1px rgba(18, 35, 69, 0.1),
 		0px 11px 10.7px -6px rgba(18, 35, 69, 0.04);
+}
+
+.btn-long.animate__slideInUp {
+	opacity: 1 !important;
+}
+
+.animate__fadeInAndSlideInUp {
+	animation:
+		fadeIn 1s,
+		slideInUp 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 0s, 1s;
 }

@@ -42,7 +42,7 @@
 	<body>
 		<header
 			id="header"
-			class="fixed top-0 left-1/2 -translate-x-1/2 z-50 transition-all w-full max-lg:bg-white"
+			class="active-header fixed -top-full left-1/2 -translate-x-1/2 z-50 transition-all w-full max-lg:bg-white duration-500"
 		>
 			<div class="container flex justify-between items-center py-4.5">
 				<a href="/">
@@ -690,9 +690,17 @@
 								</svg>
 							</button>
 							<p class="text-sm font-medium mt-3 tracking-0.28">
-								For <a href="#" class="text-blue-500">Mac,</a>
-								<a href="#" class="text-blue-500">Windows</a> and
-								<a href="#" class="text-blue-500">iOS</a>
+								For
+								<a href="#" class="text-blue-500 transition-all hover:underline"
+									>Mac,</a
+								>
+								<a href="#" class="text-blue-500 transition-all hover:underline"
+									>Windows</a
+								>
+								and
+								<a href="#" class="text-blue-500 transition-all hover:underline"
+									>iOS</a
+								>
 							</p>
 						</div>
 						<div class="flex gap-2.5 items-center mt-6 max-xs:hidden">
@@ -779,10 +787,13 @@
 							<div class="flex gap-4 items-center mt-5">
 								<div class="block size-13 rounded-xl overflow-hidden">
 									<img
-										loading="lazy"
-										class="size-full object-cover"
-										src="./assets/images/review-avatar.png"
+										class="size-full object-cover lazy-image"
+										data-src="./assets/images/review-avatar.png"
 										alt="Avatar"
+										data-srcset="
+											./assets/images/review-avatar.png    1x,
+											./assets/images/review-avatar-2x.png 2x
+										"
 									/>
 								</div>
 								<div>
@@ -814,11 +825,10 @@
 								></div>
 							</div>
 							<img
-								loading="lazy"
-								class="max-h-[35.4rem] max-lg:h-auto"
-								src="./assets/images/card-main.png"
+								class="max-h-[35.4rem] max-lg:h-auto lazy-image"
+								data-src="./assets/images/card-main.png"
 								alt="card"
-								srcset="
+								data-srcset="
 									./assets/images/card-main.png    1x,
 									./assets/images/card-main-2x.png 2x
 								"
@@ -1030,37 +1040,51 @@
 				<div class="container">
 					<div class="max-w-[50rem] mx-auto">
 						<button
-							class="btn-long mx-auto mb-4 wow animate__animated animate__slideInUp"
+							class="btn-long mx-auto mb-4 wow animate__animated animate__fadeInAndSlideInUp"
 							data-wow-delay=".2s"
+							style="opacity: 0"
 						>
 							Screen Recording
 							<svg
-								width="13"
-								height="12"
-								viewBox="0 0 13 12"
+								width="17"
+								height="16"
+								viewBox="0 0 17 16"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<g clip-path="url(#clip0_4582_2289)">
-									<path
-										d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
-										stroke="white"
-										stroke-width="1.24444"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
-										stroke="white"
-										stroke-width="1.24444"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</g>
+								<path
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="#735CFF"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="url(#paint0_linear_743_13469)"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="white"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
 								<defs>
-									<clipPath id="clip0_4582_2289">
-										<rect width="13" height="12" fill="white" />
-									</clipPath>
+									<linearGradient
+										id="paint0_linear_743_13469"
+										x1="8.50065"
+										y1="3.33331"
+										x2="9"
+										y2="13.0003"
+										gradientUnits="userSpaceOnUse"
+									>
+										<stop stop-color="#B459EB" stop-opacity="0" />
+										<stop offset="1" stop-color="#BC59EB" />
+									</linearGradient>
 								</defs>
 							</svg>
 						</button>
@@ -1082,7 +1106,7 @@
 						class="mt-16 shadow-card rounded-2.5xl card-gradient bg-no-repeat flex relative max-md:flex-wrap"
 					>
 						<div
-							class="py-16 pl-16 max-w-[30.68rem] relative z-1 max-md:order-2 max-md:w-full max-md:max-w-full max-md:py-6 max-md:px-5"
+							class="py-16 pl-16 max-w-[30.68rem] relative z-1 max-md:order-2 max-md:w-full max-md:max-w-full max-md:pb-6 max-md:pt-7 max-md:px-5"
 						>
 							<h3>Guide your audience with personalized videos</h3>
 							<p
@@ -1103,10 +1127,13 @@
 								<div class="flex gap-4 items-center mt-3">
 									<div class="block size-13 rounded-xl overflow-hidden">
 										<img
-											loading="lazy"
-											class="size-full object-cover"
-											src="./assets/images/review-avatar2.png"
+											class="size-full object-cover lazy-image"
+											data-src="./assets/images/review-avatar2.png"
 											alt="Avatar"
+											data-srcset="
+												./assets/images/review-avatar2.png    1x,
+												./assets/images/review-avatar2-2x.png 2x
+											"
 										/>
 									</div>
 									<div>
@@ -1122,16 +1149,15 @@
 							class="flex-grow flex items-center max-md:w-full max-md:order-1 relative max-md:px-5 max-md:pt-5"
 						>
 							<div
-								class="absolute top-1/2 -translate-y-1/2 -right-[12%] max-h-[410px] w-[667px] max-w-full shadow-video border border-gray-130 rounded-2.5xl max-md:top-auto max-md:right-auto max-md:mr-0 max-md:h-auto max-md:translate-y-0 max-md:relative"
+								class="absolute top-1/2 -translate-y-1/2 -right-[12%] max-h-[410px] w-[667px] max-w-full shadow-video border border-gray-130 rounded-xl max-md:top-auto max-md:right-auto max-md:mr-0 max-md:h-auto max-md:translate-y-0 max-md:relative"
 							>
 								<div
 									class="absolute w-[120%] h-[130%] left-0 top-1/2 -translate-y-[46%] bg-card-right bg-no-repeat bg-center bg-contain -z-1"
 								></div>
 								<img
-									class="object-contain max-h-full rounded-2.5xl overflow-hidden"
-									loading="lazy"
-									src="./assets/images/card-chart.png"
-									srcset="
+									class="object-contain max-h-full rounded-xl overflow-hidden lazy-image"
+									data-src="./assets/images/card-chart.png"
+									data-srcset="
 										./assets/images/card-chart.png    1x,
 										./assets/images/card-chart-2x.png 2x
 									"
@@ -1159,9 +1185,12 @@
 								</p>
 							</div>
 							<img
-								loading="lazy"
-								class="absolute bottom-0 left-0 max-sm:relative"
-								src="./assets/images/card-add-cta.png"
+								class="absolute bottom-0 left-0 max-sm:relative lazy-image"
+								data-src="./assets/images/card-add-cta.png"
+								data-srcset="
+									./assets/images/card-add-cta.png    1x,
+									./assets/images/card-add-cta-2x.png 2x
+								"
 								alt="cta"
 							/>
 						</div>
@@ -1169,9 +1198,12 @@
 							class="card-gradient shadow-card overflow-hidden rounded-2.5xl relative pt-[27.6%] flex flex-col justify-end basis-[55.8%] max-sm:basis-full max-sm:p-0"
 						>
 							<img
-								loading="lazy"
-								class="absolute top-0 left-0 max-sm:relative"
-								src="./assets/images/card-edit-video.png"
+								class="absolute top-0 left-0 max-sm:relative lazy-image"
+								data-src="./assets/images/card-edit-video.png"
+								data-srcset="
+									./assets/images/card-edit-video.png    1x,
+									./assets/images/card-edit-video-2x.png 2x
+								"
 								alt="edit video"
 							/>
 							<div
@@ -1192,9 +1224,13 @@
 							class="card-gradient shadow-card rounded-2.5xl overflow-hidden pt-[25%] flex flex-col justify-end relative basis-[55%] max-sm:basis-full max-sm:pt-0"
 						>
 							<img
+								class="absolute top-0 left-1/2 -translate-x-1/2 max-h-[24.4375rem] max-sm:relative lazy-image"
+								data-src="./assets/images/card-thumbnail.png"
 								loading="lazy"
-								class="absolute top-0 left-1/2 -translate-x-1/2 max-h-[24.4375rem] max-sm:relative"
-								src="./assets/images/card-thumbnail.png"
+								data-srcset="
+									./assets/images/card-thumbnail.png    1x,
+									./assets/images/card-thumbnail-2x.png 2x
+								"
 								alt="thumbnail"
 							/>
 							<div
@@ -1215,9 +1251,13 @@
 							class="card-gradient shadow-card overflow-hidden rounded-2.5xl relative pb-[25.5%] basis-[45%] max-sm:pb-0 max-sm:basis-full flex flex-col"
 						>
 							<img
+								class="absolute bottom-0 left-0 max-sm:relative max-sm:order-2 lazy-image"
+								data-src="./assets/images/card-insights.png"
 								loading="lazy"
-								class="absolute bottom-0 left-0 max-sm:relative max-sm:order-2"
-								src="./assets/images/card-insights.png"
+								data-srcset="
+									./assets/images/card-insights.png    1x,
+									./assets/images/card-insights-2x.png 2x
+								"
 								alt="insights"
 							/>
 							<div
@@ -1241,10 +1281,14 @@
 							class="card-gradient shadow-card rounded-2.5xl overflow-hidden pt-[21%] flex flex-col justify-end relative basis-[45.5%] max-sm:basis-full max-sm:pt-0"
 						>
 							<img
+								class="absolute top-0 left-1/2 -translate-x-1/2 max-h-[22.4375rem] max-sm:relative lazy-image"
+								data-src="./assets/images/card-action.png"
 								loading="lazy"
-								class="absolute top-0 left-1/2 -translate-x-1/2 max-h-[22.4375rem] max-sm:relative"
-								src="./assets/images/card-action.png"
-								alt="thumbnail"
+								data-srcset="
+									./assets/images/card-action.png    1x,
+									./assets/images/card-action-2x.png 2x
+								"
+								alt="action"
 							/>
 							<div class="relative z-1 p-10 pt-0 max-md:px-5 max-md:pb-6">
 								<h3 class="card-title">Zoom in to focus on the action</h3>
@@ -1260,10 +1304,13 @@
 							class="card-gradient shadow-card overflow-hidden rounded-2.5xl relative pb-[21%] basis-[54.5%] flex flex-col max-sm:basis-full max-sm:pb-0"
 						>
 							<img
-								loading="lazy"
-								class="absolute bottom-0 left-0 max-sm:relative max-sm:order-2"
-								src="./assets/images/card-player-customize.png"
-								alt="insights"
+								class="absolute bottom-0 left-0 max-sm:relative max-sm:order-2 lazy-image"
+								data-src="./assets/images/card-player-customize.png"
+								data-srcset="
+									./assets/images/card-player-customize.png    1x,
+									./assets/images/card-player-customize-2x.png 2x
+								"
+								alt="player customize"
 							/>
 							<div
 								class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1 max-sm:pb-4"
@@ -1292,7 +1339,7 @@
 				>
 					<div class="max-w-[44.8rem] mx-auto">
 						<button
-							class="btn-long mx-auto mb-4 btn-gradient tracking-0.36 wow animate__animated animate__slideInUp"
+							class="btn-long mx-auto mb-4 btn-gradient tracking-0.36 wow animate__animated animate__fadeInAndSlideInUp"
 							data-wow-delay=".2s"
 						>
 							Jumpshare AI
@@ -1304,19 +1351,39 @@
 								xmlns="http://www.w3.org/2000/svg"
 							>
 								<path
-									d="M3.83398 7.99992H13.1673M13.1673 7.99992L8.50065 3.33325M13.1673 7.99992L8.50065 12.6666"
-									stroke="white"
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="#735CFF"
 									stroke-width="1.24444"
 									stroke-linecap="round"
 									stroke-linejoin="round"
 								/>
 								<path
-									d="M3.83398 7.99992H13.1673M13.1673 7.99992L8.50065 3.33325M13.1673 7.99992L8.50065 12.6666"
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="url(#paint0_linear_743_13469)"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
 									stroke="white"
 									stroke-width="1.24444"
 									stroke-linecap="round"
 									stroke-linejoin="round"
 								/>
+								<defs>
+									<linearGradient
+										id="paint0_linear_743_13469"
+										x1="8.50065"
+										y1="3.33331"
+										x2="9"
+										y2="13.0003"
+										gradientUnits="userSpaceOnUse"
+									>
+										<stop stop-color="#B459EB" stop-opacity="0" />
+										<stop offset="1" stop-color="#BC59EB" />
+									</linearGradient>
+								</defs>
 							</svg>
 						</button>
 						<h2 class="font-semibold font-sans-variable text-white">
@@ -1336,13 +1403,17 @@
 					</div>
 					<div class="flex mt-20 gap-5 flex-wrap">
 						<div
-							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-gray-700 rounded-2.5xl overflow-hidden pb-[27.5%] flex flex-col justify-start relative basis-[calc(44.45%_-_10px)] max-sm:basis-full max-sm:pb-0 max-sm:order-1"
+							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-violet-850 rounded-2.5xl overflow-hidden pb-[27.5%] flex flex-col justify-start relative basis-[calc(44.45%_-_10px)] max-sm:basis-full max-sm:pb-0 max-sm:order-1"
 						>
 							<img
+								class="absolute w-full bottom-0 right-0 max-sm:relative max-sm:order-2 lazy-image"
+								data-src="./assets/images/card-guide.png"
 								loading="lazy"
-								class="absolute w-full bottom-0 right-0 max-sm:relative max-sm:order-2"
-								src="./assets/images/card-guide.png"
-								alt="thumbnail"
+								data-srcset="
+									./assets/images/card-guide.png    1x,
+									./assets/images/card-guide-2x.png 2x
+								"
+								alt="guide"
 							/>
 							<div
 								class="relative z-1 p-10 pl-9 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1 max-sm:-mb-12"
@@ -1357,12 +1428,15 @@
 							</div>
 						</div>
 						<div
-							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-gray-700 overflow-hidden rounded-2.5xl relative pt-[27.9%] basis-[calc(55.55%_-_10px)] flex flex-col justify-end max-sm:basis-full max-sm:pt-0 max-sm:order-3"
+							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-violet-850 overflow-hidden rounded-2.5xl relative pt-[27.9%] basis-[calc(55.55%_-_10px)] flex flex-col justify-end max-sm:basis-full max-sm:pt-0 max-sm:order-3"
 						>
 							<img
-								loading="lazy"
-								class="absolute top-0 right-0 max-sm:relative"
-								src="./assets/images/card-captions.png"
+								class="absolute top-0 right-0 max-sm:relative lazy-image"
+								data-src="./assets/images/card-captions.png"
+								data-srcset="
+									./assets/images/card-captions.png    1x,
+									./assets/images/card-captions-2x.png 2x
+								"
 								alt="captions"
 							/>
 							<div
@@ -1380,13 +1454,16 @@
 							</div>
 						</div>
 						<div
-							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-gray-700 rounded-2.5xl overflow-hidden pb-[24%] flex flex-col justify-start relative basis-[calc(59.67%_-_10px)] max-sm:basis-full max-sm:pb-0 max-sm:order-2"
+							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-violet-850 rounded-2.5xl overflow-hidden pb-[24%] flex flex-col justify-start relative basis-[calc(59.67%_-_10px)] max-sm:basis-full max-sm:pb-0 max-sm:order-2"
 						>
 							<img
-								loading="lazy"
-								class="absolute w-full bottom-0 right-0 max-sm:relative max-sm:order-2"
-								src="./assets/images/card-summaries.png"
-								alt="thumbnail"
+								class="absolute w-full bottom-0 right-0 max-sm:relative max-sm:order-2 lazy-image"
+								data-src="./assets/images/card-summaries.png"
+								data-srcset="
+									./assets/images/card-summaries.png    1x,
+									./assets/images/card-summaries-2x.png 2x
+								"
+								alt="summaries"
 							/>
 							<div
 								class="relative z-1 p-10 pl-9 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1 max-sm:-mb-7"
@@ -1403,13 +1480,16 @@
 							</div>
 						</div>
 						<div
-							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-gray-700 overflow-hidden rounded-2.5xl relative pt-[27.9%] basis-[calc(40.33%_-_10px)] flex flex-col justify-end max-sm:basis-full max-sm:pt-0 max-sm:order-4"
+							class="shadow-card-dark backdrop-blur-xl bg-[#11101E]/[0.6] border border-violet-850 overflow-hidden rounded-2.5xl relative pt-[27.9%] basis-[calc(40.33%_-_10px)] flex flex-col justify-end max-sm:basis-full max-sm:pt-0 max-sm:order-4"
 						>
 							<img
-								loading="lazy"
-								class="absolute top-0 left-0 max-sm:relative max-sm:w-full"
-								src="./assets/images/card-chapters.png"
-								alt="captions"
+								class="absolute top-0 left-0 max-sm:relative max-sm:w-full lazy-image"
+								data-src="./assets/images/card-chapters.png"
+								data-srcset="
+									./assets/images/card-chapters.png    1x,
+									./assets/images/card-chapters-2x.png 2x
+								"
+								alt="chapters"
 							/>
 							<div class="relative z-1 p-10 pt-0 max-sm:-mt-28">
 								<h3 class="card-title text-white">Contextual video chapters</h3>
@@ -1430,36 +1510,50 @@
 				<div class="container">
 					<div class="max-w-[44.18rem] mx-auto">
 						<button
-							class="btn-long mx-auto mb-2 bg-orange-500 wow animate__animated animate__slideInUp"
+							class="btn-long mx-auto mb-2 bg-orange-500 wow animate__animated animate__fadeInAndSlideInUp"
 							data-wow-delay=".2s"
 						>
-							Screenshot Capture<svg
-								width="13"
-								height="12"
-								viewBox="0 0 13 12"
+							Screenshot Capture
+							<svg
+								width="17"
+								height="16"
+								viewBox="0 0 17 16"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<g clip-path="url(#clip0_4582_2289)">
-									<path
-										d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
-										stroke="white"
-										stroke-width="1.24444"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
-										stroke="white"
-										stroke-width="1.24444"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</g>
+								<path
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="#735CFF"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="url(#paint0_linear_743_13469)"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="white"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
 								<defs>
-									<clipPath id="clip0_4582_2289">
-										<rect width="13" height="12" fill="white" />
-									</clipPath>
+									<linearGradient
+										id="paint0_linear_743_13469"
+										x1="8.50065"
+										y1="3.33331"
+										x2="9"
+										y2="13.0003"
+										gradientUnits="userSpaceOnUse"
+									>
+										<stop stop-color="#B459EB" stop-opacity="0" />
+										<stop offset="1" stop-color="#BC59EB" />
+									</linearGradient>
 								</defs>
 							</svg>
 						</button>
@@ -1482,16 +1576,27 @@
 						class="mt-16 shadow-card-orange rounded-2.5xl card-gradient-orange bg-no-repeat flex relative justify-end max-md:flex-wrap max-md:overflow-hidden"
 					>
 						<div
-							class="h-[560px] w-[835px] absolute -left-28 top-1/2 -translate-y-1/2 flex-grow flex items-center max-xl:w-[50vw] max-xl:-left-[6vw] max-md:relative max-md:w-full max-md:top-auto max-md:left-auto max-md:translate-y-0 max-md:order-1 max-md:mr-0 max-md:h-auto max-sm:-mr-[12vw]"
+							class="flex-grow flex items-center max-md:w-full max-md:order-1 relative max-md:px-5 max-md:pt-5"
 						>
-							<img
-								loading="lazy"
-								src="./assets/images/card-showing.png"
-								alt="start showing"
-							/>
+							<div
+								class="absolute top-1/2 -translate-y-1/2 -left-[12%] max-h-[428px] w-[660px] max-w-full shadow-video border border-gray-130 rounded-xl max-md:top-auto max-md:left-auto max-md:h-auto max-md:translate-y-0 max-md:relative"
+							>
+								<div
+									class="absolute w-[120%] h-[120%] left-0 top-1/2 -translate-y-[47%] bg-card-left-orange bg-no-repeat bg-center bg-contain -z-1"
+								></div>
+								<img
+									class="relative object-cover max-h-full max-w-full rounded-xl size-full lazy-image"
+									data-src="./assets/images/card-showing.png"
+									data-srcset="
+										./assets/images/card-showing.png    1x,
+										./assets/images/card-showing-2x.png 2x
+									"
+									alt="showing"
+								/>
+							</div>
 						</div>
 						<div
-							class="py-17 pr-16 max-w-[30.68rem] relative z-1 max-md:order-2 max-sm:max-w-full max-md:px-5 max-sm:py-6 max-sm:pt-2"
+							class="py-17 pr-16 max-w-[30.68rem] relative z-1 max-md:order-2 max-md:max-w-full max-md:px-5 max-sm:pb-6 max-md:pt-7"
 						>
 							<h3 class="text-orange-950">Stop typing, start showing</h3>
 							<p class="leading-5.5 mt-4 font-medium text-orange-900">
@@ -1510,10 +1615,13 @@
 								<div class="flex gap-4 items-center mt-5">
 									<div class="block size-13 rounded-xl overflow-hidden">
 										<img
-											loading="lazy"
-											class="size-full object-cover"
-											src="./assets/images/review-avatar3.png"
+											class="size-full object-cover lazy-image"
+											data-src="./assets/images/review-avatar3.png"
 											alt="Avatar"
+											data-srcset="
+												./assets/images/review-avatar3.png    1x,
+												./assets/images/review-avatar3-2x.png 2x
+											"
 										/>
 									</div>
 									<div>
@@ -1534,9 +1642,12 @@
 								class="h-full card-gradient-orange shadow-card-orange overflow-hidden rounded-2.5xl flex flex-col relative pb-[26%] max-sm:pb-0"
 							>
 								<img
-									loading="lazy"
-									class="absolute bottom-0 left-0 max-sm:relative max-sm:order-2"
-									src="./assets/images/card-screenshot.png"
+									class="absolute bottom-0 left-0 max-sm:relative max-sm:order-2 lazy-image"
+									data-src="./assets/images/card-screenshot.png"
+									data-srcset="
+										./assets/images/card-screenshot.png    1x,
+										./assets/images/card-screenshot-2x.png 2x
+									"
 									alt="screenshot"
 								/>
 								<div
@@ -1560,9 +1671,12 @@
 								class="card-gradient-orange shadow-card-orange overflow-hidden rounded-2.5xl relative pt-[47%] flex flex-col justify-end max-sm:pt-0"
 							>
 								<img
-									loading="lazy"
-									class="absolute top-0 right-0 max-w-[99%] max-sm:relative max-md:max-w-full"
-									src="./assets/images/card-sensitive.png"
+									class="absolute top-0 right-0 max-w-[99%] max-sm:relative max-md:max-w-full lazy-image"
+									data-src="./assets/images/card-sensitive.png"
+									data-srcset="
+										./assets/images/card-sensitive.png    1x,
+										./assets/images/card-sensitive-2x.png 2x
+									"
 									alt="sensitive"
 								/>
 								<div class="relative z-1 p-10 pt-0 max-md:px-5 max-sm:pb-6">
@@ -1579,9 +1693,12 @@
 								class="card-gradient-orange shadow-card-orange overflow-hidden rounded-2.5xl flex flex-col relative pb-[46.9%] max-sm:pb-0"
 							>
 								<img
-									loading="lazy"
-									class="absolute bottom-0 right-0 max-w-[98%] max-md:max-w-full max-sm:relative max-sm:order-2"
-									src="./assets/images/card-background.png"
+									class="absolute bottom-0 right-0 max-w-[98%] max-md:max-w-full max-sm:relative max-sm:order-2 lazy-image"
+									data-src="./assets/images/card-background.png"
+									data-srcset="
+										./assets/images/card-background.png    1x,
+										./assets/images/card-background-2x.png 2x
+									"
 									alt="backgrounds"
 								/>
 								<div
@@ -1603,19 +1720,22 @@
 						class="mt-5 card-gradient-orange shadow-card-orange overflow-hidden rounded-2.5xl relative pb-[20.54%] flex flex-col max-sm:pb-4"
 					>
 						<img
-							loading="lazy"
-							class="absolute bottom-0 left-1/2 -translate-x-1/2 max-w-[96.5%] max-sm:relative max-sm:order-2"
-							src="./assets/images/card-tool.png"
-							alt="backgrounds"
+							class="absolute bottom-0 left-1/2 -translate-x-1/2 max-w-[96.5%] max-sm:relative max-sm:order-2 lazy-image"
+							data-src="./assets/images/card-tool.png"
+							data-srcset="
+								./assets/images/card-tool.png    1x,
+								./assets/images/card-tool-2x.png 2x
+							"
+							alt="tools"
 						/>
 						<div
 							class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6 max-sm:order-1 max-sm:pb-2"
 						>
-							<p
+							<h3
 								class="card-title text-[1.5rem] text-orange-950 tracking-0.24 max-sm:text-base"
 							>
 								Meet the most advanced annotation tool
-							</p>
+							</h3>
 							<p class="leading-5.5 text-orange-900 font-medium mt-3">
 								Get your message across with a powerful annotation toolkit,
 								which includes <br class="max-sm:hidden" />arrow, text,
@@ -1631,37 +1751,50 @@
 				<div class="container">
 					<div class="max-w-[44.18rem] mx-auto">
 						<button
-							class="btn-long mx-auto mb-4 bg-blue-500 tracking-0.36 wow animate__animated animate__slideInUp"
+							class="btn-long mx-auto mb-4 bg-blue-500 tracking-0.36 wow animate__animated animate__fadeInAndSlideInUp"
 							data-wow-delay=".2s"
 						>
 							File Sharing & Collaboration
 							<svg
-								width="13"
-								height="12"
-								viewBox="0 0 13 12"
+								width="17"
+								height="16"
+								viewBox="0 0 17 16"
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<g clip-path="url(#clip0_4582_2289)">
-									<path
-										d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
-										stroke="white"
-										stroke-width="1.24444"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-									<path
-										d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
-										stroke="white"
-										stroke-width="1.24444"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-									/>
-								</g>
+								<path
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="#735CFF"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="url(#paint0_linear_743_13469)"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+								<path
+									d="M3.83398 7.99998H13.1673M13.1673 7.99998L8.50065 3.33331M13.1673 7.99998L8.50065 12.6666"
+									stroke="white"
+									stroke-width="1.24444"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
 								<defs>
-									<clipPath id="clip0_4582_2289">
-										<rect width="13" height="12" fill="white" />
-									</clipPath>
+									<linearGradient
+										id="paint0_linear_743_13469"
+										x1="8.50065"
+										y1="3.33331"
+										x2="9"
+										y2="13.0003"
+										gradientUnits="userSpaceOnUse"
+									>
+										<stop stop-color="#B459EB" stop-opacity="0" />
+										<stop offset="1" stop-color="#BC59EB" />
+									</linearGradient>
 								</defs>
 							</svg>
 						</button>
@@ -1686,10 +1819,10 @@
 						class="mt-15.5 shadow-card rounded-2.5xl card-gradient-blue bg-no-repeat flex relative z-1 max-md:flex-wrap"
 					>
 						<div
-							class="py-16 pl-16 max-w-[30.68rem] max-md:basis-full max-md:order-2 max-md:px-5 max-md:pb-6 max-md:pt-0"
+							class="py-16 pl-16 max-w-[30.68rem] max-md:max-w-full max-md:basis-full max-md:order-2 max-md:px-5 max-md:pb-6 max-md:pt-7"
 						>
 							<h3 class="leading-9.5 text-blue-1000 max-sm:leading-[20.8px]">
-								Get to final faster with <br />
+								Get to final faster with <br class="max-md:hidden" />
 								reviews and approvals
 							</h3>
 							<p
@@ -1710,10 +1843,13 @@
 								<div class="flex gap-4 items-center mt-5">
 									<div class="block size-13 rounded-xl overflow-hidden">
 										<img
-											loading="lazy"
-											class="size-full object-cover"
-											src="./assets/images/review-avatar-will.png"
+											class="size-full object-cover lazy-image"
+											data-src="./assets/images/review-avatar4.png"
 											alt="Avatar"
+											data-srcset="
+												./assets/images/review-avatar4.png    1x,
+												./assets/images/review-avatar4-2x.png 2x
+											"
 										/>
 									</div>
 									<div class="-mt-[2px]">
@@ -1730,14 +1866,24 @@
 							</div>
 						</div>
 						<div
-							class="h-[512px] w-[783px] absolute -right-[9.4375rem] top-1/2 -translate-y-1/2 flex-grow flex items-center max-xl:w-[50vw] max-xl:-right-[6vw] max-md:relative max-md:max-w-[97%] max-md:top-auto max-md:right-auto max-md:translate-y-0 max-md:order-1 max-md:mr-0 max-md:h-auto"
+							class="flex-grow flex items-center max-md:w-full max-md:order-1 relative max-md:px-5 max-md:pt-5"
 						>
-							<img
-								loading="lazy"
-								class="max-h-full"
-								src="./assets/images/card-reviews.png"
-								alt="reviews"
-							/>
+							<div
+								class="absolute top-1/2 -translate-y-1/2 -right-[12%] max-h-[401px] w-[679px] max-w-full shadow-video border border-gray-130 rounded-xl max-md:top-auto max-md:right-auto max-md:mr-0 max-md:h-auto max-md:translate-y-0 max-md:relative"
+							>
+								<div
+									class="absolute w-[120%] h-[130%] left-0 top-1/2 -translate-y-[46%] bg-card-right-blue bg-no-repeat bg-center bg-contain -z-1"
+								></div>
+								<img
+									class="object-contain max-h-full rounded-xl overflow-hidden lazy-image"
+									data-src="./assets/images/card-reviews.png"
+									data-srcset="
+										./assets/images/card-reviews.png    1x,
+										./assets/images/card-reviews-2x.png 2x
+									"
+									alt="reviews"
+								/>
+							</div>
 						</div>
 					</div>
 					<div class="flex mt-5 gap-5 max-sm:flex-wrap">
@@ -1745,9 +1891,12 @@
 							class="card-gradient-blue shadow-card rounded-2.5xl overflow-hidden pt-[24%] flex flex-col justify-end relative basis-[55.9%] max-sm:basis-full max-sm:pt-6"
 						>
 							<img
-								loading="lazy"
-								class="absolute top-[15%] left-1/2 -translate-x-1/2 max-sm:relative max-sm:top-0 max-sm:left-auto max-sm:translate-x-0"
-								src="./assets/images/card-preview.png"
+								class="absolute top-[15%] left-1/2 -translate-x-1/2 max-sm:relative max-sm:top-0 max-sm:left-auto max-sm:translate-x-0 lazy-image"
+								data-src="./assets/images/card-preview.png"
+								data-srcset="
+									./assets/images/card-preview.png    1x,
+									./assets/images/card-preview-2x.png 2x
+								"
 								alt="preview"
 							/>
 							<div
@@ -1769,9 +1918,12 @@
 							class="card-gradient-blue shadow-card overflow-hidden rounded-2.5xl relative flex flex-col pb-[28%] basis-[44.1%] max-sm:basis-full max-sm:pb-0"
 						>
 							<img
-								loading="lazy"
-								class="absolute bottom-3 right-0 max-sm:relative max-sm:order-2 max-sm:bottom-0 max-sm:mt-6"
-								src="./assets/images/card-history.png"
+								class="absolute bottom-3 right-0 max-sm:relative max-sm:order-2 max-sm:bottom-0 max-sm:mt-6 lazy-image"
+								data-src="./assets/images/card-history.png"
+								data-srcset="
+									./assets/images/card-history.png    1x,
+									./assets/images/card-history-2x.png 2x
+								"
 								alt="history"
 							/>
 							<div class="relative z-1 p-10 pb-0 max-md:px-5 max-md:pt-6">
@@ -1793,9 +1945,12 @@
 							class="card-gradient-blue shadow-card rounded-2.5xl overflow-hidden pt-[24%] flex flex-col justify-end relative basis-[44.1%] max-sm:basis-full max-sm:pt-0"
 						>
 							<img
-								loading="lazy"
-								class="absolute top-0 left-0 max-sm:relative"
-								src="./assets/images/card-analytics.png"
+								class="absolute top-0 left-0 max-sm:relative lazy-image"
+								data-src="./assets/images/card-analytics.png"
+								data-srcset="
+									./assets/images/card-analytics.png    1x,
+									./assets/images/card-analytics-2x.png 2x
+								"
 								alt="analytics"
 							/>
 							<div
@@ -1817,9 +1972,12 @@
 							class="card-gradient-blue shadow-card overflow-hidden rounded-2.5xl flex flex-col relative pb-[28%] basis-[55.9%] max-sm:basis-full max-sm:pb-0"
 						>
 							<img
-								loading="lazy"
-								class="absolute bottom-0 right-0 max-sm:relative max-sm:order-2"
-								src="./assets/images/card-files.png"
+								class="absolute bottom-0 right-0 max-sm:relative max-sm:order-2 lazy-image"
+								data-src="./assets/images/card-files.png"
+								data-srcset="
+									./assets/images/card-files.png    1x,
+									./assets/images/card-files-2x.png 2x
+								"
 								alt="files"
 							/>
 							<div
@@ -1865,9 +2023,12 @@
 								and your team can be more productive than ever before.
 							</p>
 							<img
-								loading="lazy"
-								class="relative -mt-5 max-md:mt-5"
-								src="./assets/images/card-apps.png"
+								class="relative min-h-[100px] -mt-5 max-md:mt-5 lazy-image"
+								data-src="./assets/images/card-apps.png"
+								data-srcset="
+									./assets/images/card-apps.png    1x,
+									./assets/images/card-apps-2x.png 2x
+								"
 								alt="apps"
 							/>
 						</div>
@@ -1965,9 +2126,12 @@
 									class="absolute w-full top-0 right-0 bottom-0 left-0 rounded-2.5xl ring-inset ring-2.5 ring-black/20 z-1"
 								></div>
 								<img
-									loading="lazy"
-									class="absolute size-full -z-10"
-									src="./assets/images/dan.png"
+									class="absolute size-full -z-10 lazy-image"
+									data-src="./assets/images/card-review-avatar.png"
+									data-srcset="
+										./assets/images/card-review-avatar.png    1x,
+										./assets/images/card-review-avatar-2x.png 2x
+									"
 									alt="Dan Corkill"
 								/>
 							</div>
@@ -1987,10 +2151,13 @@
 							<div class="flex gap-4 items-center">
 								<div class="size-14 rounded-xl overflow-hidden">
 									<img
-										loading="lazy"
-										class="size-full object-cover"
-										src="./assets/images/review-blake.png"
-										alt="blake"
+										class="size-full object-cover lazy-image"
+										data-src="./assets/images/review-blake.png"
+										alt="Blake"
+										data-srcset="
+											./assets/images/review-blake.png    1x,
+											./assets/images/review-blake-2x.png 2x
+										"
 									/>
 								</div>
 								<div>
@@ -2054,10 +2221,13 @@
 							<div class="flex gap-4 items-center">
 								<div class="size-14 rounded-xl overflow-hidden">
 									<img
-										loading="lazy"
-										class="size-full object-cover"
-										src="./assets/images/review-qwantel.png"
-										alt="qwantel"
+										class="size-full object-cover lazy-image"
+										data-src="./assets/images/review-qwantel.png"
+										alt="Qwantel"
+										data-srcset="
+											./assets/images/review-qwantel.png    1x,
+											./assets/images/review-qwantel-2x.png 2x
+										"
 									/>
 								</div>
 								<div>
@@ -2120,10 +2290,13 @@
 							<div class="flex gap-4 items-center">
 								<div class="size-13 rounded-xl overflow-hidden">
 									<img
-										loading="lazy"
-										class="size-full object-cover"
-										src="./assets/images/review-dave.png"
+										class="size-full object-cover lazy-image"
+										data-src="./assets/images/review-dave.png"
 										alt="Dave"
+										data-srcset="
+											./assets/images/review-dave.png    1x,
+											./assets/images/review-dave-2x.png 2x
+										"
 									/>
 								</div>
 								<div>
@@ -2195,27 +2368,39 @@
 							class="h-[25%] banner-gradient-bottom absolute left-0 bottom-0 right-0 w-full z-1 rotate-180"
 						></div>
 						<img
-							loading="lazy"
-							class="max-w-[19.25rem] absolute left-7 top-5 max-sm:hidden"
-							src="./assets/images/banner/1.png"
+							class="max-w-[19.25rem] absolute left-7 top-5 max-sm:hidden lazy-image"
+							data-src="./assets/images/banner/1.png"
+							data-srcset="
+								./assets/images/banner/1.png    1x,
+								./assets/images/banner/1-2x.png 2x
+							"
 							alt="file 1"
 						/>
 						<img
-							loading="lazy"
-							class="max-w-[22.5rem] absolute -left-11 bottom-4 max-sm:-left-15.5"
-							src="./assets/images/banner/2.png"
+							class="max-w-[22.5rem] absolute -left-11 bottom-4 max-sm:-left-15.5 lazy-image"
+							data-src="./assets/images/banner/2.png"
+							data-srcset="
+								./assets/images/banner/2.png    1x,
+								./assets/images/banner/2-2x.png 2x
+							"
 							alt="file 2"
 						/>
 						<img
-							loading="lazy"
-							class="max-w-[25rem] absolute -right-24 top-0 max-sm:-right-36"
-							src="./assets/images/banner/3.png"
+							class="max-w-[20.375rem] absolute -right-3 top-7 max-sm:-right-16 lazy-image"
+							data-src="./assets/images/banner/3.png"
+							data-srcset="
+								./assets/images/banner/3.png    1x,
+								./assets/images/banner/3-2x.png 2x
+							"
 							alt="file 3"
 						/>
 						<img
-							loading="lazy"
-							class="max-w-[24rem] absolute right-0 bottom-0 max-sm:hidden"
-							src="./assets/images/banner/4.png"
+							class="max-w-[24rem] absolute right-0 bottom-0 max-sm:hidden lazy-image"
+							data-src="./assets/images/banner/4.png"
+							data-srcset="
+								./assets/images/banner/4.png    1x,
+								./assets/images/banner/4-2x.png 2x
+							"
 							alt="file 4"
 						/>
 						<div class="relative z-10 flex flex-col items-center">
@@ -2235,33 +2420,19 @@
 							>
 								Get Jumpshare Free
 								<svg
-									width="13"
-									height="12"
-									viewBox="0 0 13 12"
+									width="16"
+									height="17"
+									viewBox="0 0 16 17"
 									fill="none"
 									xmlns="http://www.w3.org/2000/svg"
 								>
-									<g clip-path="url(#clip0_4582_2289)">
-										<path
-											d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
-											stroke="white"
-											stroke-width="1.24444"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-										<path
-											d="M1.83398 5.99992H11.1673M11.1673 5.99992L6.50065 1.33325M11.1673 5.99992L6.50065 10.6666"
-											stroke="white"
-											stroke-width="1.24444"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-									</g>
-									<defs>
-										<clipPath id="clip0_4582_2289">
-											<rect width="13" height="12" fill="white" />
-										</clipPath>
-									</defs>
+									<path
+										d="M3.33398 8.50016H12.6673M12.6673 8.50016L8.00065 3.8335M12.6673 8.50016L8.00065 13.1668"
+										stroke="white"
+										stroke-width="1.24444"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									/>
 								</svg>
 							</button>
 						</div>
@@ -2286,7 +2457,7 @@
 							<li>
 								<a
 									href="#"
-									class="flex items-center justify-center rounded-full size-8 shadow-social"
+									class="flex items-center justify-center rounded-full size-8 shadow-social transition-all hover:bg-gray-100"
 									aria-label="Our Twitter"
 								>
 									<svg
@@ -2323,7 +2494,7 @@
 							<li>
 								<a
 									href="#"
-									class="flex items-center justify-center rounded-full size-8 shadow-social"
+									class="flex items-center justify-center rounded-full size-8 shadow-social transition-all hover:bg-gray-100"
 									aria-label="Our Facebook"
 								>
 									<svg
@@ -2580,6 +2751,38 @@
 	<script>
 		'use strict'
 		document.addEventListener('DOMContentLoaded', () => {
+			const lazyImages = document.querySelectorAll('.lazy-image')
+
+			if ('IntersectionObserver' in window) {
+				const imageObserver = new IntersectionObserver(
+					(entries, observer) => {
+						entries.forEach(entry => {
+							if (entry.isIntersecting) {
+								const img = entry.target
+								img.src = img.getAttribute('data-src')
+								img.srcset = img.getAttribute('data-srcset')
+								img.classList.remove('lazy-image')
+								observer.unobserve(img)
+							}
+						})
+					},
+					{
+						rootMargin: '700px', // Loading the image 700px before it is visible
+					}
+				)
+
+				lazyImages.forEach(image => {
+					imageObserver.observe(image)
+				})
+			} else {
+				// For older browsers that do not support IntersectionObserver
+				lazyImages.forEach(img => {
+					img.src = img.getAttribute('data-src')
+					img.srcset = img.getAttribute('data-srcset')
+					img.classList.remove('lazy-image')
+				})
+			}
+
 			// Hamburger
 			const hamburger = document.getElementById('menu-hamburger')
 			const headerMobile = document.querySelector('.header-mobile')
@@ -2605,19 +2808,31 @@
 			// Wow animate
 			new WOW().init()
 
-			// Header Scroll animate
+			// Header animate
 			const siteHeader = document.getElementById('header')
 			const siteHeaderHeight = siteHeader.offsetHeight
+			let lastScrollTop = 0
+
 			const setActiveHeader = () => {
 				const top =
 					document.documentElement.scrollTop || document.body.scrollTop
-				if (top > siteHeaderHeight) {
-					siteHeader.classList.add('active-header')
+				const firstSectionHeight = window.innerHeight // 100vh
+
+				if (top > firstSectionHeight) {
+					if (top > lastScrollTop) {
+						siteHeader.classList.remove('active-header')
+					} else {
+						siteHeader.classList.add('active-header')
+					}
 				} else {
-					siteHeader.classList.remove('active-header')
+					siteHeader.classList.add('active-header')
 				}
+
+				lastScrollTop = top <= 0 ? 0 : top
 			}
+
 			setActiveHeader()
+
 			window.addEventListener(
 				'scroll',
 				() => {
