@@ -3,8 +3,59 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Jumpshare | Sass Product</title>
-		<meta name="description" content="Jumpshare | Saas home page" />
+		<title>Jumpshare: Screen Recording, Screenshots & GIFs. Together.</title>
+		<meta
+			name="description"
+			content="Jumpshare helps you and your team communicate better with screen recordings, screenshots, GIFs, file sharing, and more, all in one platform."
+		/>
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			href="https://jumpshare.fltr.club/assets/favicon.ico"
+			type="image/x-icon"
+		/>
+		<link
+			rel="icon"
+			href="https://jumpshare.fltr.club/assets/favicon.png"
+			type="image/png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="https://jumpshare.fltr.club/assets/favicon.png"
+		/>
+
+		<!-- Open Graph meta tags -->
+		<meta
+			property="og:title"
+			content="Jumpshare: Screen Recording, Screenshots & GIFs. Together."
+		/>
+		<meta
+			property="og:description"
+			content="Jumpshare helps you and your team communicate better with screen recordings, screenshots, GIFs, file sharing, and more, all in one platform."
+		/>
+		<meta
+			property="og:image"
+			content="https://jumpshare.fltr.club/assets/og_image.png"
+		/>
+		<meta property="og:url" content="https://jumpshare.fltr.club/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Jumpshare" />
+
+		<!-- Optional: Twitter Card meta tags -->
+		<meta
+			name="twitter:card"
+			content="https://jumpshare.fltr.club/assets/og_image.png"
+		/>
+		<meta
+			name="twitter:title"
+			content="Jumpshare: Screen Recording, Screenshots & GIFs. Together."
+		/>
+		<meta
+			name="twitter:description"
+			content="Jumpshare helps you and your team communicate better with screen recordings, screenshots, GIFs, file sharing, and more, all in one platform."
+		/>
+		<meta name="twitter:image" content="./assets/og_image.png" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -42,7 +93,7 @@
 	<body>
 		<header
 			id="header"
-			class="active-header fixed -top-full left-1/2 -translate-x-1/2 z-50 transition-all w-full max-lg:bg-white duration-500"
+			class="fixed top-0 left-1/2 -translate-x-1/2 z-50 transition-all w-full max-lg:bg-white"
 		>
 			<div class="container flex justify-between items-center py-4.5">
 				<a href="/">
@@ -646,7 +697,7 @@
 				</div>
 			</div>
 		</header>
-		<main>
+		<main class="main-body">
 			<!-- Main Section -->
 			<section class="relative">
 				<div
@@ -1041,7 +1092,6 @@
 					<div class="max-w-[50rem] mx-auto">
 						<button
 							class="btn-long mx-auto mb-4 wow animate__animated animate__fadeInAndSlideInUp"
-							data-wow-delay=".2s"
 							style="opacity: 0"
 						>
 							Screen Recording
@@ -1340,7 +1390,6 @@
 					<div class="max-w-[44.8rem] mx-auto">
 						<button
 							class="btn-long mx-auto mb-4 btn-gradient tracking-0.36 wow animate__animated animate__fadeInAndSlideInUp"
-							data-wow-delay=".2s"
 						>
 							Jumpshare AI
 							<svg
@@ -1511,7 +1560,6 @@
 					<div class="max-w-[44.18rem] mx-auto">
 						<button
 							class="btn-long mx-auto mb-2 bg-orange-500 wow animate__animated animate__fadeInAndSlideInUp"
-							data-wow-delay=".2s"
 						>
 							Screenshot Capture
 							<svg
@@ -1752,7 +1800,6 @@
 					<div class="max-w-[44.18rem] mx-auto">
 						<button
 							class="btn-long mx-auto mb-4 bg-blue-500 tracking-0.36 wow animate__animated animate__fadeInAndSlideInUp"
-							data-wow-delay=".2s"
 						>
 							File Sharing & Collaboration
 							<svg
@@ -2808,31 +2855,19 @@
 			// Wow animate
 			new WOW().init()
 
-			// Header animate
+			// Header Scroll animate
 			const siteHeader = document.getElementById('header')
 			const siteHeaderHeight = siteHeader.offsetHeight
-			let lastScrollTop = 0
-
 			const setActiveHeader = () => {
 				const top =
 					document.documentElement.scrollTop || document.body.scrollTop
-				const firstSectionHeight = window.innerHeight // 100vh
-
-				if (top > firstSectionHeight) {
-					if (top > lastScrollTop) {
-						siteHeader.classList.remove('active-header')
-					} else {
-						siteHeader.classList.add('active-header')
-					}
-				} else {
+				if (top > siteHeaderHeight) {
 					siteHeader.classList.add('active-header')
+				} else {
+					siteHeader.classList.remove('active-header')
 				}
-
-				lastScrollTop = top <= 0 ? 0 : top
 			}
-
 			setActiveHeader()
-
 			window.addEventListener(
 				'scroll',
 				() => {

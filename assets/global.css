@@ -55,14 +55,9 @@
 		0px 11px 10.7px -6px rgba(18, 35, 69, 0.04);
 }
 
-.btn-long.animate__slideInUp {
-	opacity: 1 !important;
-}
-
 .animate__fadeInAndSlideInUp {
 	animation:
-		fadeIn 1s,
-		slideInUp 1s;
+		fadeIn 0.4s,
+		slideInUp 0.5s;
 	animation-fill-mode: forwards;
-	animation-delay: 0s, 1s;
 }
