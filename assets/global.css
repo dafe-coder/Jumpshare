@@ -61,3 +61,17 @@
 		slideInUp 0.5s;
 	animation-fill-mode: forwards;
 }
+
+.tham-w-6 .tham-inner,
+.tham-w-6 .tham-inner::after,
+.tham-w-6 .tham-inner::before {
+	@apply h-0.5 w-5 bg-blue-900;
+}
+
+.tham-w-6 .tham-box {
+	@apply w-5;
+}
+
+.tham:hover {
+	opacity: 1 !important;
+}
