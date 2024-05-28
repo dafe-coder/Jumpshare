@@ -1897,6 +1897,39 @@ html {
   border-radius: 0.375rem;
   color: rgba(18, 35, 69, 0.8);
   gap: 0.5rem;
+  position: relative;
+}
+
+.btn-hover-right {
+  padding-right: 2.75rem !important;
+}
+
+.btn-hover-right svg {
+  position: absolute;
+  transition: all ease-in-out .2s;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-hover-right:hover svg {
+  right: 15px;
+}
+
+.btn-long-hover-right {
+  padding-right: 2.5rem !important;
+}
+
+.btn-long-hover-right svg {
+  position: absolute;
+  transition: all ease-in-out .2s;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-long-hover-right:hover svg {
+  right: 0.75rem;
 }
 
 .btn-border {
@@ -2112,8 +2145,8 @@ html {
   bottom: -0.375rem;
 }
 
-.-bottom-9 {
-  bottom: -2.25rem;
+.-bottom-11 {
+  bottom: -2.75rem;
 }
 
 .-left-11 {
@@ -2351,6 +2384,10 @@ html {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .ml-25 {
@@ -4848,6 +4885,10 @@ html {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+.text-black\/80 {
+  color: rgb(0 0 0 / 0.8);
+}
+
 .text-blue-1000 {
   --tw-text-opacity: 1;
   color: rgb(9 19 41 / var(--tw-text-opacity));
@@ -5475,6 +5516,11 @@ html {
 
 .hover\:font-bold:hover {
   font-weight: 700;
+}
+
+.hover\:text-black:hover {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {

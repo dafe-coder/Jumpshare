@@ -191,6 +191,37 @@ module.exports = {
 					borderRadius: '0.375rem',
 					color: theme('colors.gray[700]'),
 					gap: '0.5rem',
+					position: 'relative',
+				},
+				'.btn-hover-right': {
+					paddingRight: '2.75rem !important',
+					svg: {
+						position: 'absolute',
+						transition: 'all ease-in-out .2s',
+						right: '1.25rem',
+						top: '50%',
+						transform: 'translateY(-50%)',
+					},
+					'&:hover': {
+						svg: {
+							right: '15px',
+						},
+					},
+				},
+				'.btn-long-hover-right': {
+					paddingRight: '2.5rem !important',
+					svg: {
+						position: 'absolute',
+						transition: 'all ease-in-out .2s',
+						right: '1rem',
+						top: '50%',
+						transform: 'translateY(-50%)',
+					},
+					'&:hover': {
+						svg: {
+							right: '0.75rem',
+						},
+					},
 				},
 				'.btn-border': {
 					boxShadow:
