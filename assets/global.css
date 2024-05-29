@@ -7,7 +7,12 @@
 		font-family: Inter;
 		-webkit-font-smoothing: antialiased; /* Smoothing improvement */
 		-moz-osx-font-smoothing: grayscale;
+		-webkit-overflow-scrolling: touch;
 		@apply text-blue-900 tracking-normal;
+	}
+	body {
+		background-color: #ffffff; /* Цвет фона для body */
+		-webkit-overflow-scrolling: touch;
 	}
 	@media screen and (max-width: 640px) {
 		p {
@@ -65,13 +70,21 @@
 .tham-w-6 .tham-inner,
 .tham-w-6 .tham-inner::after,
 .tham-w-6 .tham-inner::before {
-	@apply h-0.5 w-5 bg-blue-900;
+	@apply h-0.5 w-[1.125rem] bg-black rounded-lg;
 }
 
 .tham-w-6 .tham-box {
-	@apply w-5;
+	@apply w-[1.125rem];
 }
 
 .tham:hover {
 	opacity: 1 !important;
+}
+
+.tham-w-6 .tham-inner::before {
+	top: -5px;
+}
+
+.tham-w-6 .tham-inner::after {
+	bottom: -5px;
 }

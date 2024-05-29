@@ -8,6 +8,7 @@ module.exports = {
 	theme: {
 		screens: {
 			...defaultTheme.screens,
+			md: '790px', // phones
 			xs: '480px', // phones
 		},
 		container: {
@@ -243,6 +244,7 @@ module.exports = {
 					},
 				},
 				'.btn-long': {
+					position: 'relative',
 					display: 'flex',
 					alignItems: 'center',
 					height: '2.25rem',
@@ -342,8 +344,8 @@ module.exports = {
 					fontFamily: 'GeneralSans-semibold',
 					color: theme('colors.blue[950]'),
 					'@media not all and (min-width: 480px)': {
-						fontSize: '1rem',
-						lineHeight: '1.3rem',
+						fontSize: '1rem !important',
+						lineHeight: '1.3rem !important',
 					},
 				},
 			}),
@@ -372,7 +374,7 @@ module.exports = {
 						lineHeight: '3.75rem',
 						letterSpacing: '-1.44px',
 						color: theme('colors.blue[950]'),
-						'@media not all and (min-width: 480px)': {
+						'@media not all and (min-width: 640px)': {
 							fontFamily: 'GeneralSans-medium',
 							fontSize: '2.25rem',
 							lineHeight: '2.8125rem',
@@ -386,9 +388,9 @@ module.exports = {
 						lineHeight: '2.4rem',
 						letterSpacing: '-0.32px',
 						color: theme('colors.blue[950]'),
-						'@media not all and (min-width: 480px)': {
-							fontSize: '1rem',
-							lineHeight: '1.3rem',
+						'@media not all and (min-width: 640px)': {
+							fontSize: '1.4rem',
+							lineHeight: '1.7rem !important',
 						},
 					},
 					h4: {
@@ -397,7 +399,7 @@ module.exports = {
 						lineHeight: '1.65rem',
 						fontFamily: 'GeneralSans-semibold',
 						color: theme('colors.blue[950]'),
-						'@media not all and (min-width: 480px)': {
+						'@media not all and (min-width: 640px)': {
 							fontSize: '1rem',
 							lineHeight: '1.3rem',
 						},
