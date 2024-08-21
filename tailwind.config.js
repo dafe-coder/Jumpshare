@@ -97,6 +97,7 @@ module.exports = {
 			lineHeight: {
 				5.5: '1.4rem', // 22.4px
 				6: '1.575rem', // 25.2px
+				6.5: '1.6875rem', // 27px
 				9.5: '2.4rem', // 38.4px
 			},
 			zIndex: {
@@ -113,6 +114,7 @@ module.exports = {
 				0.18: '-0.18px',
 				0.22: '-0.22px',
 				0.24: '-0.24px',
+				0.25: '-0.25px',
 				normal: '-0.32px',
 				base: 'normal',
 				0.36: '-0.36px',
@@ -142,6 +144,7 @@ module.exports = {
 					'0px 2px 7px -1px rgba(15, 28, 53, 0.04),inset 0px 3px 0px -1px rgba(255, 255, 255, 0.46),inset 0px 0px 0px 1px rgba(18, 35, 69, 0.1),0px 11.47px 23.78px -5.02px rgba(18, 35, 69, 0.07)',
 				video:
 					'0px 11.4701px 23.7768px -5.01619px rgba(18, 35, 69, 0.07), inset 0px -0.866597px 0.866597px 0.866597px rgba(17, 34, 69, 0.12)',
+				'avatar': '0 7.3px 12.2px -3.8px rgba(18, 35, 69, 0.2), 0 16.4px 35.9px -4.9px rgba(18, 35, 69, 0.09)'
 			},
 			dropShadow: {
 				'3xl':
@@ -149,7 +152,9 @@ module.exports = {
 			},
 			spacing: {
 				4.5: '1.125rem', // 18px
+				7.5: '1.875rem', // 30px
 				13: '3.25rem', // 52px
+				15: '3.75rem', // 60px
 				15.5: '3.875rem', // 62px
 				16.5: '4.25rem', // 68px
 				17: '4.5rem', // 72px
@@ -279,12 +284,6 @@ module.exports = {
 						borderRadius: '9999px',
 						overflow: 'hidden',
 						backgroundColor: theme('colors.yellow[500]'),
-						// '@media not all and (min-width: 768px)': {
-						// 	display: 'none',
-						// 	'&:first-child': {
-						// 		display: 'block',
-						// 	},
-						// },
 						'&:nth-child(1)': {
 							zIndex: 5,
 						},
@@ -306,6 +305,21 @@ module.exports = {
 						height: '100%',
 						width: '100%',
 					},
+				},
+				'.tag': {
+					display: 'flex',
+					width: 'max-content',
+					justifyContent: 'center',
+					alignItems: 'center',
+					gap: '0.625rem', // 10px
+					fontSize: '1rem', // 16px 
+					color: theme('colors.blue[900]'),
+					fontWeight: 500,
+					fontFamily: 'GeneralSans-medium',
+					borderRadius: '99999px',
+					padding: '0 1rem', // 16px
+					height: '2.25rem', // 36px
+					border: `2px solid ${theme('colors.blue[900]')}`
 				},
 				'.main-gradient': {
 					backgroundImage:
@@ -366,7 +380,7 @@ module.exports = {
 					},
 					h2: {
 						fontFamily: 'GeneralSans-semibold',
-						fontSize: '3rem',
+						fontSize: '3rem', // 48px
 						textAlign: 'center',
 						fontWeight: 600,
 						fontStretch: 'normal',
