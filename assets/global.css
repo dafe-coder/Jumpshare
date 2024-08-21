@@ -8,6 +8,7 @@
 		-webkit-font-smoothing: antialiased; /* Smoothing improvement */
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-overflow-scrolling: touch;
+		font-size: 16px;
 		@apply text-blue-900 tracking-normal;
 	}
 	body {
