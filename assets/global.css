@@ -15,7 +15,7 @@
 		background-color: #ffffff; /* Цвет фона для body */
 		-webkit-overflow-scrolling: touch;
 	}
-	@media screen and (max-width: 640px) {
+	@media screen and (max-width: 480px) {
 		p {
 			font-size: 14px;
 			line-height: 19.6px;

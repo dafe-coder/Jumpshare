@@ -92,6 +92,7 @@ module.exports = {
 			},
 			fontSize: {
 				'2.5xl': ['1.75rem', '2.45rem'],
+				sm: ['15px', '20px'],
 				m: ['0.9375rem', '1.5rem'],
 				s: ['0.8125rem', '1.0562rem'],
 			},

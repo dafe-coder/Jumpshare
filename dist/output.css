@@ -534,7 +534,7 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 480px) {
   p {
     font-size: 14px;
     line-height: 19.6px;
@@ -2821,6 +2821,10 @@ body {
   height: 485px;
 }
 
+.h-\[532px\] {
+  height: 532px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -2984,6 +2988,18 @@ body {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[29rem\] {
+  width: 29rem;
+}
+
+.w-\[26rem\] {
+  width: 26rem;
+}
+
+.w-\[28rem\] {
+  width: 28rem;
 }
 
 .min-w-\[28\.25rem\] {
@@ -5070,8 +5086,8 @@ body {
 }
 
 .text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 15px;
+  line-height: 20px;
 }
 
 .text-xl {
@@ -6528,16 +6544,12 @@ body {
     left: -0px;
   }
 
-  .max-sm\:-left-15 {
-    left: -3.75rem;
-  }
-
-  .max-sm\:-left-15\.5 {
-    left: -3.875rem;
-  }
-
   .max-sm\:bottom-0 {
     bottom: 0px;
+  }
+
+  .max-sm\:left-0 {
+    left: 0px;
   }
 
   .max-sm\:left-auto {
@@ -6812,8 +6824,8 @@ body {
   }
 
   .max-sm\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 15px;
+    line-height: 20px;
   }
 
   .max-sm\:text-xs {
@@ -6838,6 +6850,10 @@ body {
   .max-xs\:mx-auto {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .max-xs\:mb-4 {
+    margin-bottom: 1rem;
   }
 
   .max-xs\:h-9 {
@@ -6890,9 +6906,14 @@ body {
     font-size: 2.25rem;
   }
 
+  .max-xs\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
   .max-xs\:text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    font-size: 15px;
+    line-height: 20px;
   }
 }
 
