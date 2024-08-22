@@ -37,13 +37,10 @@ module.exports = {
 				300: '#999cb2',
 				400: '#59657E',
 				500: '#495057',
-				700: 'rgba(18, 35, 69, 0.8)',
-				850: 'rgba(18, 35, 69, 0.08)',
 			},
 			orange: {
 				100: '#faf6f3',
 				500: '#FE6E2B',
-				900: 'rgba(30, 12, 4, 0.8)',
 				950: '#1e0c04',
 			},
 			blue: {
@@ -53,13 +50,11 @@ module.exports = {
 				700: '#1c5ddf',
 				900: '#122345',
 				950: '#130c3e',
-				970: 'rgba(9, 19, 41, 0.8)',
 				1000: '#091329',
 			},
 			violet: {
 				500: '#6259EB',
 				600: '#9452FF',
-				800: '#130c3ecc',
 				850: '#181729',
 				900: '#060515',
 			},
@@ -92,12 +87,13 @@ module.exports = {
 			},
 			fontSize: {
 				'2.5xl': ['1.75rem', '2.45rem'],
+				lg: ['1.125rem', '1.6875rem'],
 				sm: ['15px', '20px'],
 				m: ['0.9375rem', '1.5rem'],
 				s: ['0.8125rem', '1.0562rem'],
 			},
 			lineHeight: {
-				5.5: '1.4rem', // 22.4px
+				5.5: '1.42rem', // 22.72px
 				6: '1.575rem', // 25.2px
 				6.5: '1.6875rem', // 27px
 				9.5: '2.4rem', // 38.4px
@@ -110,22 +106,11 @@ module.exports = {
 			},
 			letterSpacing: {
 				0.4: '-0.4px',
-				0.11: '-0.11px',
-				0.13: '-0.13px',
-				0.14: '-0.14px',
-				0.16: '-0.16px',
-				0.18: '-0.18px',
-				0.2: '-0.2px',
 				0.22: '-0.22px',
-				0.24: '-0.24px',
-				0.25: '-0.25px',
 				normal: '-0.32px',
 				base: 'normal',
-				0.36: '-0.36px',
 				0.56: '-0.56px',
-				0.96: '-0.96px',
 				1.44: '-1.44px',
-				1.56: '-1.56px',
 			},
 			borderRadius: {
 				'2.5xl': '20px',
@@ -267,7 +252,7 @@ module.exports = {
 					fontSize: '1.125rem',
 					fontWeight: 500,
 					lineHeight: '1.25rem',
-					letterSpacing: '-0.36px',
+					letterSpacing: '-0.32px',
 				},
 				'.btn-gradient': {
 					backgroundImage:
@@ -360,7 +345,6 @@ module.exports = {
 				},
 				'.card-title': {
 					fontSize: '1.375rem',
-					letterSpacing: '-0.22px',
 					lineHeight: '1.65rem',
 					fontFamily: 'GeneralSans-semibold',
 					color: theme('colors.blue[950]'),
@@ -407,7 +391,7 @@ module.exports = {
 						fontSize: '2rem',
 						fontWeight: 600,
 						lineHeight: '2.4rem',
-						letterSpacing: '-0.32px',
+						letterSpacing: '-0.22px',
 						color: theme('colors.blue[950]'),
 						'@media not all and (min-width: 640px)': {
 							fontSize: '1.4rem',
