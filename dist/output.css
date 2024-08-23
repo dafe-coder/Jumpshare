@@ -2365,6 +2365,14 @@ body {
   bottom: 4.5rem;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.bottom-6 {
+  bottom: 1.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -2620,6 +2628,14 @@ body {
 
 .mt-9 {
   margin-top: 2.25rem;
+}
+
+.-mt-17 {
+  margin-top: -4.5rem;
+}
+
+.-mt-20 {
+  margin-top: -5rem;
 }
 
 .box-border {
