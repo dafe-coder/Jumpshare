@@ -87,13 +87,15 @@ module.exports = {
 			},
 			fontSize: {
 				'2.5xl': ['1.75rem', '2.45rem'],
+				base: ['1rem', '1.42rem'],
 				lg: ['1.125rem', '1.6875rem'],
-				sm: ['15px', '20px'],
+				sm: ['0.9375rem', '1.25rem'],
 				m: ['0.9375rem', '1.5rem'],
 				s: ['0.8125rem', '1.0562rem'],
 			},
 			lineHeight: {
 				5.5: '1.42rem', // 22.72px
+				5.8: '1.5rem', // 24px
 				6: '1.575rem', // 25.2px
 				6.5: '1.6875rem', // 27px
 				9.5: '2.4rem', // 38.4px

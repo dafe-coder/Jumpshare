@@ -11,14 +11,16 @@
 		font-size: 16px;
 		@apply text-blue-900 tracking-normal;
 	}
+	p {
+		@apply text-base/5.5;
+	}
 	body {
 		background-color: #ffffff; /* Цвет фона для body */
 		-webkit-overflow-scrolling: touch;
 	}
 	@media screen and (max-width: 480px) {
 		p {
-			font-size: 14px;
-			line-height: 19.6px;
+			@apply text-sm/5;
 		}
 	}
 	@font-face {
