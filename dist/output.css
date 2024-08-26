@@ -2871,6 +2871,14 @@ body {
   height: 246px;
 }
 
+.h-\[207px\] {
+  height: 207px;
+}
+
+.h-\[12\.9375rem\] {
+  height: 12.9375rem;
+}
+
 .max-h-7 {
   max-height: 1.75rem;
 }
@@ -2913,6 +2921,10 @@ body {
 
 .min-h-\[246px\] {
   min-height: 246px;
+}
+
+.min-h-\[12\.9375rem\] {
+  min-height: 12.9375rem;
 }
 
 .w-0 {
