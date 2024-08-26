@@ -17,6 +17,10 @@
 	body {
 		background-color: #ffffff; /* Цвет фона для body */
 		-webkit-overflow-scrolling: touch;
+		@apply flex flex-col min-h-screen;
+	}
+	.main-body {
+		@apply flex-grow;
 	}
 	@media screen and (max-width: 480px) {
 		p {
