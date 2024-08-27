@@ -2340,6 +2340,10 @@ body {
   top: 1.25rem;
 }
 
+.top-52 {
+  top: 13rem;
+}
+
 .top-7 {
   top: 1.75rem;
 }
@@ -2350,14 +2354,6 @@ body {
 
 .top-\[calc\(100\%_\+_6px\)\] {
   top: calc(100% + 6px);
-}
-
-.-top-52 {
-  top: -13rem;
-}
-
-.top-52 {
-  top: 13rem;
 }
 
 .isolate {
@@ -2445,6 +2441,14 @@ body {
   margin-bottom: -1px;
 }
 
+.-ml-0 {
+  margin-left: -0px;
+}
+
+.-ml-0\.5 {
+  margin-left: -0.125rem;
+}
+
 .-ml-1 {
   margin-left: -0.25rem;
 }
@@ -2477,8 +2481,8 @@ body {
   margin-bottom: 0px;
 }
 
-.mb-17 {
-  margin-bottom: 4.5rem;
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mb-2 {
@@ -2561,6 +2565,10 @@ body {
   margin-top: 3.25rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .mt-15 {
   margin-top: 3.75rem;
 }
@@ -2619,26 +2627,6 @@ body {
 
 .mt-9 {
   margin-top: 2.25rem;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
-.mt-14 {
-  margin-top: 3.5rem;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
-}
-
-.-ml-0 {
-  margin-left: -0px;
-}
-
-.-ml-0\.5 {
-  margin-left: -0.125rem;
 }
 
 .box-border {
@@ -2839,6 +2827,10 @@ body {
   height: 16.25rem;
 }
 
+.h-\[246px\] {
+  height: 246px;
+}
+
 .h-\[25\%\] {
   height: 25%;
 }
@@ -2865,18 +2857,6 @@ body {
 
 .h-full {
   height: 100%;
-}
-
-.h-\[246px\] {
-  height: 246px;
-}
-
-.h-\[207px\] {
-  height: 207px;
-}
-
-.h-\[12\.9375rem\] {
-  height: 12.9375rem;
 }
 
 .max-h-7 {
@@ -2917,10 +2897,6 @@ body {
 
 .min-h-\[100px\] {
   min-height: 100px;
-}
-
-.min-h-\[246px\] {
-  min-height: 246px;
 }
 
 .min-h-\[12\.9375rem\] {
@@ -3240,6 +3216,10 @@ body {
   max-width: 47.8rem;
 }
 
+.max-w-\[500px\] {
+  max-width: 500px;
+}
+
 .max-w-\[50rem\] {
   max-width: 50rem;
 }
@@ -3266,14 +3246,6 @@ body {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-\[600px\] {
-  max-width: 600px;
-}
-
-.max-w-\[500px\] {
-  max-width: 500px;
 }
 
 .flex-shrink {
@@ -4323,10 +4295,6 @@ body {
   border-radius: 0.75rem;
 }
 
-.rounded-2xl {
-  border-radius: 1rem;
-}
-
 .rounded-b {
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -4783,6 +4751,11 @@ body {
   padding-right: 1.75rem;
 }
 
+.px-7\.5 {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -4863,11 +4836,6 @@ body {
   padding-bottom: 1.125rem;
 }
 
-.px-7\.5 {
-  padding-left: 1.875rem;
-  padding-right: 1.875rem;
-}
-
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -4876,8 +4844,16 @@ body {
   padding-bottom: 3.25rem;
 }
 
+.pb-17 {
+  padding-bottom: 4.5rem;
+}
+
 .pb-22 {
   padding-bottom: 5.625rem;
+}
+
+.pb-24 {
+  padding-bottom: 6rem;
 }
 
 .pb-30 {
@@ -4996,6 +4972,10 @@ body {
   padding-top: 0px;
 }
 
+.pt-2 {
+  padding-top: 0.5rem;
+}
+
 .pt-20 {
   padding-top: 5rem;
 }
@@ -5042,22 +5022,6 @@ body {
 
 .pt-\[47\%\] {
   padding-top: 47%;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
-}
-
-.pb-24 {
-  padding-bottom: 6rem;
-}
-
-.pb-17 {
-  padding-bottom: 4.5rem;
-}
-
-.pt-2 {
-  padding-top: 0.5rem;
 }
 
 .text-left {
@@ -5155,6 +5119,11 @@ body {
   line-height: 1.42rem;
 }
 
+.text-base\/\[1\.925rem\] {
+  font-size: 1rem;
+  line-height: 1.925rem;
+}
+
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.6875rem;
@@ -5198,31 +5167,6 @@ body {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-base\/\[26px\] {
-  font-size: 1rem;
-  line-height: 26px;
-}
-
-.text-base\/\[1\.625rem\] {
-  font-size: 1rem;
-  line-height: 1.625rem;
-}
-
-.text-base\/\[1\.825rem\] {
-  font-size: 1rem;
-  line-height: 1.825rem;
-}
-
-.text-base\/\[1\.925rem\] {
-  font-size: 1rem;
-  line-height: 1.925rem;
-}
-
-.text-base\/\[2rem\] {
-  font-size: 1rem;
-  line-height: 2rem;
 }
 
 .font-bold {
@@ -5422,11 +5366,6 @@ body {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-gray-130 {
-  --tw-text-opacity: 1;
-  color: rgb(217 222 231 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -6415,6 +6354,10 @@ body {
     top: auto;
   }
 
+  .max-md\:top-\[3rem\] {
+    top: 3rem;
+  }
+
   .max-md\:order-1 {
     order: 1;
   }
@@ -6495,14 +6438,6 @@ body {
   .max-md\:translate-y-0 {
     --tw-translate-y: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
-  .max-md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .max-md\:grid-cols-1 {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .max-md\:flex-wrap {
