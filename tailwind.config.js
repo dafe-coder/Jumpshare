@@ -3,6 +3,15 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
 const plugin = require('tailwindcss/plugin')
 
+const hexToRgb = hex => {
+	const bigint = parseInt(hex.substring(1), 16)
+	const r = (bigint >> 16) & 255
+	const g = (bigint >> 8) & 255
+	const b = bigint & 255
+
+	return `${r}, ${g}, ${b}`
+}
+
 module.exports = {
 	content: ['./**/*.{html,js}'],
 	theme: {
@@ -38,6 +47,9 @@ module.exports = {
 				400: '#59657E',
 				500: '#495057',
 			},
+			yellow: {
+				500: '#ffbc03',
+			},
 			orange: {
 				100: '#faf6f3',
 				500: '#FE6E2B',
@@ -57,6 +69,10 @@ module.exports = {
 				600: '#9452FF',
 				850: '#181729',
 				900: '#060515',
+			},
+			green: {
+				25: '#D1FAE5',
+				500: '#047857',
 			},
 		},
 		extend: {
@@ -144,6 +160,7 @@ module.exports = {
 			},
 			spacing: {
 				4.5: '1.125rem', // 18px
+				6.5: '1.625rem', // 26px
 				7.5: '1.875rem', // 30px
 				13: '3.25rem', // 52px
 				15: '3.75rem', // 60px
@@ -166,6 +183,9 @@ module.exports = {
 				'banner-round': "url('/assets/images/banner-bg.png')",
 				// 'main-card-gradient': "url('/assets/images/bg-card-blue.png')",
 			},
+			opacity: {
+				8: '0.08',
+			},
 		},
 	},
 	fontFamily: {
@@ -178,9 +198,23 @@ module.exports = {
 		require('tailwind-hamburgers'),
 		plugin(function ({ addComponents, addBase, theme }) {
 			addComponents({
+				'.list-with-circle-check': {
+					li: {
+						'&::before': {
+							content:
+								'url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguOTQ1OTUgNS4zNzgzOEw2LjAyNzAzIDguOTQ1OTVMNC43Mjk3MyA3LjY0ODY1TTEzIDdDMTMgMTAuMzEzNyAxMC4zMTM3IDEzIDcgMTNDMy42ODYyOSAxMyAxIDEwLjMxMzcgMSA3QzEgMy42ODYyOSAzLjY4NjI5IDEgNyAxQzEwLjMxMzcgMSAxMyAzLjY4NjI5IDEzIDdaIiBzdHJva2U9IiMxMjIzNDUiIHN0cm9rZS1vcGFjaXR5PSIwLjQiIHN0cm9rZS13aWR0aD0iMS40IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==)',
+							display: 'flex',
+							alignItems: 'center',
+							justifyContent: 'center',
+							height: '1.125rem',
+							width: '1.125rem',
+							marginTop: '1.5px',
+						},
+					},
+				},
 				'.btn': {
 					cursor: 'pointer',
-					height: '2.25rem',
+					height: '2.25rem', // 36px
 					display: 'flex',
 					alignItems: 'center',
 					justifyContent: 'center',
@@ -191,6 +225,7 @@ module.exports = {
 					color: theme('colors.gray[700]'),
 					gap: '0.5rem',
 					position: 'relative',
+					transition: 'all ease .2s',
 				},
 				'.btn-hover-right': {
 					paddingRight: '2.75rem !important',
@@ -238,7 +273,34 @@ module.exports = {
 					color: theme('colors.white'),
 					transition: 'all ease .2s',
 					'&:hover': {
-						backgroundColor: theme('colors.blue[700]'),
+						backgroundColor: `rgba(${hexToRgb(theme('colors.blue[500]'))}, 0.9)`,
+					},
+				},
+				'.btn-dark': {
+					boxShadow:
+						'0 1px 2px 0 rgba(18, 35, 69, 0.08), 0 0 0 1px rgba(10, 22, 44, 0.8), 0 2px 4.3px -1px rgba(12, 25, 50, 0.4)',
+					backgroundColor: theme('colors.blue[900]'),
+					color: theme('colors.white'),
+					'&:hover': {
+						backgroundColor: `rgba(${hexToRgb(theme('colors.blue[900]'))}, 0.9)`,
+					},
+				},
+				'.btn-violet': {
+					boxShadow:
+						'0 1px 2px 0 rgba(18, 35, 69, 0.08), 0 0 0 1px rgba(107, 29, 210, 0.8), 0 2px 4.3px -1px rgba(106, 26, 211, 0.4)',
+					backgroundColor: theme('colors.violet[600]'),
+					color: theme('colors.white'),
+					'&:hover': {
+						backgroundColor: `rgba(${hexToRgb(theme('colors.violet[600]'))}, 0.9)`,
+					},
+				},
+				'.btn-yellow': {
+					boxShadow:
+						'0 1px 2px 0 rgba(18, 35, 69, 0.08), 0 0 0 1px #fdbb05, 0 2px 4.3px -1px rgba(178, 131, 0, 0.4)',
+					backgroundColor: theme('colors.yellow[500]'),
+					color: theme('colors.black'),
+					'&:hover': {
+						backgroundColor: `rgba(${hexToRgb(theme('colors.yellow[500]'))}, 0.9)`,
 					},
 				},
 				'.btn-long': {
@@ -262,6 +324,9 @@ module.exports = {
 				},
 				'.btn-m': {
 					height: '2.937rem',
+				},
+				'.btn-s': {
+					height: '2.5rem', // 40px
 				},
 				'.replies-avatars': {
 					display: 'flex',
@@ -315,6 +380,53 @@ module.exports = {
 					height: '2.25rem', // 36px
 					border: `2px solid ${theme('colors.blue[900]')}`,
 				},
+				'.tag-filled': {
+					fontFamily: 'GeneralSans-semibold',
+					backgroundColor: theme('colors.green[25]'),
+					padding: '2px 0.625rem',
+					borderRadius: '6px',
+					color: theme('colors.green[500]'),
+					fontSize: '0.8125rem',
+					lineHeight: '1.5rem',
+					fontWeight: 600,
+					display: 'flex',
+					justifyContent: 'center',
+					alignItems: 'center',
+				},
+				'.btn-toggle': {
+					label: {
+						display: 'block',
+						width: '36px',
+						height: '20px',
+						backgroundColor: theme('colors.blue[500]'),
+						borderRadius: '9999px',
+						boxShadow:
+							'0 2px 4px 0 rgba(3, 7, 18, 0.04), inset 0 0 8px 0 rgba(3, 7, 18, 0.02), inset 0 0 0 0.5px rgba(3, 7, 18, 0.06), inset 0 2px 4px 0 rgba(3, 7, 18, 0.04), inset 0 1px 1px 0 rgba(3, 7, 18, 0.04)',
+						position: 'relative',
+						cursor: 'pointer',
+						'&:after': {
+							content: '""',
+							width: '16px',
+							height: '16px',
+							boxShadow:
+								'0 0 1px 0 rgba(3, 7, 18, 0.08), 0 1px 2px 0 rgba(3, 7, 18, 0.12), 0 3px 3px 0 rgba(3, 7, 18, 0.04), 0 5px 4px 0 rgba(3, 7, 18, 0.02), 0 0 0 0.5px rgba(3, 7, 18, 0.02), inset 0 1px 0 0 #fff, inset 0 0 2px 1px #fff',
+							position: 'absolute',
+							top: '50%',
+							transform: 'translateY(-50%)',
+							right: '2.2px',
+							zIndex: 1,
+							borderRadius: '9999px',
+							backgroundColor: theme('colors.white'),
+							transition: 'all ease .3s',
+						},
+					},
+					input: {
+						display: 'none',
+						'&:checked ~ label::after': {
+							right: '17.2px',
+						},
+					},
+				},
 				'.main-gradient': {
 					backgroundImage:
 						'linear-gradient(180deg, rgba(74,122,236,1) 0%, rgba(74,113,241,1) 36%, rgba(78,119,206,0) 93%)',
@@ -344,6 +456,18 @@ module.exports = {
 					backgroundImage:
 						'linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
 					opacity: 0.6,
+				},
+				'.card-gradient-yellow': {
+					backgroundImage:
+						'linear-gradient(180deg, rgba(255, 188, 3, 0.07) -7.92%, rgba(255, 188, 3, 0) 53.46%)',
+				},
+				'.card-gradient-violet': {
+					backgroundImage:
+						'linear-gradient(180deg, rgba(218, 209, 255, 0.6) -32.12%, rgba(243, 240, 255, 0) 34.58%)',
+				},
+				'.card-gradient-gray': {
+					backgroundImage:
+						'linear-gradient(180deg, rgba(18, 35, 69, 0.06) -7.92%, rgba(18, 35, 69, 0) 38.29%)',
 				},
 				'.card-title': {
 					fontSize: '1.375rem',
