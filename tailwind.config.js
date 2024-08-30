@@ -102,6 +102,7 @@ module.exports = {
 				'sans-medium': ['GeneralSans-medium', ...defaultTheme.fontFamily.sans],
 			},
 			fontSize: {
+				'4.5xl': ['2.5rem', '125%'],
 				'2.5xl': ['1.75rem', '2.45rem'],
 				base: ['1rem', '1.42rem'],
 				lg: ['1.125rem', '1.6875rem'],
@@ -380,6 +381,22 @@ module.exports = {
 					height: '2.25rem', // 36px
 					border: `2px solid ${theme('colors.blue[900]')}`,
 				},
+				'.tag-sm': {
+					display: 'flex',
+					width: 'max-content',
+					justifyContent: 'center',
+					alignItems: 'center',
+					gap: '0.6rem', // 10px
+					fontSize: '0.75rem', // 12px
+					letterSpacing: '-0.16px',
+					color: theme('colors.violet[600]'),
+					backgroundColor: `rgba(${hexToRgb(theme('colors.violet[600]'))}, 0.15)`,
+					fontWeight: 500,
+					fontFamily: 'GeneralSans-medium',
+					borderRadius: '99999px',
+					padding: '0 0.5rem', // 8px
+					height: '1.4375rem', // 23px
+				},
 				'.tag-filled': {
 					fontFamily: 'GeneralSans-semibold',
 					backgroundColor: theme('colors.green[25]'),
@@ -392,17 +409,20 @@ module.exports = {
 					display: 'flex',
 					justifyContent: 'center',
 					alignItems: 'center',
+					whiteSpace: 'nowrap',
 				},
 				'.btn-toggle': {
 					label: {
 						display: 'block',
 						width: '36px',
 						height: '20px',
-						backgroundColor: theme('colors.blue[500]'),
 						borderRadius: '9999px',
 						boxShadow:
-							'0 2px 4px 0 rgba(3, 7, 18, 0.04), inset 0 0 8px 0 rgba(3, 7, 18, 0.02), inset 0 0 0 0.5px rgba(3, 7, 18, 0.06), inset 0 2px 4px 0 rgba(3, 7, 18, 0.04), inset 0 1px 1px 0 rgba(3, 7, 18, 0.04)',
+							'0px 2.25px 4.5px rgba(3, 7, 18, 0.04), inset 0px 1.125px 1.125px rgba(3, 7, 18, 0.04), inset 0px 2.25px 4.5px rgba(3, 7, 18, 0.04), inset 0px 0px 0px 0.5625px rgba(3, 7, 18, 0.06), inset 0px 0px 9px rgba(3, 7, 18, 0.02)',
+						backgroundColor: '#E5E7EB',
 						position: 'relative',
+						transition: 'all ease .3s',
+						// border: `1px solid ${theme('colors.blue[500]')}`,
 						cursor: 'pointer',
 						'&:after': {
 							content: '""',
@@ -410,20 +430,25 @@ module.exports = {
 							height: '16px',
 							boxShadow:
 								'0 0 1px 0 rgba(3, 7, 18, 0.08), 0 1px 2px 0 rgba(3, 7, 18, 0.12), 0 3px 3px 0 rgba(3, 7, 18, 0.04), 0 5px 4px 0 rgba(3, 7, 18, 0.02), 0 0 0 0.5px rgba(3, 7, 18, 0.02), inset 0 1px 0 0 #fff, inset 0 0 2px 1px #fff',
+							backgroundColor: theme('colors.white'),
 							position: 'absolute',
 							top: '50%',
 							transform: 'translateY(-50%)',
-							right: '2.2px',
+							right: '17.2px',
 							zIndex: 1,
 							borderRadius: '9999px',
-							backgroundColor: theme('colors.white'),
 							transition: 'all ease .3s',
 						},
 					},
 					input: {
 						display: 'none',
 						'&:checked ~ label::after': {
-							right: '17.2px',
+							right: '2.2px',
+						},
+						'&:checked ~ label': {
+							boxShadow:
+								'0 2px 4px 0 rgba(3, 7, 18, 0.04), inset 0 0 8px 0 rgba(3, 7, 18, 0.02), inset 0 0 0 0.5px rgba(3, 7, 18, 0.06), inset 0 2px 4px 0 rgba(3, 7, 18, 0.04), inset 0 1px 1px 0 rgba(3, 7, 18, 0.04)',
+							backgroundColor: theme('colors.blue[500]'),
 						},
 					},
 				},
@@ -483,7 +508,7 @@ module.exports = {
 				addBase({
 					h1: {
 						fontFamily: 'GeneralSans-semibold',
-						fontSize: '3.25rem',
+						fontSize: '3.25rem', // 52px
 						fontWeight: 600,
 						lineHeight: '3.81rem',
 						letterSpacing: '-1.56px',
@@ -514,7 +539,7 @@ module.exports = {
 					},
 					h3: {
 						fontFamily: 'GeneralSans-semibold',
-						fontSize: '2rem',
+						fontSize: '2rem', // 32px
 						fontWeight: 600,
 						lineHeight: '2.4rem',
 						letterSpacing: '-0.22px',
