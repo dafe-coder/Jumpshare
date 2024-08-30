@@ -663,12 +663,12 @@
 								<label for="price-time-switch"></label>
 							</div>
 						</div>
-						<div class="flex justify-center items-center gap-2">
+						<div class="relative flex justify-center items-center gap-2">
 							<p class="text-sm max-xs:text-[13px]" id="annual-price-text">
 								Annual Billing
 							</p>
 							<div
-								class="tag-filled max-xs:text-[10px] transition-all duration-300"
+								class="absolute left-[calc(100%_+_0.5rem)] tag-filled max-xs:text-[10px] transition-all duration-300"
 								id="annual-badge"
 							>
 								20% OFF
@@ -1219,7 +1219,7 @@
 			<section class="pb-30 max-sm:pb-24">
 				<div class="container">
 					<div
-						class="flex justify-between items-center border-b border-b-blue-1000/10 pb-8"
+						class="flex justify-between items-center border-b border-b-blue-1000/10 bg-white pb-8 sticky top-[4.75rem] pt-6 max-lg:top-[72px] max-lg:pb-6"
 					>
 						<p
 							class="w-[28.3%] text-xl font-medium font-sans-variable max-lg:hidden"
@@ -4263,6 +4263,52 @@
 									<h5
 										class="text-lg font-sans-variable font-[560] tracking-0.22"
 									>
+										What is the difference between the Plus and Business plan?
+									</h5>
+									<div
+										class="relative h-5 w-6 flex-shrink-0 flex justify-end items-center mt-1"
+									>
+										<svg
+											class="accordion-icon transition-transform"
+											width="10"
+											height="6"
+											viewBox="0 0 10 6"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M1 1.20613L4.6464 4.85253C4.8417 5.04783 5.1583 5.04783 5.3536 4.85253L9 1.20613"
+												stroke="#122345"
+												stroke-width="1.5"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</div>
+								</button>
+								<div
+									class="accordion-content overflow-hidden transition-all duration-300 max-h-0"
+								>
+									<div
+										class="pb-4 font-sans-variable font-medium text-blue-900/60"
+									>
+										<p>
+											The Plus plan is for individuals and small teams who want
+											to get the most out of Jumpshare. It has almost all the
+											features you need to work better. The Business plan is for
+											professional teams who want the full power of Jumpshare to
+											make them 10x productive.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div>
+								<button
+									class="w-full py-4 text-left focus:outline-none accordion-header flex justify-between max-sm:py-3"
+								>
+									<h5
+										class="text-lg font-sans-variable font-[560] tracking-0.22"
+									>
 										Do I really get unlimited storage with the paid plans?
 									</h5>
 									<div
@@ -4317,52 +4363,6 @@
 												user adds 500 GB.
 											</li>
 										</ul>
-									</div>
-								</div>
-							</div>
-							<div>
-								<button
-									class="w-full py-4 text-left focus:outline-none accordion-header flex justify-between max-sm:py-3"
-								>
-									<h5
-										class="text-lg font-sans-variable font-[560] tracking-0.22"
-									>
-										What is the difference between the Plus and Business plan?
-									</h5>
-									<div
-										class="relative h-5 w-6 flex-shrink-0 flex justify-end items-center mt-1"
-									>
-										<svg
-											class="accordion-icon transition-transform"
-											width="10"
-											height="6"
-											viewBox="0 0 10 6"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
-										>
-											<path
-												d="M1 1.20613L4.6464 4.85253C4.8417 5.04783 5.1583 5.04783 5.3536 4.85253L9 1.20613"
-												stroke="#122345"
-												stroke-width="1.5"
-												stroke-linecap="round"
-												stroke-linejoin="round"
-											/>
-										</svg>
-									</div>
-								</button>
-								<div
-									class="accordion-content overflow-hidden transition-all duration-300 max-h-0"
-								>
-									<div
-										class="pb-4 font-sans-variable font-medium text-blue-900/60"
-									>
-										<p>
-											The Plus plan is for individuals and small teams who want
-											to get the most out of Jumpshare. It has almost all the
-											features you need to work better. The Business plan is for
-											professional teams who want the full power of Jumpshare to
-											make them 10x productive.
-										</p>
 									</div>
 								</div>
 							</div>
@@ -5255,18 +5255,11 @@
 				monthlyPriceText = document.querySelector('#monthly-price-text'),
 				annualPriceText = document.querySelector('#annual-price-text')
 
-			const annualBadgeWidth =
-				annualBadge.getBoundingClientRect().width + 2 + 'px'
-			console.log(annualBadgeWidth)
-
-			annualBadge.style.width = annualBadgeWidth
-
 			priceSwitcher.addEventListener('change', e => {
 				if (!e.target.checked) {
 					businessPrice.innerHTML = '$20'
 					plusPrice.innerHTML = '$15'
 					annualBadge.classList.remove('scale-100')
-					annualBadge.style.width = 0
 					annualBadge.classList.add('scale-0')
 					monthlyPriceText.classList.remove('text-blue-900/60')
 					annualPriceText.classList.add('text-blue-900/60')
@@ -5274,7 +5267,6 @@
 					businessPrice.innerHTML = '$16'
 					plusPrice.innerHTML = '$12'
 					annualBadge.classList.remove('scale-0')
-					annualBadge.style.width = annualBadgeWidth
 					annualBadge.classList.add('scale-100')
 					monthlyPriceText.classList.add('text-blue-900/60')
 					annualPriceText.classList.remove('text-blue-900/60')
