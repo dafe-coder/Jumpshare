@@ -48,7 +48,8 @@ module.exports = {
 				500: '#495057',
 			},
 			yellow: {
-				500: '#ffbc03',
+				400: '#DDB51E',
+				600: '#FFBC03',
 			},
 			orange: {
 				100: '#faf6f3',
@@ -102,10 +103,11 @@ module.exports = {
 				'sans-medium': ['GeneralSans-medium', ...defaultTheme.fontFamily.sans],
 			},
 			fontSize: {
+				'6xl': ['3rem', '3.75rem'], // 48px 60px
 				'4.5xl': ['2.5rem', '125%'],
 				'2.5xl': ['1.75rem', '2.45rem'],
 				base: ['1rem', '1.42rem'],
-				lg: ['1.125rem', '1.6875rem'],
+				lg: ['1.125rem', '1.6875rem'], // 18px
 				sm: ['0.9375rem', '1.25rem'],
 				m: ['0.9375rem', '1.5rem'],
 				s: ['0.8125rem', '1.0562rem'],
@@ -126,7 +128,7 @@ module.exports = {
 			letterSpacing: {
 				0.4: '-0.4px',
 				0.22: '-0.22px',
-				normal: '-0.32px',
+				normal: '-0.22px',
 				base: 'normal',
 				0.56: '-0.56px',
 				1.44: '-1.44px',
@@ -203,7 +205,7 @@ module.exports = {
 					li: {
 						'&::before': {
 							content:
-								'url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTguOTQ1OTUgNS4zNzgzOEw2LjAyNzAzIDguOTQ1OTVMNC43Mjk3MyA3LjY0ODY1TTEzIDdDMTMgMTAuMzEzNyAxMC4zMTM3IDEzIDcgMTNDMy42ODYyOSAxMyAxIDEwLjMxMzcgMSA3QzEgMy42ODYyOSAzLjY4NjI5IDEgNyAxQzEwLjMxMzcgMSAxMyAzLjY4NjI5IDEzIDdaIiBzdHJva2U9IiMxMjIzNDUiIHN0cm9rZS1vcGFjaXR5PSIwLjQiIHN0cm9rZS13aWR0aD0iMS40IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==)',
+								'url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEwIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xLjI1IDQuNzVMMy41IDdMOC43NSAxIiBzdHJva2U9IiMxMjIzNDUiIHN0cm9rZS1vcGFjaXR5PSIwLjQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=)',
 							display: 'flex',
 							alignItems: 'center',
 							justifyContent: 'center',
@@ -298,10 +300,10 @@ module.exports = {
 				'.btn-yellow': {
 					boxShadow:
 						'0 1px 2px 0 rgba(18, 35, 69, 0.08), 0 0 0 1px #fdbb05, 0 2px 4.3px -1px rgba(178, 131, 0, 0.4)',
-					backgroundColor: theme('colors.yellow[500]'),
+					backgroundColor: theme('colors.yellow[600]'),
 					color: theme('colors.black'),
 					'&:hover': {
-						backgroundColor: `rgba(${hexToRgb(theme('colors.yellow[500]'))}, 0.9)`,
+						backgroundColor: `rgba(${hexToRgb(theme('colors.yellow[600]'))}, 0.9)`,
 					},
 				},
 				'.btn-long': {
@@ -317,7 +319,7 @@ module.exports = {
 					fontSize: '1.125rem',
 					fontWeight: 500,
 					lineHeight: '1.25rem',
-					letterSpacing: '-0.32px',
+					letterSpacing: '-0.22px',
 				},
 				'.btn-gradient': {
 					backgroundImage:
@@ -342,7 +344,7 @@ module.exports = {
 						height: theme('spacing[9]'),
 						borderRadius: '9999px',
 						overflow: 'hidden',
-						backgroundColor: theme('colors.yellow[500]'),
+						backgroundColor: theme('colors.yellow[600]'),
 						'&:nth-child(1)': {
 							zIndex: 5,
 						},
@@ -504,6 +506,22 @@ module.exports = {
 						lineHeight: '1.3rem !important',
 					},
 				},
+				'.h2': {
+					fontFamily: 'GeneralSans-semibold',
+					fontSize: '3rem', // 48px
+					textAlign: 'center',
+					fontWeight: 600,
+					fontStretch: 'normal',
+					fontStyle: 'normal',
+					lineHeight: '3.75rem', // 60px
+					letterSpacing: '-1.44px',
+					color: theme('colors.blue[950]'),
+					'@media not all and (min-width: 640px)': {
+						fontFamily: 'GeneralSans-medium',
+						fontSize: '2.25rem',
+						lineHeight: '2.8125rem',
+					},
+				},
 			}),
 				addBase({
 					h1: {
@@ -513,6 +531,7 @@ module.exports = {
 						lineHeight: '3.81rem',
 						letterSpacing: '-1.56px',
 						color: theme('colors.blue[900]'),
+						textAlign: 'center',
 						'@media not all and (min-width: 480px)': {
 							fontSize: '2.25rem',
 							fontWeight: 600,
@@ -527,14 +546,13 @@ module.exports = {
 						fontWeight: 600,
 						fontStretch: 'normal',
 						fontStyle: 'normal',
-						lineHeight: '3.75rem',
+						lineHeight: '3.75rem', // 60px
 						letterSpacing: '-1.44px',
 						color: theme('colors.blue[950]'),
 						'@media not all and (min-width: 640px)': {
 							fontFamily: 'GeneralSans-medium',
 							fontSize: '2.25rem',
 							lineHeight: '2.8125rem',
-							letterSpacing: '-1.08px',
 						},
 					},
 					h3: {
