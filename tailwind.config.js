@@ -140,6 +140,7 @@ module.exports = {
 				'inset-3xl':
 					'inset 0px -0.876389px 0.876389px 0.876389px rgba(17, 34, 69, 0.12)',
 				card: '0 2px 8px -1px #130c3e0a, 0 0 0 1px #130c3e1c, 0 4px 4px -5px #130c3e40;',
+				'card-use-cases': '0px 5px 30.9px -4px rgba(58, 68, 89, 0.27)',
 				'card-dark': '0px 1px 7px rgba(15, 28, 53, 0.04)',
 				'card-orange':
 					'0px 4px 4px -5px rgba(30, 12, 4, 0.25), 0px 0px 0px 1px rgba(34, 14, 5, 0.08), 0px 1px 7px rgba(30, 12, 4, 0.04)',
@@ -165,6 +166,7 @@ module.exports = {
 				4.5: '1.125rem', // 18px
 				6.5: '1.625rem', // 26px
 				7.5: '1.875rem', // 30px
+				9.5: '2.375rem', // 38px
 				13: '3.25rem', // 52px
 				15: '3.75rem', // 60px
 				15.5: '3.875rem', // 62px
@@ -531,7 +533,7 @@ module.exports = {
 						lineHeight: '3.81rem',
 						letterSpacing: '-1.56px',
 						color: theme('colors.blue[900]'),
-						textAlign: 'center',
+						textAlign: 'left',
 						'@media not all and (min-width: 480px)': {
 							fontSize: '2.25rem',
 							fontWeight: 600,

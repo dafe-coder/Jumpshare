@@ -249,7 +249,7 @@
 								>
 									<a
 										class="flex gap-2 px-4 rounded-lg items-center h-10 text-blue-900/80 transition-all max-lg:h-12 max-lg:rounded-none max-lg:px-0 max-lg:justify-between"
-										href="#"
+										href="/use-cases"
 										>Use Cases
 										<svg
 											width="20"
@@ -276,7 +276,7 @@
 											>
 												<li>
 													<a
-														href="./sales"
+														href="/use-cases/sales"
 														class="flex gap-3 items-center py-3 px-3.5 rounded-md text-black/80 hover:text-black transition-all hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0"
 													>
 														<svg
@@ -318,7 +318,7 @@
 												</li>
 												<li>
 													<a
-														href="./marketing"
+														href="/use-cases/marketing"
 														class="flex gap-3 items-center py-3 px-3.5 rounded-md text-black/80 hover:text-black transition-all hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0"
 													>
 														<svg
@@ -357,7 +357,7 @@
 												</li>
 												<li>
 													<a
-														href="./customer-support"
+														href="/use-cases/customer-support"
 														class="flex gap-3 items-center py-3 px-3.5 rounded-md text-black/80 hover:text-black transition-all hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0"
 													>
 														<svg
@@ -396,7 +396,7 @@
 												</li>
 												<li>
 													<a
-														href="./product-management"
+														href="/use-cases/product-management"
 														class="flex gap-3 items-center py-3 px-3.5 rounded-md text-black/80 hover:text-black transition-all hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0"
 													>
 														<svg
@@ -437,7 +437,7 @@
 											<ul class="basis-1/2">
 												<li>
 													<a
-														href="./design"
+														href="/use-cases/design"
 														class="flex gap-3 items-center py-3 px-3.5 rounded-md text-black/80 hover:text-black transition-all hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0"
 													>
 														<svg
@@ -481,7 +481,7 @@
 												</li>
 												<li>
 													<a
-														href="./engineering"
+														href="/use-cases/engineering"
 														class="flex gap-3 items-center py-3 px-3.5 rounded-md text-black/80 hover:text-black transition-all hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0"
 													>
 														<svg
@@ -520,7 +520,7 @@
 												</li>
 												<li>
 													<a
-														href="./team-collaboration"
+														href="/use-cases/team-collaboration"
 														class="flex gap-3 items-center py-3 px-3.5 rounded-md text-black/80 hover:text-black transition-all hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0"
 													>
 														<svg
@@ -559,7 +559,7 @@
 												</li>
 												<li>
 													<a
-														href="./education"
+														href="/use-cases/education"
 														class="flex gap-3 items-center py-3 px-3.5 rounded-md text-black/80 hover:text-black transition-all hover:bg-gray-100 max-lg:hover:bg-white max-lg:pl-0"
 													>
 														<svg
@@ -610,7 +610,7 @@
 								<li class="animated-item max-lg:border-b border-gray-150">
 									<a
 										class="flex gap-3 px-4 rounded-lg items-center h-10 text-blue-900/80 transition-all max-lg:h-12 max-lg:rounded-none max-lg:pl-0"
-										href="./pricing"
+										href="/pricing"
 										>Pricing</a
 									>
 								</li>
@@ -652,7 +652,7 @@
 					class="container pt-34 max-xs:pt-30 flex max-md:flex-wrap bg-main bg-[length:67.5rem_34.43rem] bg-[left_4rem_top_1.8rem] bg-no-repeat max-xs:bg-[center_top_500px] min-[1900px]:relative"
 				>
 					<div class="w-[31rem] max-md:w-full">
-						<h1 class="text-left">
+						<h1>
 							Communicate better with
 							<span class="text-blue-500"> Videos, GIFs, and Screenshots </span>
 						</h1>
@@ -2882,7 +2882,7 @@
 						bgItem.style.opacity = 1
 					})
 					item.addEventListener('mouseleave', e => {
-						bgItem.style.opacity = 0 // Adjust to default width
+						bgItem.style.opacity = 0
 					})
 				})
 			}
@@ -2897,7 +2897,9 @@
 			function handleMobileClick(e) {
 				if (isAnimatingMobile) return
 				isAnimatingMobile = true
-
+				if (!e.target.closest('.menu-dropdown-body')) {
+					e.preventDefault()
+				}
 				e.preventDefault()
 				const item = e.currentTarget
 				const menuDropdownBody = item
@@ -2931,7 +2933,7 @@
 					menuDropdownBody.classList.add('animate-fade')
 					setTimeout(() => {
 						isAnimatingMobile = false
-					}, 300) // Длительность анимации открытия
+					}, 300)
 				}
 			}
 
@@ -2982,7 +2984,7 @@
 			}
 
 			function initMobileMenu() {
-				removeEventListeners() // Delete all existing handlers
+				removeEventListeners()
 				menuDropdown.forEach(item => {
 					const menuDropdownBody = item
 						.closest('li')
@@ -2997,7 +2999,7 @@
 
 			function initDesktopMenu() {
 				headerMobile.classList.remove('animate-fadeOut')
-				removeEventListeners() // Delete all existing handlers
+				removeEventListeners()
 				menuDropdown.forEach(item => {
 					const menuDropdownBody = item
 						.closest('li')
