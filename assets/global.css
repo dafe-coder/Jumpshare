@@ -58,6 +58,14 @@
 	}
 }
 
+@layer utilities {
+	@media screen and (max-height: 800px) {
+		.screen-h-800-py-28 {
+			padding-top: 7rem;
+			padding-bottom: 2.75rem;
+		}
+	}
+}
 .active-header {
 	@apply bg-white top-0;
 	box-shadow:

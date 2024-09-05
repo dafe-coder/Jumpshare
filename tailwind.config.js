@@ -15,12 +15,6 @@ const hexToRgb = hex => {
 module.exports = {
 	content: ['./**/*.{html,js}'],
 	theme: {
-		screens: {
-			...defaultTheme.screens,
-			xxl: '1360px',
-			md: '790px', // phones
-			xs: '480px', // phones
-		},
 		container: {
 			center: true,
 			padding: '20px',
@@ -77,6 +71,11 @@ module.exports = {
 			},
 		},
 		extend: {
+			screens: {
+				xxl: '1360px',
+				md: '790px', // phones
+				xs: '480px', // phones
+			},
 			animation: {
 				fade: 'fadeIn .3s ease-in-out forwards',
 				fadeOut: 'fadeOut .3s ease-in-out forwards',
@@ -207,7 +206,7 @@ module.exports = {
 					li: {
 						'&::before': {
 							content:
-								'url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEwIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xLjI1IDQuNzVMMy41IDdMOC43NSAxIiBzdHJva2U9IiMxMjIzNDUiIHN0cm9rZS1vcGFjaXR5PSIwLjQiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=)',
+								'url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUuMjUgOS43NUw3LjUgMTJMMTIuNzUgNiIgc3Ryb2tlPSIjMTIyMzQ1IiBzdHJva2Utb3BhY2l0eT0iMC41IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K)',
 							display: 'flex',
 							alignItems: 'center',
 							justifyContent: 'center',
