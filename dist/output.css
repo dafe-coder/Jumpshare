@@ -3063,6 +3063,14 @@ body {
   height: 100%;
 }
 
+.h-\[224px\] {
+  height: 224px;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
@@ -3117,6 +3125,14 @@ body {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[120px\] {
+  min-height: 120px;
+}
+
+.min-h-\[7\.5rem\] {
+  min-height: 7.5rem;
 }
 
 .w-0 {
@@ -3306,6 +3322,14 @@ body {
 .w-max {
   width: -moz-max-content;
   width: max-content;
+}
+
+.w-\[135px\] {
+  width: 135px;
+}
+
+.w-\[8\.4375rem\] {
+  width: 8.4375rem;
 }
 
 .min-w-\[28\.25rem\] {
@@ -3562,6 +3586,14 @@ body {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-\[987px\] {
+  max-width: 987px;
+}
+
+.max-w-\[61\.6875rem\] {
+  max-width: 61.6875rem;
 }
 
 .flex-shrink {
@@ -5229,6 +5261,21 @@ body {
   padding-bottom: 1.125rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.px-9 {
+  padding-left: 2.25rem;
+  padding-right: 2.25rem;
+}
+
+.px-9\.5 {
+  padding-left: 2.375rem;
+  padding-right: 2.375rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -5531,6 +5578,11 @@ body {
 .text-4\.5xl\/\[136\%\] {
   font-size: 2.5rem;
   line-height: 136%;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-\[1\.1rem\]\/5\.5 {
