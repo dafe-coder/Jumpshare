@@ -76,7 +76,7 @@
 	<body>
 		<header
 			id="header"
-			class="fixed top-0 left-1/2 -translate-x-1/2 z-50 transition-all w-full max-lg:bg-white backdrop-blur-0"
+			class="fixed top-0 left-1/2 -translate-x-1/2 z-50 transition-all duration-0 w-full max-lg:bg-white backdrop-blur-0"
 		>
 			<div class="container flex justify-between items-center py-4.5">
 				<a href="/">
@@ -599,7 +599,7 @@
 								<li class="animated-item max-lg:border-b border-gray-150">
 									<a
 										class="flex gap-3 px-4 rounded-lg items-center h-10 text-blue-900/80 transition-all max-lg:h-12 max-lg:rounded-none max-lg:pl-0"
-										href="/downloading.html"
+										href="/apps"
 										>Download</a
 									>
 								</li>
@@ -1614,7 +1614,7 @@
 							<a
 								class="text-blue-900/80 transition-all hover:underline"
 								href="#"
-								>Creative Collaboration</a
+								>Sharing & Collaboration</a
 							>
 						</li>
 						<li>
@@ -1960,7 +1960,13 @@
 			const setActiveHeader = () => {
 				const top =
 					document.documentElement.scrollTop || document.body.scrollTop
-				if (top > siteHeaderHeight) {
+
+				if (top > 5) {
+					siteHeader.classList.add('bg-white', 'duration-300')
+				} else {
+					siteHeader.classList.remove('bg-white', 'duration-300')
+				}
+				if (top > 40) {
 					siteHeader.classList.add('active-header')
 				} else {
 					siteHeader.classList.remove('active-header')

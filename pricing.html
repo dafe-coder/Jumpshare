@@ -75,7 +75,7 @@
 	<body>
 		<header
 			id="header"
-			class="fixed top-0 left-1/2 -translate-x-1/2 z-50 transition-all w-full max-lg:bg-white backdrop-blur-0"
+			class="fixed top-0 left-1/2 -translate-x-1/2 z-50 transition-all duration-0 w-full max-lg:bg-white backdrop-blur-0"
 		>
 			<div class="container flex justify-between items-center py-4.5">
 				<a href="/">
@@ -598,7 +598,7 @@
 								<li class="animated-item max-lg:border-b border-gray-150">
 									<a
 										class="flex gap-3 px-4 rounded-lg items-center h-10 text-blue-900/80 transition-all max-lg:h-12 max-lg:rounded-none max-lg:pl-0"
-										href="/downloading.html"
+										href="/apps"
 										>Download</a
 									>
 								</li>
@@ -632,7 +632,7 @@
 			<section class="pt-34 pb-24">
 				<div class="container">
 					<div class="max-w-[40.3125rem] mx-auto">
-						<h1 class="h2 text-center">
+						<h1 class="h2 text-center text-blue-900">
 							Choose the plan that’s right for you or your company
 						</h1>
 					</div>
@@ -694,7 +694,7 @@
 								</button>
 							</div>
 							<div class="pt-4.5">
-								<p class="text-sm text-blue-900/80 font-medium">
+								<p class="text-sm text-blue-900 opacity-80 font-medium">
 									Basic plan includes:
 								</p>
 								<ul class="list-with-circle-check mt-3 space-y-3">
@@ -757,10 +757,9 @@
 								</button>
 							</div>
 							<div class="pt-4.5">
-								<p class="text-sm text-blue-900/80 font-medium">
+								<p class="text-sm text-blue-900 opacity-80 font-medium">
 									Everything in
-									<span class="text-blue-900/80 font-semibold">Basic</span>,
-									and:
+									<span class="text-blue-900 font-semibold">Basic</span>, and:
 								</p>
 								<ul class="list-with-circle-check mt-3 space-y-3">
 									<li class="flex items-center gap-2">
@@ -826,9 +825,9 @@
 								</button>
 							</div>
 							<div class="pt-4.5">
-								<p class="text-sm text-blue-900/80 font-medium">
+								<p class="text-sm text-blue-900 opacity-80 font-medium">
 									Everything in
-									<span class="text-blue-900/80 font-semibold">Plus</span>, and:
+									<span class="text-blue-900 font-semibold">Plus</span>, and:
 								</p>
 								<ul class="list-with-circle-check mt-3 space-y-3">
 									<li class="flex items-center gap-2 before:!hidden">
@@ -987,9 +986,9 @@
 								</button>
 							</div>
 							<div class="pt-4.5">
-								<p class="text-sm text-blue-900/80 font-medium">
+								<p class="text-sm text-blue-900 opacity-80 font-medium">
 									Everything in
-									<span class="text-blue-900/80 font-semibold">Business</span>,
+									<span class="text-blue-900 font-semibold">Business</span>,
 									and:
 								</p>
 								<ul class="list-with-circle-check mt-3 space-y-3">
@@ -1338,33 +1337,6 @@
 								class="flex justify-center w-[17.92%] text-center py-3.5 border-0 border-b border-b-blue-1000/10 text-sm max-lg:w-1/4 max-md:px-0.5 max-xs:px-1"
 							>
 								Unlimited
-							</span>
-						</li>
-						<li class="flex max-lg:flex-wrap">
-							<span
-								class="flex w-[28.3%] text-left py-3.5 border-0 border-b border-b-blue-1000/10 text-sm max-lg:w-full"
-							>
-								Bandwidth
-							</span>
-							<span
-								class="flex justify-center w-[17.92%] text-center py-3.5 border-0 border-b border-b-blue-1000/10 text-sm max-lg:w-1/4 max-md:px-0.5 max-xs:px-1"
-							>
-								5 GB / user / month
-							</span>
-							<span
-								class="flex justify-center w-[17.92%] text-center py-3.5 border-0 border-b border-b-blue-1000/10 text-sm max-lg:w-1/4 max-md:px-0.5 max-xs:px-1"
-							>
-								250 GB / user / month
-							</span>
-							<span
-								class="flex justify-center w-[17.92%] text-center py-3.5 border-0 border-b border-b-blue-1000/10 text-sm max-lg:w-1/4 max-md:px-0.5 max-xs:px-1"
-							>
-								500 GB / user / month
-							</span>
-							<span
-								class="flex justify-center w-[17.92%] text-center py-3.5 border-0 border-b border-b-blue-1000/10 text-sm max-lg:w-1/4 max-md:px-0.5 max-xs:px-1"
-							>
-								1 TB / user / month
 							</span>
 						</li>
 						<li class="flex max-lg:flex-wrap">
@@ -4656,7 +4628,7 @@
 							<a
 								class="text-blue-900/80 transition-all hover:underline"
 								href="#"
-								>Creative Collaboration</a
+								>Sharing & Collaboration</a
 							>
 						</li>
 						<li>
@@ -4995,7 +4967,13 @@
 			const setActiveHeader = () => {
 				const top =
 					document.documentElement.scrollTop || document.body.scrollTop
-				if (top > siteHeaderHeight) {
+
+				if (top > 5) {
+					siteHeader.classList.add('bg-white', 'duration-300')
+				} else {
+					siteHeader.classList.remove('bg-white', 'duration-300')
+				}
+				if (top > 40) {
 					siteHeader.classList.add('active-header')
 				} else {
 					siteHeader.classList.remove('active-header')
