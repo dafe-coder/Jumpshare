@@ -62,25 +62,25 @@
 	<body>
 		<main class="main-body">
 			<!-- Main Section -->
-			<section class="min-h-screen">
+			<section class="relative min-h-screen">
+				<a href="/" class="absolute z-10 top-11 left-11 max-sm:top-10 max-[1320px]:left-5">
+					<img
+						loading="lazy"
+						class="max-h-7"
+						src="../assets/images/logo.svg"
+						alt="Jumpshare"
+					/>
+				</a>
 				<div
 					class="flex min-h-screen max-md:flex-col max-md:items-start max-md:justify-start"
 				>
 					<div
-						class="w-[51.67%] flex flex-col items-end px-6 max-md:w-full max-md:items-start max-md:flex-shrink"
+						class="w-[51.67%] flex flex-col items-center px-6 max-md:w-full max-md:items-start max-md:flex-shrink"
 					>
 						<div
 							id="step-1"
-							class="relative w-full max-w-[38.375rem] flex flex-col justify-center items-start h-full max-md:pt-28 max-md:pb-11 max-sm:justify-start screen-h-800-py-28"
+							class="relative w-full max-w-[35.6rem] flex flex-col justify-center items-start h-full max-md:pt-28 max-md:pb-11 max-sm:justify-start screen-h-800-py-28"
 						>
-							<a href="/" class="absolute top-11 max-sm:top-10">
-								<img
-									loading="lazy"
-									class="max-h-7"
-									src="../assets/images/logo.svg"
-									alt="Jumpshare"
-								/>
-							</a>
 							<div class="max-w-[29rem] w-full">
 								<h1
 									class="font-sans-variable mb-3 text-4.5xl max-sm:text-3xl max-sm:text-left"
@@ -96,12 +96,12 @@
 								<input
 									id="workspace-name"
 									type="text"
-									class="peer border border-gray-150 text-sm rounded-md h-12 px-5 py-3 max-w-[20.875rem] w-full text-blue-900 max-xs:max-w-full outline-none focus:border-blue-500"
+									class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 max-w-[20.875rem] w-full text-blue-900 max-xs:max-w-full outline-none focus:border-blue-500 hover:border-gray-700"
 									required
 								/>
 								<label
 									for="workspace-name"
-									class="absolute left-5 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm font-medium font-sans-variable text-blue-900/60 transition-all duration-200 bg-white px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:text-blue-500 peer-focus:scale-75 peer-valid:scale-75 origin-left"
+									class="absolute left-5 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm font-medium font-sans-variable text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:text-blue-500 peer-focus:scale-75 peer-valid:scale-75 origin-left"
 								>
 									Workspace name
 								</label>
@@ -120,7 +120,7 @@
 										/>
 										<label
 											for="sales"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Sales</label
 										>
 									</li>
@@ -133,7 +133,7 @@
 										/>
 										<label
 											for="marketing"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Marketing</label
 										>
 									</li>
@@ -146,7 +146,7 @@
 										/>
 										<label
 											for="customer-support"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Customer Support</label
 										>
 									</li>
@@ -159,7 +159,7 @@
 										/>
 										<label
 											for="product"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Product</label
 										>
 									</li>
@@ -172,7 +172,7 @@
 										/>
 										<label
 											for="executive"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Executive</label
 										>
 									</li>
@@ -185,7 +185,7 @@
 										/>
 										<label
 											for="operations"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Operations</label
 										>
 									</li>
@@ -198,7 +198,7 @@
 										/>
 										<label
 											for="design"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Design</label
 										>
 									</li>
@@ -211,7 +211,7 @@
 										/>
 										<label
 											for="engineering"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Engineering</label
 										>
 									</li>
@@ -224,7 +224,7 @@
 										/>
 										<label
 											for="human-resources"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Human Resources</label
 										>
 									</li>
@@ -237,7 +237,7 @@
 										/>
 										<label
 											for="education"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Education</label
 										>
 									</li>
@@ -250,7 +250,7 @@
 										/>
 										<label
 											for="personal"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Personal</label
 										>
 									</li>
@@ -263,7 +263,7 @@
 										/>
 										<label
 											for="other"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-150 rounded-md transition-all duration-200 peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100"
+											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
 											>Other</label
 										>
 									</li>
@@ -297,14 +297,6 @@
 							id="step-2"
 							class="relative w-full max-w-[38.375rem] hidden flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start max-md:pb-11 screen-h-800-py-28"
 						>
-							<a href="/" class="absolute top-11 max-sm:top-10">
-								<img
-									loading="lazy"
-									class="max-h-7"
-									src="../assets/images/logo.svg"
-									alt="Jumpshare"
-								/>
-							</a>
 							<div class="max-w-[29rem] w-full">
 								<h1
 									class="font-sans-variable mb-3 text-4.5xl/[136%] max-sm:text-3xl max-sm:text-left"
@@ -338,14 +330,6 @@
 							id="step-3"
 							class="hidden relative w-full max-w-[38.375rem] flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start max-md:pb-11 screen-h-800-py-28"
 						>
-							<a href="/" class="absolute top-11 max-sm:top-10">
-								<img
-									loading="lazy"
-									class="max-h-7"
-									src="../assets/images/logo.svg"
-									alt="Jumpshare"
-								/>
-							</a>
 							<div class="max-w-[29rem] w-full">
 								<h1
 									class="font-sans-variable mb-3 text-4.5xl/[136%] max-sm:text-3xl max-sm:text-left"

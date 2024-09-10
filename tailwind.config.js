@@ -31,15 +31,13 @@ module.exports = {
 				600: '#FFBC03',
 			},
 			gray: {
-				50: '#FBFBFD',
-				100: '#F8F9FC',
-				110: '#f1f2f5',
-				125: '#E8E9ED',
-				130: '#D9DEE7',
-				150: '#D3D6DC',
-				300: '#999cb2',
-				400: '#59657E',
-				500: '#495057',
+				100: '#FBFBFD',
+				200: '#F8F9FC',
+				300: '#f1f2f5',
+				400: '#E8E9ED',
+				500: '#D9DEE7',
+				600: '#D3D6DC',
+				700: '#999cb2',
 			},
 			orange: {
 				100: '#faf6f3',
@@ -222,7 +220,6 @@ module.exports = {
 					fontWeight: 500,
 					padding: '0.375rem 0.75rem',
 					borderRadius: '0.375rem',
-					color: theme('colors.gray[700]'),
 					gap: '0.5rem',
 					position: 'relative',
 					transition: 'all ease .2s',
@@ -263,7 +260,7 @@ module.exports = {
 					backgroundColor: theme('colors.white'),
 					transition: 'all ease .2s',
 					'&:hover': {
-						backgroundColor: theme('colors.gray[100]'),
+						backgroundColor: theme('colors.gray[200]'),
 					},
 				},
 				'.btn-primary': {
@@ -333,7 +330,7 @@ module.exports = {
 					paddingRight: '0.5625rem',
 					'> li': {
 						borderWidth: '2px',
-						borderColor: theme('colors.gray[100]'),
+						borderColor: theme('colors.gray[200]'),
 						position: 'relative',
 						marginRight: '-0.5625rem',
 						display: 'block',
