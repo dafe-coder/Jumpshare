@@ -630,9 +630,12 @@
 						<button class="btn btn-border tracking-base max-lg:w-full">
 							Log in
 						</button>
-						<button class="btn btn-primary tracking-base max-lg:w-full">
+						<a
+							href="/sign-up"
+							class="btn btn-primary tracking-base max-lg:w-full"
+						>
 							Sign up Free
-						</button>
+						</a>
 					</div>
 				</div>
 				<div
@@ -1132,20 +1135,17 @@
 							class="flex-grow flex items-center max-md:w-full max-md:order-1 relative max-md:px-5 max-md:pt-5"
 						>
 							<div
-								class="absolute top-1/2 -translate-y-1/2 -right-[12%] max-h-[410px] w-[667px] max-w-full shadow-video border border-gray-500 rounded-xl max-md:top-auto max-md:right-auto max-md:mr-0 max-md:h-auto max-md:translate-y-0 max-md:relative"
+								class="absolute top-1/2 -translate-y-1/2 -right-[12%] max-h-[410px] w-[667px] max-w-full shadow-video border border-gray-500 rounded-xl max-md:top-auto max-md:right-auto max-md:mr-0 max-md:h-auto max-md:translate-y-0 max-md:relative overflow-hidden object-bottom"
 							>
 								<div
 									class="absolute w-[120%] h-[130%] left-0 top-1/2 -translate-y-[46%] bg-card-right bg-no-repeat bg-center bg-contain -z-1"
 								></div>
-								<img
-									class="object-contain max-h-full rounded-xl overflow-hidden lazy-image"
-									data-src="./assets/images/card-chart.png"
-									data-srcset="
-										./assets/images/card-chart.png    1x,
-										./assets/images/card-chart-2x.png 2x
-									"
-									alt="chart"
-								/>
+								<video
+									class="size-full max-h-[410px] object-cover"
+									src="./assets/Screen recording.webm"
+									autoplay
+									loop
+								></video>
 							</div>
 						</div>
 					</div>
