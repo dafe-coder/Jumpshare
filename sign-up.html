@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Jumpshare: Sign.</title>
+		<title>Sign Up Free - Jumpshare</title>
 		<meta
 			name="description"
 			content="Jumpshare helps you and your team communicate better with screen recordings, screenshots, GIFs, file sharing, and more, all in one platform."
@@ -25,7 +25,7 @@
 		/>
 
 		<!-- Open Graph meta tags -->
-		<meta property="og:title" content="Jumpshare: Sign." />
+		<meta property="og:title" content="Sign Up Free - Jumpshare" />
 		<meta
 			property="og:description"
 			content="Jumpshare helps you and your team communicate better with screen recordings, screenshots, GIFs, file sharing, and more, all in one platform."
@@ -43,7 +43,7 @@
 			name="twitter:card"
 			content="https://jumpshare.fltr.club/assets/og_image.png"
 		/>
-		<meta name="twitter:title" content="Jumpshare: Sign." />
+		<meta name="twitter:title" content="Sign Up Free - Jumpshare" />
 		<meta
 			name="twitter:description"
 			content="Jumpshare helps you and your team communicate better with screen recordings, screenshots, GIFs, file sharing, and more, all in one platform."
@@ -63,30 +63,30 @@
 		<main class="main-body">
 			<!-- Main Section -->
 			<section class="relative min-h-screen">
-				<a
-					href="/"
-					class="absolute z-10 top-11 left-11 max-sm:top-10 max-[1320px]:left-5 cursor-pointer"
-				>
-					<img
-						loading="lazy"
-						class="max-h-7"
-						src="../assets/images/logo.svg"
-						alt="Jumpshare"
-					/>
-				</a>
 				<div
 					class="flex min-h-screen max-md:flex-col max-md:items-start max-md:justify-start"
 				>
 					<div
-						class="w-[51.67%] flex flex-col justify-center items-center px-6 max-md:w-full max-md:flex-shrink py-30"
+						class="w-[51.67%] flex flex-col justify-center items-center px-6 max-md:w-full max-md:flex-shrink max-sm:pb-9.5 max-md:flex-grow"
 					>
-						<div class="max-w-[27.25rem] w-full">
-							<h1 class="mb-6.5 text-3xl/[125%] font-[560]">
-								Sign up to Jumpshare
-							</h1>
+						<div
+							class="relative max-w-[27.25rem] w-full flex flex-col justify-center flex-grow py-30 max-sm:pt-22 max-sm:pb-0"
+						>
+							<a
+								href="/"
+								class="absolute z-10 top-11 left-0 cursor-pointer max-sm:top-8"
+							>
+								<img
+									loading="lazy"
+									class="max-h-7"
+									src="../assets/images/logo.svg"
+									alt="Jumpshare"
+								/>
+							</a>
+							<h1 class="mb-6.5 h3 max-sm:text-left">Sign up to Jumpshare</h1>
 							<div class="flex flex-col gap-3">
 								<button
-									class="btn btn-border w-full shadow-none h-13 border border-gray-500 font-semibold text-base gap-5"
+									class="btn btn-border w-full shadow-none h-13 border border-gray-500 font-medium text-base gap-5"
 								>
 									<svg
 										width="25"
@@ -115,7 +115,7 @@
 									Sign up with Google
 								</button>
 								<button
-									class="btn btn-border w-full shadow-none h-13 border border-gray-500 font-semibold text-base gap-5"
+									class="btn btn-border w-full shadow-none h-13 border border-gray-500 font-medium text-base gap-5"
 								>
 									<svg
 										width="24"
@@ -144,7 +144,7 @@
 									Sign up with Microsoft
 								</button>
 								<button
-									class="btn btn-border w-full shadow-none h-13 border border-gray-500 font-semibold text-base gap-5"
+									class="btn btn-border w-full shadow-none h-13 border border-gray-500 font-medium text-base gap-5"
 								>
 									<svg
 										width="25"
@@ -170,12 +170,8 @@
 								</div>
 								<div class="flex-grow bg-gray-500 h-px"></div>
 							</div>
-							<form
-								action="#"
-								method="POST"
-								class="w-full flex flex-col gap-3.5"
-							>
-								<div class="flex gap-4 w-full">
+							<form action="#" method="POST" class="w-full">
+								<div class="flex gap-4 w-full mb-3.5">
 									<div class="flex-grow relative">
 										<input
 											id="first-name"
@@ -205,7 +201,7 @@
 										</label>
 									</div>
 								</div>
-								<div class="relative w-full">
+								<div class="relative w-full mb-3.5">
 									<input
 										id="email"
 										type="email"
@@ -219,7 +215,7 @@
 										Email
 									</label>
 								</div>
-								<div class="relative w-full">
+								<div class="relative w-full mb-3.5">
 									<input
 										autocomplete="off"
 										id="password"
@@ -277,7 +273,7 @@
 								</div>
 								<div
 									id="requirement-block"
-									class="w-full mb-2.5 max-h-0 overflow-hidden transition-all duration-300"
+									class="w-full max-h-0 overflow-hidden transition-all duration-300"
 								>
 									<div class="w-full rounded-full h-[5px] bg-gray-400 mb-2.5">
 										<div
@@ -285,7 +281,7 @@
 											class="bg-red-500 w-1/4 h-full rounded-full transition-all duration-500"
 										></div>
 									</div>
-									<div class="flex justify-between gap-2">
+									<div class="flex justify-between gap-2 mb-3.5">
 										<p
 											class="max-w-[21.25rem] flex-grow text-s text-gray-800"
 											id="requirement-par"
@@ -301,7 +297,7 @@
 									</div>
 								</div>
 								<button
-									class="w-full btn btn-primary h-11 font-sans-variable font-[560]"
+									class="w-full btn btn-primary h-11 font-sans-variable font-medium mb-3.5"
 								>
 									Sign up for free
 									<svg
@@ -328,6 +324,10 @@
 								</p>
 							</form>
 						</div>
+						<p class="text-s hidden max-md:block flex-shrink-0 mt-5">
+							Already have an account?
+							<a class="text-blue-500" href="/login">Sign In</a>
+						</p>
 					</div>
 					<div
 						class="right-side relative w-[48.33%] bg-blue-50 flex items-center justify-center px-6 max-md:w-full max-md:flex-grow max-md:py-24 overflow-hidden max-md:hidden"
@@ -457,7 +457,7 @@
 						document.getElementById('requirement-block').style.maxHeight = 0
 					} else {
 						document.getElementById('requirement-block').style.maxHeight =
-							50 + 'px'
+							63 + 'px'
 					}
 
 					let requirementArray = []

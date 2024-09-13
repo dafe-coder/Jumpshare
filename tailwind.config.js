@@ -196,6 +196,8 @@ module.exports = {
 	fontFamily: {
 		inter: ['Inter'],
 		'sans-medium': ['GeneralSans-semibold', ...defaultTheme.fontFamily.sans],
+		'sans-variable': ['GeneralSans-Variable', ...defaultTheme.fontFamily.sans],
+		'sans-semi': ['GeneralSans-semibold', ...defaultTheme.fontFamily.sans],
 	},
 	plugins: [
 		require('tailwindcss'),
@@ -213,7 +215,7 @@ module.exports = {
 							justifyContent: 'center',
 							height: '1.125rem',
 							width: '1.125rem',
-							marginTop: '1.5px',
+							marginTop: '6.3px',
 						},
 					},
 				},
@@ -521,6 +523,18 @@ module.exports = {
 						fontFamily: 'GeneralSans-medium',
 						fontSize: '2.25rem',
 						lineHeight: '2.8125rem',
+					},
+				},
+				'.h3': {
+					fontFamily: 'GeneralSans-semibold',
+					fontSize: '2rem', // 32px
+					fontWeight: 600,
+					lineHeight: '2.4rem',
+					letterSpacing: '-0.22px',
+					color: theme('colors.blue[950]'),
+					'@media not all and (min-width: 640px)': {
+						fontSize: '1.4rem',
+						lineHeight: '1.7rem !important',
 					},
 				},
 			}),
