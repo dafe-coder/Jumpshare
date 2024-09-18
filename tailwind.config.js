@@ -140,6 +140,8 @@ module.exports = {
 				'inset-3xl':
 					'inset 0px -0.876389px 0.876389px 0.876389px rgba(17, 34, 69, 0.12)',
 				card: '0 2px 8px -1px #130c3e0a, 0 0 0 1px #130c3e1c, 0 4px 4px -5px #130c3e40;',
+				violet:
+					'0 1px 2px 0 rgba(31, 18, 69, 0.08), 0 0 0 1px rgba(58, 22, 202, 0.75), 0 2px 4.3px -1px rgba(58, 22, 202, 0.4)',
 				'card-use-cases': '0px 5px 30.9px -4px rgba(58, 68, 89, 0.27)',
 				'card-dark': '0px 1px 7px rgba(15, 28, 53, 0.04)',
 				'card-orange':
@@ -461,6 +463,10 @@ module.exports = {
 					backgroundImage:
 						'linear-gradient(180deg, rgba(74,122,236,1) 0%, rgba(74,113,241,1) 36%, rgba(78,119,206,0) 93%)',
 				},
+				'.main-gradient-violet': {
+					backgroundImage:
+						'linear-gradient(180deg, #6B5EEC 0%, #6B5EEC 36%, rgba(78,119,206,0) 93%)',
+				},
 				'.card-gradient': {
 					backgroundImage:
 						'linear-gradient(180deg, rgba(243, 240, 255, 0.5) -7.92%, rgba(239, 235, 255, 0) 53.46%)',
@@ -510,7 +516,7 @@ module.exports = {
 					},
 				},
 				'.h2': {
-					fontFamily: 'GeneralSans-semibold',
+					fontFamily: 'GeneralSans-Variable',
 					fontSize: '3rem', // 48px
 					textAlign: 'center',
 					fontWeight: 600,
@@ -520,13 +526,12 @@ module.exports = {
 					letterSpacing: '-1.44px',
 					color: theme('colors.blue[950]'),
 					'@media not all and (min-width: 640px)': {
-						fontFamily: 'GeneralSans-medium',
 						fontSize: '2.25rem',
 						lineHeight: '2.8125rem',
 					},
 				},
 				'.h3': {
-					fontFamily: 'GeneralSans-semibold',
+					fontFamily: 'GeneralSans-Variable',
 					fontSize: '2rem', // 32px
 					fontWeight: 600,
 					lineHeight: '2.4rem',
@@ -540,7 +545,7 @@ module.exports = {
 			}),
 				addBase({
 					h1: {
-						fontFamily: 'GeneralSans-semibold',
+						fontFamily: 'GeneralSans-Variable',
 						fontSize: '3.25rem', // 52px
 						fontWeight: 600,
 						lineHeight: '3.81rem',
@@ -549,13 +554,12 @@ module.exports = {
 						textAlign: 'left',
 						'@media not all and (min-width: 480px)': {
 							fontSize: '2.25rem',
-							fontWeight: 600,
 							lineHeight: '2.6437rem',
 							textAlign: 'center',
 						},
 					},
 					h2: {
-						fontFamily: 'GeneralSans-semibold',
+						fontFamily: 'GeneralSans-Variable',
 						fontSize: '3rem', // 48px
 						textAlign: 'center',
 						fontWeight: 600,
@@ -565,13 +569,12 @@ module.exports = {
 						letterSpacing: '-1.44px',
 						color: theme('colors.blue[950]'),
 						'@media not all and (min-width: 640px)': {
-							fontFamily: 'GeneralSans-medium',
 							fontSize: '2.25rem',
 							lineHeight: '2.8125rem',
 						},
 					},
 					h3: {
-						fontFamily: 'GeneralSans-semibold',
+						fontFamily: 'GeneralSans-Variable',
 						fontSize: '2rem', // 32px
 						fontWeight: 600,
 						lineHeight: '2.4rem',
@@ -586,7 +589,7 @@ module.exports = {
 						fontSize: '1.375rem',
 						letterSpacing: '-0.22px',
 						lineHeight: '1.65rem',
-						fontFamily: 'GeneralSans-semibold',
+						fontFamily: 'GeneralSans-Variable',
 						color: theme('colors.blue[950]'),
 						'@media not all and (min-width: 640px)': {
 							fontSize: '1rem',
