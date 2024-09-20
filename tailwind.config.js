@@ -589,6 +589,7 @@ module.exports = {
 						fontSize: '1.375rem',
 						letterSpacing: '-0.22px',
 						lineHeight: '1.65rem',
+						fontWeight: 600,
 						fontFamily: 'GeneralSans-Variable',
 						color: theme('colors.blue[950]'),
 						'@media not all and (min-width: 640px)': {
