@@ -51,17 +51,22 @@ module.exports = {
 			},
 			blue: {
 				50: '#E9F1F6',
+				75: '#F5F9FA',
 				100: '#f2f6ff',
+				400: '#09B4DC',
 				500: '#2F76FF',
 				600: '#4C78EA',
 				700: '#1c5ddf',
+				800: '#082A35',
 				900: '#122345',
 				950: '#130c3e',
 				1000: '#091329',
 			},
 			violet: {
+				400: '#9F99B2',
 				500: '#6259EB',
 				600: '#9452FF',
+				700: '#27293D',
 				850: '#181729',
 				900: '#060515',
 			},
@@ -185,6 +190,8 @@ module.exports = {
 				'card-right': "url('/assets/images/bg-card-right.png')",
 				'card-left-orange': "url('/assets/images/card-bg-orange.png')",
 				'card-right-blue': "url('/assets/images/card-bg-blue.png')",
+				'card-right-vivid-blue':
+					"url('/assets/images/bg-card-right-vivid-blue.png')",
 				'video-ai': "url('/assets/images/video-ai-bg.png')",
 				'card-dark-center': "url('/assets/images/bg-card-dark.png')",
 				'banner-round': "url('/assets/images/banner-bg.png')",
@@ -302,6 +309,21 @@ module.exports = {
 						backgroundColor: `rgba(${hexToRgb(theme('colors.violet[600]'))}, 0.9)`,
 					},
 				},
+				'.btn-dark': {
+					backgroundColor: '#161723',
+					color: theme('colors.white'),
+					boxShadow:
+						'0px 0px 0px 1px rgba(255, 255, 255, 0.12), 0px 1px 2px rgba(18, 35, 69, 0.05), 0px 5px 4.5px -1px rgba(18, 35, 69, 0.04)',
+				},
+				'.btn-vivid-blue': {
+					boxShadow:
+						'0px 2px 4.3px -1px rgba(22, 159, 202, 0.4), 0px 0px 0px 1px rgba(9, 154, 199, 0.85), 0px 1px 2px rgba(18, 60, 69, 0.08)',
+					backgroundColor: theme('colors.blue[400]'),
+					color: theme('colors.white'),
+					'&:hover': {
+						backgroundColor: `rgba(${hexToRgb(theme('colors.blue[400]'))}, 0.9)`,
+					},
+				},
 				'.btn-yellow': {
 					boxShadow:
 						'0 1px 2px 0 rgba(18, 35, 69, 0.08), 0 0 0 1px #fdbb05, 0 2px 4.3px -1px rgba(178, 131, 0, 0.4)',
@@ -309,6 +331,15 @@ module.exports = {
 					color: theme('colors.black'),
 					'&:hover': {
 						backgroundColor: `rgba(${hexToRgb(theme('colors.yellow[600]'))}, 0.9)`,
+					},
+				},
+				'.btn-orange': {
+					boxShadow:
+						'0px 2px 4.3px -1px rgba(217, 94, 26, 0.4), 0px 0px 0px 1px #E15B22, 0px 1px 2px rgba(31, 18, 69, 0.08)',
+					backgroundColor: theme('colors.orange[500]'),
+					color: theme('colors.white'),
+					'&:hover': {
+						backgroundColor: `rgba(${hexToRgb(theme('colors.orange[500]'))}, 0.9)`,
 					},
 				},
 				'.btn-long': {
@@ -467,6 +498,14 @@ module.exports = {
 					backgroundImage:
 						'linear-gradient(180deg, #6B5EEC 0%, #6B5EEC 36%, rgba(78,119,206,0) 93%)',
 				},
+				'.main-gradient-vivid-blue': {
+					backgroundImage:
+						'linear-gradient(180deg, #09B4DC 0%, #09B4DC 36%, rgba(78,119,206,0) 93%)',
+				},
+				'.main-gradient-orange': {
+					backgroundImage:
+						'linear-gradient(180deg, #FE6E2B 0%, #FE6E2B 36%, rgba(78,119,206,0) 93%)',
+				},
 				'.card-gradient': {
 					backgroundImage:
 						'linear-gradient(180deg, rgba(243, 240, 255, 0.5) -7.92%, rgba(239, 235, 255, 0) 53.46%)',
@@ -474,6 +513,10 @@ module.exports = {
 				'.card-gradient-orange': {
 					backgroundImage:
 						'linear-gradient(180deg, rgba(255, 247, 240, 0.5) -7.92%, rgba(239, 235, 255, 0) 53.46%)',
+				},
+				'.card-gradient-vivid-blue': {
+					backgroundImage:
+						'linear-gradient(180deg, rgba(240, 252, 255, 0.5) -7.92%, rgba(240, 252, 255, 0) 53.46%)',
 				},
 				'.card-gradient-blue': {
 					backgroundImage:
@@ -483,6 +526,10 @@ module.exports = {
 					backgroundImage:
 						'linear-gradient(180deg, rgba(255,255,255,0) 24%, rgba(255,255,255,1) 100%)',
 				},
+				'.gradient-dark': {
+					backgroundImage:
+						'linear-gradient(180deg, rgba(255,255,255,0) 0%, #131320 100%)',
+				},
 				'.banner-gradient-top': {
 					backgroundImage:
 						'linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100.65%)',
@@ -491,6 +538,16 @@ module.exports = {
 				'.banner-gradient-bottom': {
 					backgroundImage:
 						'linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)',
+					opacity: 0.6,
+				},
+				'.banner-gradient-top-dark': {
+					backgroundImage:
+						'linear-gradient(180deg, #131320 0%, rgba(255, 255, 255, 0) 100%)',
+					opacity: 0.6,
+				},
+				'.banner-gradient-bottom-dark': {
+					backgroundImage:
+						'linear-gradient(180deg, #131320 0%, rgba(255, 255, 255, 0) 100%)',
 					opacity: 0.6,
 				},
 				'.card-gradient-yellow': {

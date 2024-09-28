@@ -66,6 +66,7 @@
 		}
 	}
 }
+
 .active-header {
 	@apply bg-white top-0;
 	box-shadow:
@@ -73,6 +74,9 @@
 		0px 6px 11.8px -4px rgba(13, 34, 71, 0.02),
 		0px 0px 0px 1px rgba(18, 35, 69, 0.1),
 		0px 11px 10.7px -6px rgba(18, 35, 69, 0.04);
+}
+.active-header.dark-header {
+	@apply !bg-violet-900 top-0;
 }
 
 .animate__fadeInAndSlideInUp {
@@ -96,6 +100,12 @@
 	opacity: 1 !important;
 }
 
+.hamburger-dark.tham-w-6 .tham-inner,
+.hamburger-dark.tham-w-6 .tham-inner::after,
+.hamburger-dark.tham-w-6 .tham-inner::before {
+	@apply !bg-white;
+}
+
 .tham-w-6 .tham-inner::before {
 	top: -5px;
 }
@@ -109,4 +119,7 @@
 }
 .checkmark-label {
 	@apply pl-7 relative cursor-pointer before:left-[-1px] before:top-0 before:absolute before:size-4.5 before:hidden after:absolute after:left-0 after:top-[1px] after:block after:size-4 after:content-[''] after:border after:border-gray-600 after:rounded-sm;
+}
+.dark-header .expand > a {
+	@apply lg:text-black;
 }
