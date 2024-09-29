@@ -187,6 +187,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				main: "url('/assets/images/main-bg.png')",
+				'main-ai': "url('/assets/images/features/ai/main-bg.png')",
 				'card-right': "url('/assets/images/bg-card-right.png')",
 				'card-left-orange': "url('/assets/images/card-bg-orange.png')",
 				'card-right-blue': "url('/assets/images/card-bg-blue.png')",
