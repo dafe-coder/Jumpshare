@@ -74,7 +74,7 @@
 							alt="Jumpshare"
 						/>
 					</a>
-					<div class="flex flex-col items-center w-full py-8 max-sm:py-6">
+					<div class="flex flex-col items-center w-full py-8 max-sm:py-5">
 						<div
 							class="w-full max-w-[460px] flex flex-col justify-center items-center max-md:w-full max-md:flex-shrink max-md:flex-grow shadow-card-white bg-white p-10 pb-6.5 rounded-2xl max-sm:px-5 max-sm:pb-4.5 max-sm:pt-7.5"
 						>
@@ -173,7 +173,7 @@
 									</div>
 									<div class="flex-grow bg-gray-500 h-px"></div>
 								</div>
-								<form action="#" method="POST" class="w-full">
+								<form action="#" method="POST" class="w-full" id="sign-form">
 									<div class="flex gap-4 w-full mb-3.5">
 										<div class="flex-grow relative">
 											<input
@@ -181,6 +181,7 @@
 												type="text"
 												class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 w-full text-blue-900 outline-none font-normal focus:border-blue-500 hover:border-gray-700"
 												required
+												minlength="2"
 											/>
 											<label
 												for="first-name"
@@ -195,6 +196,7 @@
 												type="text"
 												class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 w-full text-blue-900 outline-none font-normal focus:border-blue-500 hover:border-gray-700"
 												required
+												minlength="2"
 											/>
 											<label
 												for="last-name"
@@ -204,6 +206,42 @@
 											</label>
 										</div>
 									</div>
+									<p
+										id="name-par-invalid"
+										class="text-red-500 flex items-center gap-2 text-s max-h-0 overflow-hidden transition-all"
+									>
+										<svg
+											width="16"
+											height="16"
+											viewBox="0 0 16 16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M7.99479 1.32812C11.6768 1.32812 14.6615 4.31279 14.6615 7.99479C14.6615 11.6768 11.6768 14.6615 7.99479 14.6615C4.31279 14.6615 1.32812 11.6768 1.32812 7.99479C1.32812 4.31279 4.31279 1.32812 7.99479 1.32812ZM7.99479 2.66146C6.5803 2.66146 5.22375 3.22336 4.22356 4.22356C3.22336 5.22375 2.66146 6.5803 2.66146 7.99479C2.66146 9.40928 3.22336 10.7658 4.22356 11.766C5.22375 12.7662 6.5803 13.3281 7.99479 13.3281C9.40928 13.3281 10.7658 12.7662 11.766 11.766C12.7662 10.7658 13.3281 9.40928 13.3281 7.99479C13.3281 6.5803 12.7662 5.22375 11.766 4.22356C10.7658 3.22336 9.40928 2.66146 7.99479 2.66146ZM7.99479 9.99479C8.1716 9.99479 8.34117 10.065 8.4662 10.1901C8.59122 10.3151 8.66146 10.4846 8.66146 10.6615C8.66146 10.8383 8.59122 11.0078 8.4662 11.1329C8.34117 11.2579 8.1716 11.3281 7.99479 11.3281C7.81798 11.3281 7.64841 11.2579 7.52339 11.1329C7.39836 11.0078 7.32812 10.8383 7.32812 10.6615C7.32812 10.4846 7.39836 10.3151 7.52339 10.1901C7.64841 10.065 7.81798 9.99479 7.99479 9.99479ZM7.99479 3.99479C8.1716 3.99479 8.34117 4.06503 8.4662 4.19005C8.59122 4.31508 8.66146 4.48465 8.66146 4.66146V8.66146C8.66146 8.83827 8.59122 9.00784 8.4662 9.13286C8.34117 9.25789 8.1716 9.32812 7.99479 9.32812C7.81798 9.32812 7.64841 9.25789 7.52339 9.13286C7.39836 9.00784 7.32812 8.83827 7.32812 8.66146V4.66146C7.32812 4.48465 7.39836 4.31508 7.52339 4.19005C7.64841 4.06503 7.81798 3.99479 7.99479 3.99479Z"
+												fill="#EC2C58"
+											/>
+										</svg>
+										First name should be at least 2 characters
+									</p>
+									<p
+										id="lastname-par-invalid"
+										class="text-red-500 flex items-center gap-2 text-s max-h-0 overflow-hidden transition-all"
+									>
+										<svg
+											width="16"
+											height="16"
+											viewBox="0 0 16 16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M7.99479 1.32812C11.6768 1.32812 14.6615 4.31279 14.6615 7.99479C14.6615 11.6768 11.6768 14.6615 7.99479 14.6615C4.31279 14.6615 1.32812 11.6768 1.32812 7.99479C1.32812 4.31279 4.31279 1.32812 7.99479 1.32812ZM7.99479 2.66146C6.5803 2.66146 5.22375 3.22336 4.22356 4.22356C3.22336 5.22375 2.66146 6.5803 2.66146 7.99479C2.66146 9.40928 3.22336 10.7658 4.22356 11.766C5.22375 12.7662 6.5803 13.3281 7.99479 13.3281C9.40928 13.3281 10.7658 12.7662 11.766 11.766C12.7662 10.7658 13.3281 9.40928 13.3281 7.99479C13.3281 6.5803 12.7662 5.22375 11.766 4.22356C10.7658 3.22336 9.40928 2.66146 7.99479 2.66146ZM7.99479 9.99479C8.1716 9.99479 8.34117 10.065 8.4662 10.1901C8.59122 10.3151 8.66146 10.4846 8.66146 10.6615C8.66146 10.8383 8.59122 11.0078 8.4662 11.1329C8.34117 11.2579 8.1716 11.3281 7.99479 11.3281C7.81798 11.3281 7.64841 11.2579 7.52339 11.1329C7.39836 11.0078 7.32812 10.8383 7.32812 10.6615C7.32812 10.4846 7.39836 10.3151 7.52339 10.1901C7.64841 10.065 7.81798 9.99479 7.99479 9.99479ZM7.99479 3.99479C8.1716 3.99479 8.34117 4.06503 8.4662 4.19005C8.59122 4.31508 8.66146 4.48465 8.66146 4.66146V8.66146C8.66146 8.83827 8.59122 9.00784 8.4662 9.13286C8.34117 9.25789 8.1716 9.32812 7.99479 9.32812C7.81798 9.32812 7.64841 9.25789 7.52339 9.13286C7.39836 9.00784 7.32812 8.83827 7.32812 8.66146V4.66146C7.32812 4.48465 7.39836 4.31508 7.52339 4.19005C7.64841 4.06503 7.81798 3.99479 7.99479 3.99479Z"
+												fill="#EC2C58"
+											/>
+										</svg>
+										Last name should be at least 2 characters
+									</p>
 									<div class="relative w-full mb-3.5">
 										<input
 											id="email"
@@ -213,12 +251,31 @@
 											required
 										/>
 										<label
+											id="email-label"
 											for="email"
 											class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:text-blue-500 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:scale-75 peer-valid:scale-75 origin-left"
 										>
 											Email
 										</label>
 									</div>
+									<p
+										id="email-par-invalid"
+										class="text-red-500 flex items-center gap-2 text-s max-h-0 overflow-hidden transition-all"
+									>
+										<svg
+											width="16"
+											height="16"
+											viewBox="0 0 16 16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M7.99479 1.32812C11.6768 1.32812 14.6615 4.31279 14.6615 7.99479C14.6615 11.6768 11.6768 14.6615 7.99479 14.6615C4.31279 14.6615 1.32812 11.6768 1.32812 7.99479C1.32812 4.31279 4.31279 1.32812 7.99479 1.32812ZM7.99479 2.66146C6.5803 2.66146 5.22375 3.22336 4.22356 4.22356C3.22336 5.22375 2.66146 6.5803 2.66146 7.99479C2.66146 9.40928 3.22336 10.7658 4.22356 11.766C5.22375 12.7662 6.5803 13.3281 7.99479 13.3281C9.40928 13.3281 10.7658 12.7662 11.766 11.766C12.7662 10.7658 13.3281 9.40928 13.3281 7.99479C13.3281 6.5803 12.7662 5.22375 11.766 4.22356C10.7658 3.22336 9.40928 2.66146 7.99479 2.66146ZM7.99479 9.99479C8.1716 9.99479 8.34117 10.065 8.4662 10.1901C8.59122 10.3151 8.66146 10.4846 8.66146 10.6615C8.66146 10.8383 8.59122 11.0078 8.4662 11.1329C8.34117 11.2579 8.1716 11.3281 7.99479 11.3281C7.81798 11.3281 7.64841 11.2579 7.52339 11.1329C7.39836 11.0078 7.32812 10.8383 7.32812 10.6615C7.32812 10.4846 7.39836 10.3151 7.52339 10.1901C7.64841 10.065 7.81798 9.99479 7.99479 9.99479ZM7.99479 3.99479C8.1716 3.99479 8.34117 4.06503 8.4662 4.19005C8.59122 4.31508 8.66146 4.48465 8.66146 4.66146V8.66146C8.66146 8.83827 8.59122 9.00784 8.4662 9.13286C8.34117 9.25789 8.1716 9.32812 7.99479 9.32812C7.81798 9.32812 7.64841 9.25789 7.52339 9.13286C7.39836 9.00784 7.32812 8.83827 7.32812 8.66146V4.66146C7.32812 4.48465 7.39836 4.31508 7.52339 4.19005C7.64841 4.06503 7.81798 3.99479 7.99479 3.99479Z"
+												fill="#EC2C58"
+											/>
+										</svg>
+										Please enter a valid email address
+									</p>
 									<div class="relative w-full mb-4">
 										<input
 											autocomplete="off"
@@ -290,8 +347,7 @@
 												class="max-w-[21.25rem] flex-grow text-s text-gray-800"
 												id="requirement-par"
 											>
-												Your password requires a symbol, a symbol, uppercase
-												letter, lowercase letter & a number
+												Your password must contain:
 											</p>
 											<span
 												id="password-level"
@@ -301,6 +357,7 @@
 										</div>
 									</div>
 									<button
+										type="submit"
 										class="w-full btn btn-primary h-12 font-sans-variable font-medium mb-4 max-sm:mb-4.5 mt-1.5 text-sm"
 									>
 										Sign up with email
@@ -340,7 +397,7 @@
 						<p class="flex-shrink-0 mt-5 text-center text-s max-sm:mt-4.5">
 							Already have an account?
 							<a class="text-blue-500 font-medium hover:underline" href="/login"
-								>Login here</a
+								>Sign in</a
 							>
 						</p>
 					</div>
@@ -384,6 +441,56 @@
 					})
 				}
 
+				const validInput = (input, invalidPar) => {
+					if (!input.validity.valid || input.value.includes(' ')) {
+						input.classList.add('!border-red-500')
+						input
+							.closest('div')
+							.querySelector('label')
+							.classList.add('!text-red-500')
+						if (invalidPar) {
+							invalidPar.style.maxHeight = '18px'
+							invalidPar.style.marginBottom = '14px'
+						}
+					} else {
+						input.classList.remove('!border-red-500')
+						input
+							.closest('div')
+							.querySelector('label')
+							.classList.remove('!text-red-500')
+						if (invalidPar) {
+							invalidPar.style.maxHeight = 0
+							invalidPar.style.marginBottom = 0
+						}
+					}
+				}
+
+				// First name
+				const firstName = document.getElementById('first-name')
+				const nameParInvalid = document.getElementById('name-par-invalid')
+
+				firstName.addEventListener('input', function () {
+					validInput(firstName, nameParInvalid)
+				})
+
+				// Last name
+				const lastName = document.getElementById('last-name')
+				const lastNameParInvalid = document.getElementById(
+					'lastname-par-invalid'
+				)
+
+				lastName.addEventListener('input', function () {
+					validInput(lastName, lastNameParInvalid)
+				})
+
+				// email
+				const emailInput = document.getElementById('email')
+				const emailParInvalid = document.getElementById('email-par-invalid')
+
+				emailInput.addEventListener('input', function () {
+					validInput(emailInput, emailParInvalid)
+				})
+
 				// Password
 				const passwordInput = document.getElementById('password')
 				const requirementPar = document.getElementById('requirement-par')
@@ -413,11 +520,11 @@
 				const numberRegex = /[0-9]/
 
 				let requirements = {
-					length: 'to be at least 8 characters',
 					symbol: 'a symbol',
 					uppercase: 'uppercase letter',
 					lowercase: 'lowercase letter',
 					number: 'a number',
+					length: '8 characters minimum',
 				}
 
 				function setPasswordValidProgress(
@@ -443,20 +550,16 @@
 						passwordLevel.innerText = text
 					}
 				}
+				let requirementArray = []
 
 				function updateRequirementText() {
 					if (passwordInput.value.length <= 0) {
 						document.getElementById('requirement-block').style.maxHeight = 0
 					} else {
 						document.getElementById('requirement-block').style.maxHeight =
-							63 + 'px'
+							146 + 'px'
 					}
 
-					let requirementArray = []
-
-					if (passwordInput.value.length < 8) {
-						requirementArray.push(requirements.length)
-					}
 					if (!symbolRegex.test(passwordInput.value)) {
 						requirementArray.push(requirements.symbol)
 					}
@@ -469,7 +572,9 @@
 					if (!numberRegex.test(passwordInput.value)) {
 						requirementArray.push(requirements.number)
 					}
-
+					if (passwordInput.value.length < 8) {
+						requirementArray.push(requirements.length)
+					}
 					if (requirementArray.length === 0) {
 						setPasswordValidProgress(
 							'add',
@@ -493,7 +598,7 @@
 							['!w-1/2', '!bg-yellow-700'],
 							'!text-green-400',
 							'!text-yellow-700',
-							'Fair'
+							'Weak'
 						)
 						passwordInput.classList.remove(
 							'!border-green-400',
@@ -547,12 +652,24 @@
 					}
 
 					if (requirementArray.length > 0) {
-						requirementPar.textContent = `Your password requires ${requirementArray.join(', ').replace(/,([^,]*)$/, ' & $1')}`
+						requirementPar.innerHTML = `Your password must contain:
+						<ul class="custom-marker !list-disc list-inside text-gray-800 mt-2.5 space-y-1">
+							${requirementArray
+								.filter(item => item.trim() !== '')
+								.map(item => `<li>${item}</li>`)
+								.join('')}
+						</ul>`
 					} else {
 						requirementPar.textContent = 'Your Password is secure!'
 					}
 				}
 
+				// document.getElementById('sign-form').addEventListener('submit', (e) => {
+				// 	e.preventDefault()
+				// 	if(requirementArray.length === 0) {
+
+				// 	}
+				// })
 				passwordInput.addEventListener('input', updateRequirementText)
 			})
 		</script>

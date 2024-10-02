@@ -65,6 +65,9 @@
 			padding-bottom: 2.75rem;
 		}
 	}
+	.custom-marker li::marker {
+		color: rgba(18, 35, 69, 0.5);
+	}
 }
 
 .active-header {

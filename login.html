@@ -74,7 +74,7 @@
 							alt="Jumpshare"
 						/>
 					</a>
-					<div class="flex flex-col items-center w-full py-8 max-sm:py-6">
+					<div class="flex flex-col items-center w-full py-8 max-sm:py-5">
 						<div
 							class="w-full max-w-[460px] flex flex-col justify-center items-center max-md:w-full max-md:flex-shrink max-md:flex-grow shadow-card-white bg-white p-10 pb-6.5 rounded-2xl max-sm:px-5 max-sm:pb-4.5 max-sm:pt-7.5"
 						>
@@ -186,6 +186,24 @@
 											Email
 										</label>
 									</div>
+									<p
+										id="email-par-invalid"
+										class="text-red-500 flex items-center gap-2 text-s max-h-0 overflow-hidden transition-all"
+									>
+										<svg
+											width="16"
+											height="16"
+											viewBox="0 0 16 16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M7.99479 1.32812C11.6768 1.32812 14.6615 4.31279 14.6615 7.99479C14.6615 11.6768 11.6768 14.6615 7.99479 14.6615C4.31279 14.6615 1.32812 11.6768 1.32812 7.99479C1.32812 4.31279 4.31279 1.32812 7.99479 1.32812ZM7.99479 2.66146C6.5803 2.66146 5.22375 3.22336 4.22356 4.22356C3.22336 5.22375 2.66146 6.5803 2.66146 7.99479C2.66146 9.40928 3.22336 10.7658 4.22356 11.766C5.22375 12.7662 6.5803 13.3281 7.99479 13.3281C9.40928 13.3281 10.7658 12.7662 11.766 11.766C12.7662 10.7658 13.3281 9.40928 13.3281 7.99479C13.3281 6.5803 12.7662 5.22375 11.766 4.22356C10.7658 3.22336 9.40928 2.66146 7.99479 2.66146ZM7.99479 9.99479C8.1716 9.99479 8.34117 10.065 8.4662 10.1901C8.59122 10.3151 8.66146 10.4846 8.66146 10.6615C8.66146 10.8383 8.59122 11.0078 8.4662 11.1329C8.34117 11.2579 8.1716 11.3281 7.99479 11.3281C7.81798 11.3281 7.64841 11.2579 7.52339 11.1329C7.39836 11.0078 7.32812 10.8383 7.32812 10.6615C7.32812 10.4846 7.39836 10.3151 7.52339 10.1901C7.64841 10.065 7.81798 9.99479 7.99479 9.99479ZM7.99479 3.99479C8.1716 3.99479 8.34117 4.06503 8.4662 4.19005C8.59122 4.31508 8.66146 4.48465 8.66146 4.66146V8.66146C8.66146 8.83827 8.59122 9.00784 8.4662 9.13286C8.34117 9.25789 8.1716 9.32812 7.99479 9.32812C7.81798 9.32812 7.64841 9.25789 7.52339 9.13286C7.39836 9.00784 7.32812 8.83827 7.32812 8.66146V4.66146C7.32812 4.48465 7.39836 4.31508 7.52339 4.19005C7.64841 4.06503 7.81798 3.99479 7.99479 3.99479Z"
+												fill="#EC2C58"
+											/>
+										</svg>
+										Please enter a valid email address
+									</p>
 									<div class="relative w-full mb-4">
 										<input
 											autocomplete="off"
@@ -241,31 +259,6 @@
 												/>
 											</svg>
 										</button>
-									</div>
-									<div
-										id="requirement-block"
-										class="w-full max-h-0 overflow-hidden transition-all duration-300"
-									>
-										<div class="w-full rounded-full h-[5px] bg-gray-400 mb-2.5">
-											<div
-												id="password-correct-line"
-												class="bg-red-500 w-1/4 h-full rounded-full transition-all duration-500"
-											></div>
-										</div>
-										<div class="flex justify-between gap-2 mb-3.5">
-											<p
-												class="max-w-[21.25rem] flex-grow text-s text-gray-800"
-												id="requirement-par"
-											>
-												Your password requires a symbol, a symbol, uppercase
-												letter, lowercase letter & a number
-											</p>
-											<span
-												id="password-level"
-												class="flex-shrink-0 text-s text-red-500"
-												>Too Weak</span
-											>
-										</div>
 									</div>
 									<div class="flex items-center justify-between mb-[1.375rem]">
 										<div>
@@ -366,177 +359,37 @@
 						img.classList.remove('lazy-image')
 					})
 				}
-
-				// Password
-				const passwordInput = document.getElementById('password')
-				const requirementPar = document.getElementById('requirement-par')
-				const showPasswordButton = document.getElementById('show-password')
-				const passwordLevel = document.getElementById('password-level')
-				const passwordCorrectLine = document.querySelector(
-					'#password-correct-line'
-				)
-
-				showPasswordButton.addEventListener('click', () => {
-					const isActive = showPasswordButton.classList.toggle('active')
-					passwordInput.type = isActive ? 'text' : 'password'
-					const icons = showPasswordButton.querySelectorAll('svg')
-
-					if (isActive) {
-						icons[0].classList.add('hidden')
-						icons[1].classList.remove('hidden')
+				const validInput = (input, invalidPar) => {
+					if (!input.validity.valid || input.value.includes(' ')) {
+						input.classList.add('!border-red-500')
+						input
+							.closest('div')
+							.querySelector('label')
+							.classList.add('!text-red-500')
+						if (invalidPar) {
+							invalidPar.style.maxHeight = '18px'
+							invalidPar.style.marginBottom = '14px'
+						}
 					} else {
-						icons[1].classList.add('hidden')
-						icons[0].classList.remove('hidden')
+						input.classList.remove('!border-red-500')
+						input
+							.closest('div')
+							.querySelector('label')
+							.classList.remove('!text-red-500')
+						if (invalidPar) {
+							invalidPar.style.maxHeight = 0
+							invalidPar.style.marginBottom = 0
+						}
 					}
+				}
+
+				// email
+				const emailInput = document.getElementById('email')
+				const emailParInvalid = document.getElementById('email-par-invalid')
+
+				emailInput.addEventListener('input', function () {
+					validInput(emailInput, emailParInvalid)
 				})
-
-				const symbolRegex = /[!@#$%^&*(),.?":{}|<>]/
-				const uppercaseRegex = /[A-Z]/
-				const lowercaseRegex = /[a-z]/
-				const numberRegex = /[0-9]/
-
-				let requirements = {
-					length: 'to be at least 8 characters',
-					symbol: 'a symbol',
-					uppercase: 'uppercase letter',
-					lowercase: 'lowercase letter',
-					number: 'a number',
-				}
-
-				function setPasswordValidProgress(
-					toggle = 'add',
-					prevClassLine,
-					nextClassLine,
-					prevClassText,
-					nextClassText,
-					text
-				) {
-					if (toggle === 'add') {
-						passwordCorrectLine.classList.remove(...prevClassLine)
-						passwordCorrectLine.classList.add(...nextClassLine)
-						passwordLevel.innerText = text
-						passwordLevel.classList.remove(prevClassText)
-						passwordLevel.classList.add(nextClassText)
-					} else {
-						passwordCorrectLine.classList.remove(
-							...prevClassLine,
-							...nextClassLine
-						)
-						passwordLevel.classList.remove(prevClassText, nextClassText)
-						passwordLevel.innerText = text
-					}
-				}
-
-				function updateRequirementText() {
-					if (passwordInput.value.length <= 0) {
-						document.getElementById('requirement-block').style.maxHeight = 0
-					} else {
-						document.getElementById('requirement-block').style.maxHeight =
-							63 + 'px'
-					}
-
-					let requirementArray = []
-
-					if (passwordInput.value.length < 8) {
-						requirementArray.push(requirements.length)
-					}
-					if (!symbolRegex.test(passwordInput.value)) {
-						requirementArray.push(requirements.symbol)
-					}
-					if (!uppercaseRegex.test(passwordInput.value)) {
-						requirementArray.push(requirements.uppercase)
-					}
-					if (!lowercaseRegex.test(passwordInput.value)) {
-						requirementArray.push(requirements.lowercase)
-					}
-					if (!numberRegex.test(passwordInput.value)) {
-						requirementArray.push(requirements.number)
-					}
-
-					if (requirementArray.length === 0) {
-						setPasswordValidProgress(
-							'add',
-							['!w-1/2', '!w-2/3', '!bg-yellow-700'],
-							['!w-full', '!bg-green-400'],
-							'!text-yellow-700',
-							'!text-green-400',
-							'Strong'
-						)
-						passwordInput.classList.add('!border-green-400')
-						passwordInput.classList.remove('!border-yellow-700')
-						passwordInput.nextElementSibling.classList.add('!text-green-400')
-						passwordInput.nextElementSibling.classList.remove(
-							'!text-yellow-700',
-							'!text-red-500'
-						)
-					} else if (requirementArray.length === 2) {
-						setPasswordValidProgress(
-							'add',
-							['!w-full', '!w-2/3', '!bg-green-400'],
-							['!w-1/2', '!bg-yellow-700'],
-							'!text-green-400',
-							'!text-yellow-700',
-							'Fair'
-						)
-						passwordInput.classList.remove(
-							'!border-green-400',
-							'!border-red-500'
-						)
-						passwordInput.classList.add('!border-yellow-700')
-						passwordInput.nextElementSibling.classList.add('!text-yellow-700')
-						passwordInput.nextElementSibling.classList.remove(
-							'!text-green-400',
-							'!text-red-500'
-						)
-					} else if (requirementArray.length === 1) {
-						setPasswordValidProgress(
-							'add',
-							['!w-full', '!w-1/2', '!bg-green-400'],
-							['!w-2/3', '!bg-yellow-700'],
-							'!text-green-400',
-							'!text-yellow-700',
-							'Fair'
-						)
-						passwordInput.classList.remove(
-							'!border-green-400',
-							'!border-red-500'
-						)
-						passwordInput.classList.add('!border-yellow-700')
-						passwordInput.nextElementSibling.classList.add('!text-yellow-700')
-						passwordInput.nextElementSibling.classList.remove(
-							'!text-green-400',
-							'!text-red-500'
-						)
-					} else {
-						setPasswordValidProgress(
-							'remove',
-							['!w-1/2', '!w-2/3', '!bg-yellow-700'],
-							['!w-full', '!bg-green-400'],
-							'!text-yellow-700',
-							'!text-green-400',
-							'Too Weak'
-						)
-						passwordInput.classList.remove(
-							'!border-green-400',
-							'!border-yellow-700',
-							'!border-red-500'
-						)
-						passwordInput.classList.add('!border-red-500')
-						passwordInput.nextElementSibling.classList.add('!text-red-500')
-						passwordInput.nextElementSibling.classList.remove(
-							'!text-yellow-700',
-							'!text-green-400'
-						)
-					}
-
-					if (requirementArray.length > 0) {
-						requirementPar.textContent = `Your password requires ${requirementArray.join(', ').replace(/,([^,]*)$/, ' & $1')}`
-					} else {
-						requirementPar.textContent = 'Your Password is secure!'
-					}
-				}
-
-				passwordInput.addEventListener('input', updateRequirementText)
 			})
 		</script>
 	</body>
