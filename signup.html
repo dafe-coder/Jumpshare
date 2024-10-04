@@ -222,7 +222,7 @@
 												fill="#EC2C58"
 											/>
 										</svg>
-										Please enter your first name
+										<span>Please enter your first name</span>
 									</p>
 									<p
 										id="lastname-par-invalid"
@@ -240,7 +240,7 @@
 												fill="#EC2C58"
 											/>
 										</svg>
-										Please enter your last name
+										<span>Please enter your last name</span>
 									</p>
 									<div class="relative w-full mb-3.5">
 										<input
@@ -333,6 +333,24 @@
 											</svg>
 										</button>
 									</div>
+									<p
+										id="password-par-invalid"
+										class="text-red-500 flex items-center gap-2 text-s max-h-0 overflow-hidden transition-all"
+									>
+										<svg
+											width="16"
+											height="16"
+											viewBox="0 0 16 16"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M7.99479 1.32812C11.6768 1.32812 14.6615 4.31279 14.6615 7.99479C14.6615 11.6768 11.6768 14.6615 7.99479 14.6615C4.31279 14.6615 1.32812 11.6768 1.32812 7.99479C1.32812 4.31279 4.31279 1.32812 7.99479 1.32812ZM7.99479 2.66146C6.5803 2.66146 5.22375 3.22336 4.22356 4.22356C3.22336 5.22375 2.66146 6.5803 2.66146 7.99479C2.66146 9.40928 3.22336 10.7658 4.22356 11.766C5.22375 12.7662 6.5803 13.3281 7.99479 13.3281C9.40928 13.3281 10.7658 12.7662 11.766 11.766C12.7662 10.7658 13.3281 9.40928 13.3281 7.99479C13.3281 6.5803 12.7662 5.22375 11.766 4.22356C10.7658 3.22336 9.40928 2.66146 7.99479 2.66146ZM7.99479 9.99479C8.1716 9.99479 8.34117 10.065 8.4662 10.1901C8.59122 10.3151 8.66146 10.4846 8.66146 10.6615C8.66146 10.8383 8.59122 11.0078 8.4662 11.1329C8.34117 11.2579 8.1716 11.3281 7.99479 11.3281C7.81798 11.3281 7.64841 11.2579 7.52339 11.1329C7.39836 11.0078 7.32812 10.8383 7.32812 10.6615C7.32812 10.4846 7.39836 10.3151 7.52339 10.1901C7.64841 10.065 7.81798 9.99479 7.99479 9.99479ZM7.99479 3.99479C8.1716 3.99479 8.34117 4.06503 8.4662 4.19005C8.59122 4.31508 8.66146 4.48465 8.66146 4.66146V8.66146C8.66146 8.83827 8.59122 9.00784 8.4662 9.13286C8.34117 9.25789 8.1716 9.32812 7.99479 9.32812C7.81798 9.32812 7.64841 9.25789 7.52339 9.13286C7.39836 9.00784 7.32812 8.83827 7.32812 8.66146V4.66146C7.32812 4.48465 7.39836 4.31508 7.52339 4.19005C7.64841 4.06503 7.81798 3.99479 7.99479 3.99479Z"
+												fill="#EC2C58"
+											/>
+										</svg>
+										Please enter a password
+									</p>
 									<div
 										id="requirement-block"
 										class="w-full max-h-0 overflow-hidden transition-all duration-300"
@@ -469,6 +487,9 @@
 
 				// Password
 				const passwordInput = document.getElementById('password')
+				const passwordParInvalid = document.getElementById(
+					'password-par-invalid'
+				)
 				const requirementPar = document.getElementById('requirement-par')
 				const showPasswordButton = document.getElementById('show-password')
 				const passwordLevel = document.getElementById('password-level')
@@ -694,6 +715,14 @@
 					}
 				})
 
+				const validName = (value, parItem, text1, text2) => {
+					if (value.length >= 1 && value.length <= 2) {
+						parItem.querySelector('span').innerText = text2
+					} else if (value.length === 0) {
+						parItem.querySelector('span').innerText = text1
+					}
+				}
+
 				document.getElementById('sign-form').addEventListener('submit', e => {
 					e.preventDefault()
 
@@ -703,14 +732,24 @@
 
 					validInput(emailInput, emailParInvalid, validInp.email)
 
-					validInput(passwordInput, false, validInp.password)
+					validInput(
+						passwordInput,
+						passwordParInvalid,
+						passwordInput.value.length > 0
+					)
 
-					if (firstName.value.length >= 1 && firstName.value.length <= 2) {
-						nameParInvalid.innerText =
-							'First name should be at least 2 characters'
-					} else if (firstName.value.length === 0) {
-						nameParInvalid.innerText = 'Please enter your first name'
-					}
+					validName(
+						firstName.value,
+						nameParInvalid,
+						'Please enter your first name',
+						'First name should be at least 2 characters'
+					)
+					validName(
+						lastName.value,
+						lastNameParInvalid,
+						'Please enter your last name',
+						'Last name should be at least 2 characters'
+					)
 
 					if (!Object.values(validInp).includes(false)) {
 						/// method POST
