@@ -176,7 +176,7 @@
 											id="email"
 											type="email"
 											placeholder=" "
-											class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 w-full text-blue-900 outline-none font-normal focus:border-blue-500 hover:border-gray-700"
+											class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 w-full text-blue-900 outline-none font-normal focus:border-blue-500 hover:border-gray-700 autofill:bg-white"
 											required
 										/>
 										<label
@@ -328,7 +328,6 @@
 			document.addEventListener('DOMContentLoaded', () => {
 				// Lazy images
 				const lazyImages = document.querySelectorAll('.lazy-image')
-				console.log(lazyImages)
 
 				if ('IntersectionObserver' in window) {
 					const imageObserver = new IntersectionObserver(

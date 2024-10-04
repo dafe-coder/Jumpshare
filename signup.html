@@ -177,30 +177,30 @@
 									<div class="flex gap-4 w-full mb-3.5">
 										<div class="flex-grow relative">
 											<input
+												placeholder=" "
 												id="first-name"
 												type="text"
 												class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 w-full text-blue-900 outline-none font-normal focus:border-blue-500 hover:border-gray-700"
-												required
-												minlength="2"
+												autocomplete="off"
 											/>
 											<label
 												for="first-name"
-												class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:text-blue-500 peer-focus:scale-75 peer-valid:scale-75 origin-left"
+												class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:text-blue-500 peer-focus:scale-75 origin-left"
 											>
 												First Name
 											</label>
 										</div>
 										<div class="flex-grow relative">
 											<input
+												placeholder=" "
 												id="last-name"
 												type="text"
 												class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 w-full text-blue-900 outline-none font-normal focus:border-blue-500 hover:border-gray-700"
-												required
-												minlength="2"
+												autocomplete="off"
 											/>
 											<label
 												for="last-name"
-												class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:text-blue-500 peer-focus:scale-75 peer-valid:scale-75 origin-left"
+												class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:text-blue-500 peer-focus:scale-75 origin-left"
 											>
 												Last Name
 											</label>
@@ -245,15 +245,15 @@
 									<div class="relative w-full mb-3.5">
 										<input
 											id="email"
-											type="email"
+											type="text"
 											placeholder=" "
 											class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 w-full text-blue-900 outline-none font-normal focus:border-blue-500 hover:border-gray-700"
-											required
+											autocomplete="off"
 										/>
 										<label
 											id="email-label"
 											for="email"
-											class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:text-blue-500 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:scale-75 peer-valid:scale-75 origin-left"
+											class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-focus:text-blue-500 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:scale-75 origin-left"
 										>
 											Email
 										</label>
@@ -278,15 +278,16 @@
 									</p>
 									<div class="relative w-full mb-4">
 										<input
+											placeholder=" "
 											autocomplete="off"
 											id="password"
 											type="password"
 											class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 w-full text-blue-900 outline-none font-normal focus:border-blue-500 hover:border-gray-700"
-											required
+											autocomplete="off"
 										/>
 										<label
 											for="password"
-											class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:text-blue-500 peer-focus:scale-75 peer-valid:scale-75 origin-left"
+											class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:text-blue-500 peer-focus:scale-75 origin-left"
 										>
 											Password
 										</label>
@@ -409,7 +410,6 @@
 			document.addEventListener('DOMContentLoaded', () => {
 				// Lazy images
 				const lazyImages = document.querySelectorAll('.lazy-image')
-				console.log(lazyImages)
 
 				if ('IntersectionObserver' in window) {
 					const imageObserver = new IntersectionObserver(
@@ -441,8 +441,8 @@
 					})
 				}
 
-				const validInput = (input, invalidPar) => {
-					if (!input.validity.valid || input.value.includes(' ')) {
+				const validInput = (input, invalidPar, valid) => {
+					if (!valid || input.value.includes(' ')) {
 						input.classList.add('!border-red-500')
 						input
 							.closest('div')
@@ -451,6 +451,7 @@
 						if (invalidPar) {
 							invalidPar.style.maxHeight = '18px'
 							invalidPar.style.marginBottom = '14px'
+							invalidPar.style.marginTop = '-5px'
 						}
 					} else {
 						input.classList.remove('!border-red-500')
@@ -461,35 +462,10 @@
 						if (invalidPar) {
 							invalidPar.style.maxHeight = 0
 							invalidPar.style.marginBottom = 0
+							invalidPar.style.marginTop = 0
 						}
 					}
 				}
-
-				// First name
-				const firstName = document.getElementById('first-name')
-				const nameParInvalid = document.getElementById('name-par-invalid')
-
-				firstName.addEventListener('input', function () {
-					validInput(firstName, nameParInvalid)
-				})
-
-				// Last name
-				const lastName = document.getElementById('last-name')
-				const lastNameParInvalid = document.getElementById(
-					'lastname-par-invalid'
-				)
-
-				lastName.addEventListener('input', function () {
-					validInput(lastName, lastNameParInvalid)
-				})
-
-				// email
-				const emailInput = document.getElementById('email')
-				const emailParInvalid = document.getElementById('email-par-invalid')
-
-				emailInput.addEventListener('input', function () {
-					validInput(emailInput, emailParInvalid)
-				})
 
 				// Password
 				const passwordInput = document.getElementById('password')
@@ -526,6 +502,12 @@
 					number: 'a number',
 					length: '8 characters minimum',
 				}
+				let validInp = {
+					name: false,
+					lastName: false,
+					email: false,
+					password: false,
+				}
 
 				function setPasswordValidProgress(
 					toggle = 'add',
@@ -550,9 +532,10 @@
 						passwordLevel.innerText = text
 					}
 				}
-				let requirementArray = []
 
 				function updateRequirementText() {
+					let requirementArray = []
+
 					if (passwordInput.value.length <= 0) {
 						document.getElementById('requirement-block').style.maxHeight = 0
 					} else {
@@ -659,17 +642,74 @@
 								.map(item => `<li>${item}</li>`)
 								.join('')}
 						</ul>`
+						validInp.password = false
 					} else {
+						validInp.password = true
 						requirementPar.textContent = 'Your Password is secure!'
 					}
 				}
 
-				// document.getElementById('sign-form').addEventListener('submit', (e) => {
-				// 	e.preventDefault()
-				// 	if(requirementArray.length === 0) {
+				// First name
+				const firstName = document.getElementById('first-name')
+				const nameParInvalid = document.getElementById('name-par-invalid')
 
-				// 	}
-				// })
+				const checkStrLength = (value, item) => {
+					if (value.length >= 2) {
+						validInp[item] = true
+					} else {
+						validInp[item] = false
+					}
+				}
+
+				firstName.addEventListener('input', e => {
+					const target = e.target
+					checkStrLength(target.value, 'name')
+				})
+
+				// Last name
+				const lastName = document.getElementById('last-name')
+				const lastNameParInvalid = document.getElementById(
+					'lastname-par-invalid'
+				)
+
+				lastName.addEventListener('input', e => {
+					const target = e.target
+					checkStrLength(target.value, 'lastName')
+				})
+
+				// email
+				const emailInput = document.getElementById('email')
+				const emailParInvalid = document.getElementById('email-par-invalid')
+				function validateEmail(email) {
+					const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+					return emailPattern.test(email)
+				}
+
+				emailInput.addEventListener('input', e => {
+					const target = e.target
+					if (validateEmail(target.value)) {
+						validInp.email = true
+					} else {
+						validInp.email = false
+					}
+				})
+
+				document.getElementById('sign-form').addEventListener('submit', e => {
+					e.preventDefault()
+
+					validInput(firstName, nameParInvalid, validInp.name)
+
+					validInput(lastName, lastNameParInvalid, validInp.lastName)
+
+					validInput(emailInput, emailParInvalid, validInp.email)
+
+					validInput(passwordInput, false, validInp.password)
+
+					if (!Object.values(validInp).includes(false)) {
+						/// method POST
+						console.log('The date is correct, This can be shipped!')
+					}
+				})
 				passwordInput.addEventListener('input', updateRequirementText)
 			})
 		</script>

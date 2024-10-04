@@ -150,7 +150,6 @@
 			document.addEventListener('DOMContentLoaded', () => {
 				// Lazy images
 				const lazyImages = document.querySelectorAll('.lazy-image')
-				console.log(lazyImages)
 
 				if ('IntersectionObserver' in window) {
 					const imageObserver = new IntersectionObserver(

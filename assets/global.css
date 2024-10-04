@@ -126,3 +126,19 @@
 .dark-header .expand > a {
 	@apply lg:text-black;
 }
+
+input:-internal-autofill-selected {
+	@apply !bg-white;
+}
+
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0 50px white inset !important;
+	-webkit-text-fill-color: rgb(18 35 69 / var(--tw-text-opacity)) !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition: background-color 50000s ease-in-out 0s !important;
+}
