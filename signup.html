@@ -222,7 +222,7 @@
 												fill="#EC2C58"
 											/>
 										</svg>
-										First name should be at least 2 characters
+										Please enter your first name
 									</p>
 									<p
 										id="lastname-par-invalid"
@@ -240,7 +240,7 @@
 												fill="#EC2C58"
 											/>
 										</svg>
-										Last name should be at least 2 characters
+										Please enter your last name
 									</p>
 									<div class="relative w-full mb-3.5">
 										<input
@@ -704,6 +704,13 @@
 					validInput(emailInput, emailParInvalid, validInp.email)
 
 					validInput(passwordInput, false, validInp.password)
+
+					if (firstName.value.length >= 1 && firstName.value.length <= 2) {
+						nameParInvalid.innerText =
+							'First name should be at least 2 characters'
+					} else if (firstName.value.length === 0) {
+						nameParInvalid.innerText = 'Please enter your first name'
+					}
 
 					if (!Object.values(validInp).includes(false)) {
 						/// method POST
