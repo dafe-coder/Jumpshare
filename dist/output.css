@@ -2654,6 +2654,90 @@ body {
   top: calc(100% + 6px);
 }
 
+.left-\[300px\] {
+  left: 300px;
+}
+
+.right-\[0\] {
+  right: 0;
+}
+
+.-right-\[200px\] {
+  right: -200px;
+}
+
+.-right-\[300px\] {
+  right: -300px;
+}
+
+.top-\[51\%\] {
+  top: 51%;
+}
+
+.top-\[65\%\] {
+  top: 65%;
+}
+
+.top-\[60\%\] {
+  top: 60%;
+}
+
+.-right-\[150px\] {
+  right: -150px;
+}
+
+.-right-\[190px\] {
+  right: -190px;
+}
+
+.top-\[58\%\] {
+  top: 58%;
+}
+
+.-right-\[220px\] {
+  right: -220px;
+}
+
+.-left-\[200px\] {
+  left: -200px;
+}
+
+.-left-\[300px\] {
+  left: -300px;
+}
+
+.-left-\[500px\] {
+  left: -500px;
+}
+
+.left-\[500px\] {
+  left: 500px;
+}
+
+.left-\[700px\] {
+  left: 700px;
+}
+
+.left-\[650px\] {
+  left: 650px;
+}
+
+.left-\[200px\] {
+  left: 200px;
+}
+
+.left-\[280px\] {
+  left: 280px;
+}
+
+.left-\[290px\] {
+  left: 290px;
+}
+
+.left-\[260px\] {
+  left: 260px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -2684,6 +2768,10 @@ body {
 
 .z-50 {
   z-index: 50;
+}
+
+.z-0 {
+  z-index: 0;
 }
 
 .float-start {
@@ -3645,6 +3733,30 @@ body {
   width: max-content;
 }
 
+.w-\[813px\] {
+  width: 813px;
+}
+
+.w-\[1300\] {
+  width: 1300;
+}
+
+.w-\[1500\] {
+  width: 1500;
+}
+
+.w-\[1500px\] {
+  width: 1500px;
+}
+
+.w-\[1000px\] {
+  width: 1000px;
+}
+
+.w-\[1100px\] {
+  width: 1100px;
+}
+
 .min-w-\[28\.25rem\] {
   min-width: 28.25rem;
 }
@@ -4099,6 +4211,18 @@ body {
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-\[28\.75rem\] {
+  max-width: 28.75rem;
+}
+
+.max-w-\[377px\] {
+  max-width: 377px;
+}
+
+.max-w-\[23\.5625rem\] {
+  max-width: 23.5625rem;
 }
 
 .flex-shrink {
@@ -5502,6 +5626,10 @@ body {
   border-color: rgb(195 200 208 / var(--tw-border-opacity));
 }
 
+.border-\[transparent\] {
+  border-color: transparent;
+}
+
 .border-b-blue-1000\/10 {
   border-bottom-color: rgb(9 19 41 / 0.1);
 }
@@ -6366,6 +6494,14 @@ body {
   padding-top: 50%;
 }
 
+.pb-px {
+  padding-bottom: 1px;
+}
+
+.pb-0\.5 {
+  padding-bottom: 0.125rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -6432,6 +6568,10 @@ body {
 
 .font-sans-variable {
   font-family: GeneralSans-Variable, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .text-2\.5xl {
@@ -6547,6 +6687,20 @@ body {
 
 .text-\[12px\] {
   font-size: 12px;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
+}
+
+.text-\[32px\]\/\[38\/4px\] {
+  font-size: 32px;
+  line-height: 38/4px;
+}
+
+.text-\[32px\]\/\[38\.4px\] {
+  font-size: 32px;
+  line-height: 38.4px;
 }
 
 .font-\[560\] {
@@ -7787,6 +7941,18 @@ input:-webkit-autofill:active {
     top: 100%;
   }
 
+  .max-lg\:left-\[200px\] {
+    left: 200px;
+  }
+
+  .max-lg\:left-\[500px\] {
+    left: 500px;
+  }
+
+  .max-lg\:left-\[550px\] {
+    left: 550px;
+  }
+
   .max-lg\:order-1 {
     order: 1;
   }
@@ -8156,6 +8322,18 @@ input:-webkit-autofill:active {
     top: auto;
   }
 
+  .max-md\:left-\[50\%\] {
+    left: 50%;
+  }
+
+  .max-md\:-bottom-\[0vw\] {
+    bottom: -0vw;
+  }
+
+  .max-md\:bottom-\[2vw\] {
+    bottom: 2vw;
+  }
+
   .max-md\:order-1 {
     order: 1;
   }
@@ -8235,6 +8413,10 @@ input:-webkit-autofill:active {
 
   .max-md\:w-full {
     width: 100%;
+  }
+
+  .max-md\:w-\[90vw\] {
+    width: 90vw;
   }
 
   .max-md\:max-w-full {

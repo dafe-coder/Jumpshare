@@ -64,83 +64,74 @@
 	<body>
 		<main class="main-body">
 			<!-- Main Section -->
-			<section class="min-h-screen">
+			<section class="min-h-screen bg-gray-100">
 				<div
 					class="flex min-h-screen max-md:flex-col max-md:items-start max-md:justify-start"
 				>
-					<div
-						class="w-[51.67%] flex flex-col items-end px-6 max-md:w-full max-md:items-start max-md:pb-11 max-md:flex-shrink"
-					>
-						<div
-							class="relative w-full max-w-[38.375rem] flex flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start"
-						>
-							<a href="/" class="absolute top-11 max-sm:top-10">
-								<img
-									loading="lazy"
-									class="max-h-7"
-									src="../assets/images/logo.svg"
-									alt="Jumpshare"
-								/>
-							</a>
-							<div class="max-w-[29rem] w-full">
+					<div class="container pt-[1.5875rem]">
+						<a href="/" class="cursor-pointer inline-block">
+							<img
+								loading="lazy"
+								class="max-h-7"
+								src="../assets/images/logo.svg"
+								alt="Jumpshare"
+							/>
+						</a>
+						<div class="w-ful flex flex-col justify-center items-center py-16">
+							<div
+								class="max-w-[28.75rem] w-full bg-white shadow-card rounded-2xl pt-10 px-7 pb-6.5"
+							>
 								<h1
-									class="font-sans-variable mb-3 text-4.5xl max-sm:text-3xl max-sm:text-left max-sm:max-w-[280px]"
+									class="font-sans-semi text-blue-950 mb-3 text-center text-[32px]/[38.4px]"
 								>
 									Verify your email address
 								</h1>
-								<p class="text-sm text-left text-blue-900/80">
+								<p
+									class="text-sm text-center text-blue-900/80 max-w-[23.5625rem] mx-auto"
+								>
 									We have sent you a verification email. It should arrive in
-									your inbox in less than a minute. If you can't find it, check
-									your Spam folder or resend the email.
+									your inbox in a moment. If you can't find it, check your Spam
+									folder or resend the email.
+								</p>
+								<div class="mt-8 flex items-center gap-6">
+									<div
+										class="relative bg-gray-200 py-2 px-4 flex items-center rounded-lg"
+									>
+										<svg
+											class="flex-shrink-0"
+											width="24"
+											height="24"
+											viewBox="0 0 24 24"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M4.616 19C4.15533 19 3.771 18.846 3.463 18.538C3.155 18.23 3.00067 17.8453 3 17.384V6.616C3 6.15533 3.15433 5.771 3.463 5.463C3.77167 5.155 4.15567 5.00067 4.615 5H19.385C19.845 5 20.229 5.15433 20.537 5.463C20.845 5.77167 20.9993 6.156 21 6.616V17.385C21 17.845 20.8457 18.2293 20.537 18.538C20.2283 18.8467 19.8443 19.0007 19.385 19H4.616ZM12 12.116L4 6.885V17.385C4 17.5643 4.05767 17.7117 4.173 17.827C4.28833 17.9423 4.436 18 4.616 18H19.385C19.5643 18 19.7117 17.9423 19.827 17.827C19.9423 17.7117 20 17.564 20 17.384V6.884L12 12.116ZM12 11L19.692 6H4.308L12 11ZM4 6.885V6V17.385C4 17.5643 4.05767 17.7117 4.173 17.827C4.28833 17.9423 4.436 18 4.616 18H4V6.885Z"
+												fill="#222222"
+											/>
+										</svg>
+										<input
+											type="email"
+											placeholder="ghausiftikhar@jumpshareinbox..."
+											class="ml-4 mr-5 bg-[transparent] font-medium text-blue-900/60 placeholder:text-blue-900/60 text-[14px] w-full max-w-[13.75rem] flex flex-shrink pb-0.5"
+										/>
+										<a
+											class="text-blue-500 text-[14px] font-medium flex flex-shrink-0"
+											href="#"
+											>Change email</a
+										>
+									</div>
+								</div>
+								<p
+									class="text-center text-[14px] mt-6 font-medium font-sans-variable text-blue-900/80"
+								>
+									Didn't receive it?
+									<a href="#" class="text-blue-500 text-sm font-medium"
+										>Resend email</a
+									>
 								</p>
 							</div>
-							<div
-								class="flex items-center gap-6 mt-8 max-[1110px]:flex-wrap max-sm:mt-6 max-md:gap-3.5"
-							>
-								<div
-									class="relative bg-gray-200 py-2 px-4 flex items-center rounded-lg"
-								>
-									<svg
-										class="flex-shrink-0"
-										width="24"
-										height="24"
-										viewBox="0 0 24 24"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											d="M4.616 19C4.15533 19 3.771 18.846 3.463 18.538C3.155 18.23 3.00067 17.8453 3 17.384V6.616C3 6.15533 3.15433 5.771 3.463 5.463C3.77167 5.155 4.15567 5.00067 4.615 5H19.385C19.845 5 20.229 5.15433 20.537 5.463C20.845 5.77167 20.9993 6.156 21 6.616V17.385C21 17.845 20.8457 18.2293 20.537 18.538C20.2283 18.8467 19.8443 19.0007 19.385 19H4.616ZM12 12.116L4 6.885V17.385C4 17.5643 4.05767 17.7117 4.173 17.827C4.28833 17.9423 4.436 18 4.616 18H19.385C19.5643 18 19.7117 17.9423 19.827 17.827C19.9423 17.7117 20 17.564 20 17.384V6.884L12 12.116ZM12 11L19.692 6H4.308L12 11ZM4 6.885V6V17.385C4 17.5643 4.05767 17.7117 4.173 17.827C4.28833 17.9423 4.436 18 4.616 18H4V6.885Z"
-											fill="#222222"
-										/>
-									</svg>
-									<input
-										type="email"
-										placeholder="ghausiftikhar@jumpshareinbox..."
-										class="ml-4 mr-5 bg-[transparent] font-medium text-blue-900/60 placeholder:text-blue-900/60 text-sm w-full max-w-[13.75rem] flex flex-shrink"
-									/>
-									<a
-										class="text-blue-500 text-sm font-medium flex flex-shrink-0"
-										href="#"
-										>Change email</a
-									>
-								</div>
-								<a href="#" class="text-blue-500 text-sm font-medium"
-									>Resend email</a
-								>
-							</div>
 						</div>
-					</div>
-					<div
-						class="w-[48.33%] bg-[#FAFDFF] flex items-center justify-center px-6 max-md:w-full max-md:flex-grow max-md:py-24"
-					>
-						<img
-							class="relative max-w-[456px] w-full lazy-image"
-							data-src="./assets/images/verification/verification.png"
-							data-srcset="./assets/images/verification/verification.png 1x, 
-							./assets/images/verification/verification-2x.png 2x,
-							"
-							alt="verification"
-						/>
 					</div>
 				</div>
 			</section>
