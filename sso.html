@@ -79,18 +79,22 @@
 							class="shadow-card-white p-10 pb-7.5 rounded-2xl bg-white max-w-[460px] w-full max-sm:pt-7.5 max-sm:px-5 max-sm:pb-5"
 						>
 							<h1 class="h3 mb-4 text-center max-sm:mb-3">Sign In with SSO</h1>
-							<form action="#" method="POST" class="mt-6.5 max-sm:mt-6">
+							<form
+								id="sign-form"
+								action="#"
+								method="POST"
+								class="mt-6.5 max-sm:mt-6"
+							>
 								<div class="flex-grow relative mb-5">
 									<input
 										id="email"
 										type="email"
 										placeholder=" "
 										class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 w-full text-blue-900 outline-none focus:border-blue-500 hover:border-gray-700"
-										required
 									/>
 									<label
 										for="email"
-										class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm font-medium font-sans-variable text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-valid:top-0 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:text-blue-500 peer-focus:scale-75 peer-valid:scale-75 origin-left"
+										class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm font-medium font-sans-variable text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:text-blue-500 peer-focus:scale-75 origin-left"
 									>
 										Email address
 									</label>
@@ -165,17 +169,18 @@
 						img.classList.remove('lazy-image')
 					})
 				}
-				const validInput = (input, invalidPar) => {
-					if (!input.validity.valid || input.value.includes(' ')) {
+
+				const validInput = (input, invalidPar, valid) => {
+					if (!valid || input.value.includes(' ')) {
 						input.classList.add('!border-red-500')
 						input
 							.closest('div')
 							.querySelector('label')
 							.classList.add('!text-red-500')
 						if (invalidPar) {
-							invalidPar.classList.add('-mt-1.5')
 							invalidPar.style.maxHeight = '18px'
-							invalidPar.style.marginBottom = '1.25rem'
+							invalidPar.style.marginBottom = '14px'
+							invalidPar.style.marginTop = '-10px'
 						}
 					} else {
 						input.classList.remove('!border-red-500')
@@ -184,19 +189,42 @@
 							.querySelector('label')
 							.classList.remove('!text-red-500')
 						if (invalidPar) {
-							invalidPar.classList.remove('-mt-1.5')
 							invalidPar.style.maxHeight = 0
 							invalidPar.style.marginBottom = 0
+							invalidPar.style.marginTop = 0
 						}
 					}
 				}
-
+				let validInp = {
+					email: false,
+				}
 				// email
 				const emailInput = document.getElementById('email')
 				const emailParInvalid = document.getElementById('email-par-invalid')
 
-				emailInput.addEventListener('input', function () {
-					validInput(emailInput, emailParInvalid)
+				function validateEmail(email) {
+					const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+					return emailPattern.test(email)
+				}
+
+				emailInput.addEventListener('input', e => {
+					const target = e.target
+					if (validateEmail(target.value)) {
+						validInp.email = true
+					} else {
+						validInp.email = false
+					}
+				})
+
+				document.getElementById('sign-form').addEventListener('submit', e => {
+					e.preventDefault()
+
+					validInput(emailInput, emailParInvalid, validInp.email)
+
+					if (!Object.values(validInp).includes(false)) {
+						/// method POST
+						console.log('The date is correct, This can be shipped!')
+					}
 				})
 			})
 		</script>
