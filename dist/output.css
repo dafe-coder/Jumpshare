@@ -2738,6 +2738,14 @@ body {
   left: 260px;
 }
 
+.left-\[180px\] {
+  left: 180px;
+}
+
+.top-\[59\%\] {
+  top: 59%;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -3755,6 +3763,10 @@ body {
 
 .w-\[1100px\] {
   width: 1100px;
+}
+
+.w-\[1150px\] {
+  width: 1150px;
 }
 
 .min-w-\[28\.25rem\] {
@@ -5760,6 +5772,10 @@ body {
   background-color: rgb(249 250 252 / var(--tw-bg-opacity));
 }
 
+.bg-\[top_center\2c bottom_-100px_center\] {
+  background-color: top center,bottom -100px center;
+}
+
 .bg-banner-round {
   background-image: url('/assets/images/banner-bg.png');
 }
@@ -5794,6 +5810,10 @@ body {
 
 .bg-video-ai {
   background-image: url('/assets/images/video-ai-bg.png');
+}
+
+.bg-\[url\(\'\/assets\/images\/bg-card-dark\.png\'\)\2c url\(\'\/assets\/images\/bg-card-dark\.png\'\)\] {
+  background-image: url('/assets/images/bg-card-dark.png'),url('/assets/images/bg-card-dark.png');
 }
 
 .decoration-slice {
@@ -5867,6 +5887,10 @@ body {
 
 .bg-center-top {
   background-position: center top;
+}
+
+.bg-\[bottom_-100px_center\] {
+  background-position: bottom -100px center;
 }
 
 .bg-repeat {
@@ -7953,6 +7977,14 @@ input:-webkit-autofill:active {
     left: 550px;
   }
 
+  .max-lg\:left-\[150px\] {
+    left: 150px;
+  }
+
+  .max-lg\:left-\[100px\] {
+    left: 100px;
+  }
+
   .max-lg\:order-1 {
     order: 1;
   }
@@ -8332,6 +8364,14 @@ input:-webkit-autofill:active {
 
   .max-md\:bottom-\[2vw\] {
     bottom: 2vw;
+  }
+
+  .max-md\:left-\[21\%\] {
+    left: 21%;
+  }
+
+  .max-md\:-bottom-\[37vw\] {
+    bottom: -37vw;
   }
 
   .max-md\:order-1 {
