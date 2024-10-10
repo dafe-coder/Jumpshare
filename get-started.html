@@ -68,26 +68,26 @@
 		<main class="main-body">
 			<!-- Main Section -->
 			<section class="relative min-h-screen">
-				<a
-					href="/"
-					class="absolute z-10 top-11 left-11 max-sm:top-10 max-[1320px]:left-5"
-				>
-					<img
-						loading="lazy"
-						class="max-h-7"
-						src="../assets/images/logo.svg"
-						alt="Jumpshare"
-					/>
-				</a>
 				<div
 					class="flex min-h-screen max-md:flex-col max-md:items-start max-md:justify-start"
 				>
 					<div
-						class="w-[51.67%] flex flex-col items-center px-6 max-md:w-full max-md:items-start max-md:flex-shrink"
+						class="w-[51.67%] flex flex-col items-end px-6 pr-[5.3125rem] max-md:w-full max-md:items-start max-md:flex-shrink"
 					>
+						<a
+							href="/"
+							class="absolute z-10 top-11 left-11 max-xl:left-0 max-sm:top-10 max-[1320px]:left-5"
+						>
+							<img
+								loading="lazy"
+								class="max-h-7"
+								src="../assets/images/logo.svg"
+								alt="Jumpshare"
+							/>
+						</a>
 						<div
 							id="step-1"
-							class="relative w-full max-w-[35.6rem] flex flex-col justify-center items-start h-full max-md:pt-28 max-md:pb-11 max-sm:justify-start screen-h-800-py-28"
+							class="relative w-full max-w-[30.5rem] flex flex-col justify-center items-start h-full max-md:pt-28 max-md:pb-11 max-sm:justify-start screen-h-800-py-28"
 						>
 							<div class="max-w-[29rem] w-full">
 								<h1
@@ -128,9 +128,11 @@
 										/>
 										<label
 											for="sales"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
-											>Sales</label
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Sales"
 										>
+											Sales
+										</label>
 									</li>
 									<li>
 										<input
@@ -141,7 +143,8 @@
 										/>
 										<label
 											for="marketing"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Marketing"
 											>Marketing</label
 										>
 									</li>
@@ -154,7 +157,8 @@
 										/>
 										<label
 											for="customer-support"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Customer Support"
 											>Customer Support</label
 										>
 									</li>
@@ -167,7 +171,8 @@
 										/>
 										<label
 											for="product"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Product"
 											>Product</label
 										>
 									</li>
@@ -180,7 +185,8 @@
 										/>
 										<label
 											for="executive"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Executive"
 											>Executive</label
 										>
 									</li>
@@ -193,7 +199,8 @@
 										/>
 										<label
 											for="operations"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Operations"
 											>Operations</label
 										>
 									</li>
@@ -206,7 +213,8 @@
 										/>
 										<label
 											for="design"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Design"
 											>Design</label
 										>
 									</li>
@@ -219,7 +227,8 @@
 										/>
 										<label
 											for="engineering"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Engineering"
 											>Engineering</label
 										>
 									</li>
@@ -232,7 +241,8 @@
 										/>
 										<label
 											for="human-resources"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Human Resources"
 											>Human Resources</label
 										>
 									</li>
@@ -245,7 +255,8 @@
 										/>
 										<label
 											for="education"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Education"
 											>Education</label
 										>
 									</li>
@@ -258,7 +269,8 @@
 										/>
 										<label
 											for="personal"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Personal"
 											>Personal</label
 										>
 									</li>
@@ -271,7 +283,8 @@
 										/>
 										<label
 											for="other"
-											class="flex cursor-pointer justify-center items-center py-3 px-7.5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75"
+											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:text-blue-500 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+											data-text="Other"
 											>Other</label
 										>
 									</li>
@@ -303,7 +316,7 @@
 						</div>
 						<div
 							id="step-2"
-							class="relative w-full max-w-[38.375rem] hidden flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start max-md:pb-11 screen-h-800-py-28"
+							class="relative w-full max-w-[30.5rem] hidden flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start max-md:pb-11 screen-h-800-py-28"
 						>
 							<div class="max-w-[29rem] w-full">
 								<h1
@@ -315,7 +328,7 @@
 									<a
 										id="go-step-3"
 										href="#"
-										class="btn btn-primary btn-m w-[18.1875rem] max-xs:w-full"
+										class="btn btn-primary btn-m w-[27.1875rem] max-xs:w-full"
 									>
 										<svg
 											width="25"
@@ -336,7 +349,7 @@
 						</div>
 						<div
 							id="step-3"
-							class="hidden relative w-full max-w-[38.375rem] flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start max-md:pb-11 screen-h-800-py-28"
+							class="hidden relative w-full max-w-[30.5rem] flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start max-md:pb-11 screen-h-800-py-28"
 						>
 							<div class="max-w-[29rem] w-full">
 								<h1
@@ -350,7 +363,7 @@
 								<div class="mt-6 w-full">
 									<a
 										href="#"
-										class="btn btn-primary btn-m w-[18.1875rem] max-xs:w-full"
+										class="btn btn-primary btn-m w-[27.1875rem] max-xs:w-full"
 									>
 										Continue to web dashboard
 										<svg
@@ -378,7 +391,7 @@
 						</div>
 					</div>
 					<div
-						class="right-side relative w-[48.33%] bg-[#FAFDFF] flex items-center justify-center px-6 max-md:w-full max-md:flex-grow max-md:py-24 overflow-hidden max-md:hidden"
+						class="right-side relative w-[48.33%] bg-[#EDF6FA] flex items-center justify-center px-6 max-md:w-full max-md:flex-grow max-md:py-24 overflow-hidden max-md:hidden"
 					>
 						<div
 							id="step-1-image"
@@ -401,19 +414,19 @@
 						</div>
 						<img
 							id="step-2-image"
-							class="hidden relative max-w-[549px] w-full lazy-image"
-							data-src="./assets/images/verification/verification-step-2.png.png"
-							data-srcset="./assets/images/verification/verification-step-2.png 1x, 
-							./assets/images/verification/verification-step-2-2x.png 2x,
+							class="hidden relative max-w-[28rem] w-full lazy-image"
+							data-src="./assets/images/onboarding/step-2.png.png"
+							data-srcset="./assets/images/onboarding/step-2.png 1x, 
+							./assets/images/onboarding/step-2-2x.png 2x,
 							"
 							alt="step 2"
 						/>
 						<img
 							id="step-3-image"
-							class="hidden relative max-w-[549px] w-full lazy-image"
-							data-src="./assets/images/verification/verification-step-3.png.png"
-							data-srcset="./assets/images/verification/verification-step-3.png 1x, 
-							./assets/images/verification/verification-step-3-2x.png 2x,
+							class="hidden relative max-w-[36.375rem] w-full lazy-image"
+							data-src="./assets/images/onboarding/step-3.png.png"
+							data-srcset="./assets/images/onboarding/step-3.png 1x, 
+							./assets/images/onboarding/step-3-2x.png 2x,
 							"
 							alt="step 3"
 						/>
