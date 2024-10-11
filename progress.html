@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<style>
+			html {
+				font-family: 'Inter', serif;
+			}
+			* {
+				box-sizing: border-box;
+			}
+			.uploading_bar {
+				position: fixed;
+				bottom: -30px;
+				opacity: 0;
+				background-color: #2f76ff;
+				max-width: 550px;
+				border-radius: 8px;
+				font-size: 14px;
+				left: 0;
+				right: 0;
+				margin: 0 auto;
+				padding-top: 18px;
+				padding-bottom: 16px;
+				padding-left: 28px;
+				padding-right: 28px;
+				color: #fff;
+				box-shadow:
+					-3px 3px 9px 0px rgba(0, 0, 0, 0.1),
+					-11px 12px 16px 0px rgba(0, 0, 0, 0.09),
+					-25px 27px 22px 0px rgba(0, 0, 0, 0.05),
+					-44px 48px 26px 0px rgba(0, 0, 0, 0.01),
+					-69px 75px 29px 0px rgba(0, 0, 0, 0);
+				transition: all 0.3s ease;
+			}
+			.uploading_bar .top_info {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.uploading_bar .top_info p {
+				margin: 0;
+			}
+			.uploading_bar .progress_custom {
+				position: relative;
+				width: 100%;
+				height: 5px;
+				border-radius: 5px;
+				margin-top: 12px;
+				overflow: hidden;
+			}
+			.uploading_bar .progress_custom span {
+				background-color: #fff;
+				position: absolute;
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+			}
+			.uploading_bar .progress_custom .progress_bg {
+				opacity: 0.3;
+			}
+			.top-info-progress {
+				display: flex;
+				align-items: center;
+				gap: 9px;
+			}
+			.top_info_text strong {
+				font-weight: 600;
+			}
+			#close_bar {
+				position: relative;
+				width: 17px;
+				height: 17px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			#close_bar svg:last-child {
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				opacity: 0;
+				transform: translate(-50%, -50%);
+				transition: all ease 0.6s;
+				transition-delay: 0.1s;
+			}
+			#close_bar svg:first-child,
+			#progress_count {
+				transition: all ease 0.6s;
+				position: relative;
+			}
+			.top-info-progress {
+				display: flex;
+				align-items: center;
+			}
+		</style>
+
+		<div class="uploading_bar">
+			<div class="top_info">
+				<p class="top_info_text">Uploading <strong>1 of 12 files</strong></p>
+				<div class="top-info-progress">
+					<span id="progress_count">0%</span>
+					<span id="close_bar">
+						<svg
+							width="12"
+							height="12"
+							viewBox="0 0 12 12"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								d="M1.33268 11.8337L0.166016 10.667L4.83268 6.00033L0.166016 1.33366L1.33268 0.166992L5.99935 4.83366L10.666 0.166992L11.8327 1.33366L7.16602 6.00033L11.8327 10.667L10.666 11.8337L5.99935 7.16699L1.33268 11.8337Z"
+								fill="white"
+							/>
+						</svg>
+						<svg
+							width="17"
+							height="17"
+							viewBox="0 0 17 17"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								vector-effect="non-scaling-stroke"
+								d="M8.5 0C3.825 0 0 3.825 0 8.5C0 13.175 3.825 17 8.5 17C13.175 17 17 13.175 17 8.5C17 3.825 13.175 0 8.5 0ZM6.8 12.75L2.55 8.5L3.7485 7.3015L6.8 10.3445L13.2515 3.893L14.45 5.1L6.8 12.75Z"
+								fill="white"
+							/>
+						</svg>
+					</span>
+				</div>
+			</div>
+			<div class="progress_custom">
+				<span class="progress_bg"></span>
+				<span class="progress_actual" style="width: 0%"></span>
+			</div>
+		</div>
+	</body>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			let progress = 0
+			const uploadingBar = document.querySelector('.uploading_bar')
+			const progressCount = document.getElementById('progress_count')
+			const progressActual = document.querySelector('.progress_actual')
+			const topInfoText = document.querySelector('.top_info_text')
+			const closeBar = document.getElementById('close_bar')
+
+			// Show the bar
+			setTimeout(() => {
+				uploadingBar.style.bottom = '30px'
+				uploadingBar.style.opacity = 1
+			}, 500)
+
+			// Start the upload progress animation
+			setTimeout(() => {
+				const interval = setInterval(() => {
+					if (progress < 100) {
+						updateProgress()
+					} else {
+						clearInterval(interval)
+						finalizeUpload()
+					}
+				}, 10)
+			}, 1000)
+
+			function updateProgress() {
+				progress++
+				progressCount.innerHTML = progress
+				progressActual.style.width = `${progress}%`
+			}
+
+			function finalizeUpload() {
+				topInfoText.innerHTML = 'Upload Complete'
+				uploadingBar.style.backgroundColor = '#0DB00D'
+				progressCount.style.marginTop = '-16px'
+				progressCount.style.opacity = '0'
+
+				const closeIcons = closeBar.querySelectorAll('svg')
+				closeIcons[0].style.marginTop = '-16px'
+				closeIcons[0].style.opacity = '0'
+				closeIcons[1].style.top = '50%'
+				closeIcons[1].style.opacity = '1'
+
+				// Hide the bar after a delay
+				setTimeout(() => {
+					uploadingBar.style.bottom = '-30px'
+					uploadingBar.style.opacity = '0'
+				}, 2000)
+			}
+		})
+	</script>
+</html>
