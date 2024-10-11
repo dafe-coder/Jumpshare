@@ -2662,6 +2662,22 @@ body {
   top: calc(100% + 6px);
 }
 
+.-top-20 {
+  top: -5rem;
+}
+
+.-top-10 {
+  top: -2.5rem;
+}
+
+.-top-30 {
+  top: -7.5625rem;
+}
+
+.-top-40 {
+  top: -10rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -3020,6 +3036,10 @@ body {
 
 .ml-1 {
   margin-left: 0.25rem;
+}
+
+.ml-0 {
+  margin-left: 0px;
 }
 
 .box-border {
@@ -3653,8 +3673,20 @@ body {
   width: max-content;
 }
 
+.w-\[1000px\] {
+  width: 1000px;
+}
+
 .min-w-\[28\.25rem\] {
   min-width: 28.25rem;
+}
+
+.min-w-\[1000px\] {
+  min-width: 1000px;
+}
+
+.min-w-\[1200px\] {
+  min-width: 1200px;
 }
 
 .max-w-\[13\.75rem\] {
@@ -5514,6 +5546,16 @@ body {
   border-color: rgb(24 23 41 / var(--tw-border-opacity));
 }
 
+.border-violet-500 {
+  --tw-border-opacity: 1;
+  border-color: rgb(98 89 235 / var(--tw-border-opacity));
+}
+
+.border-violet-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(148 82 255 / var(--tw-border-opacity));
+}
+
 .border-b-blue-1000\/10 {
   border-bottom-color: rgb(9 19 41 / 0.1);
 }
@@ -5644,6 +5686,10 @@ body {
   background-color: rgb(255 188 3 / var(--tw-bg-opacity));
 }
 
+.bg-\[top_-_130px\] {
+  background-color: top - 130px;
+}
+
 .bg-\[url\(\'\/assets\/images\/bg-card-dark\.png\'\)\2c url\(\'\/assets\/images\/bg-card-dark\.png\'\)\] {
   background-image: url('/assets/images/bg-card-dark.png'),url('/assets/images/bg-card-dark.png');
 }
@@ -5684,6 +5730,10 @@ body {
   background-image: url('/assets/images/video-ai-bg.png');
 }
 
+.bg-\[url\(\'\/assets\/images\/marketing\/ai-shadow\.png\'\)\] {
+  background-image: url('/assets/images/marketing/ai-shadow.png');
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -5710,6 +5760,10 @@ body {
 
 .bg-contain {
   background-size: contain;
+}
+
+.bg-\[length\:top_-_130px\] {
+  background-size: top - 130px;
 }
 
 .bg-fixed {
@@ -5755,6 +5809,14 @@ body {
 
 .bg-center-top {
   background-position: center top;
+}
+
+.bg-top {
+  background-position: top;
+}
+
+.bg-\[top_-30px\] {
+  background-position: top -30px;
 }
 
 .bg-repeat {
@@ -8978,6 +9040,11 @@ input:-webkit-autofill:active {
   .max-sm\:py-56 {
     padding-top: 14rem;
     padding-bottom: 14rem;
+  }
+
+  .max-sm\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .max-sm\:pb-0 {
