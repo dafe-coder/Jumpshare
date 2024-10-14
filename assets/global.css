@@ -142,3 +142,6 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
 	transition: background-color 50000s ease-in-out 0s !important;
 }
+.dark-input::-webkit-contacts-auto-fill-button {
+	@apply bg-violet-300;
+}

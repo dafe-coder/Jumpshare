@@ -84,7 +84,7 @@
 							<div
 								class="relative w-full flex flex-col justify-center flex-grow"
 							>
-								<h1 class="mb-6.5 h3 text-center max-sm:mb-6">
+								<h1 class="mb-6.5 h3 text-center max-sm:mb-6 text-blue-900">
 									Sign in to Jumpshare
 								</h1>
 								<div class="flex flex-col gap-3">
@@ -209,13 +209,14 @@
 									<div class="relative w-full mb-4">
 										<input
 											autocomplete="off"
+											placeholder=" "
 											id="password"
 											type="password"
 											class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 w-full text-blue-900 outline-none font-normal focus:border-blue-500 hover:border-gray-700"
 										/>
 										<label
 											for="password"
-											class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-focus:text-blue-500 peer-focus:scale-75 origin-left"
+											class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-[&:not(:placeholder-shown)]:top-0 peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:text-blue-500 peer-focus:scale-75 origin-left"
 										>
 											Password
 										</label>
@@ -363,6 +364,21 @@
 					})
 				}
 				// Password
+				const showPasswordButton = document.getElementById('show-password')
+
+				showPasswordButton.addEventListener('click', () => {
+					const isActive = showPasswordButton.classList.toggle('active')
+					passwordInput.type = isActive ? 'text' : 'password'
+					const icons = showPasswordButton.querySelectorAll('svg')
+
+					if (isActive) {
+						icons[0].classList.add('hidden')
+						icons[1].classList.remove('hidden')
+					} else {
+						icons[1].classList.add('hidden')
+						icons[0].classList.remove('hidden')
+					}
+				})
 				const passwordInput = document.getElementById('password')
 				const passwordParInvalid = document.getElementById(
 					'password-par-invalid'

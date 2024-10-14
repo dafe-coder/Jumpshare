@@ -63,10 +63,12 @@ module.exports = {
 				1000: '#091329',
 			},
 			violet: {
+				300: '#9489B6',
 				400: '#9F99B2',
 				500: '#6259EB',
 				600: '#9452FF',
 				700: '#27293D',
+				800: '#1E1D33',
 				850: '#181729',
 				900: '#060515',
 			},
@@ -149,6 +151,8 @@ module.exports = {
 					'0 1px 2px 0 rgba(31, 18, 69, 0.08), 0 0 0 1px rgba(58, 22, 202, 0.75), 0 2px 4.3px -1px rgba(58, 22, 202, 0.4)',
 				'card-use-cases': '0px 5px 30.9px -4px rgba(58, 68, 89, 0.27)',
 				'card-dark': '0px 1px 7px rgba(15, 28, 53, 0.04)',
+				'card-dark-contact':
+					'0px 2.85px 18.335px 3.8px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1.02317px rgba(255, 255, 255, 0.04)',
 				'card-orange':
 					'0px 4px 4px -5px rgba(30, 12, 4, 0.25), 0px 0px 0px 1px rgba(34, 14, 5, 0.08), 0px 1px 7px rgba(30, 12, 4, 0.04)',
 				'card-white':
@@ -490,6 +494,10 @@ module.exports = {
 							backgroundColor: theme('colors.blue[500]'),
 						},
 					},
+				},
+				'.label-gradient': {
+					backgroundImage:
+						'linear-gradient(180deg, #11121f 38.78%, #1E1D33 75.06%)',
 				},
 				'.main-gradient': {
 					backgroundImage:
