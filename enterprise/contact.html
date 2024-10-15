@@ -929,7 +929,7 @@
 									placeholder=" "
 									id="first-name"
 									type="text"
-									class="dark-input peer text-sm rounded-md h-12 px-5 py-3 w-full bg-violet-800 text-violet-300 outline-none font-normal focus:border-violet-300 border border-[transparent] placeholder:text-violet-300"
+									class="dark-input peer text-sm rounded-md h-12 px-5 py-3 w-full bg-violet-800 text-violet-300 outline-none font-normal focus:border-gray-500/30 border border-[transparent] placeholder:text-violet-300"
 									autocomplete="off"
 								/>
 								<label
@@ -944,7 +944,7 @@
 									placeholder=" "
 									id="last-name"
 									type="text"
-									class="dark-input peer text-sm rounded-md h-12 px-5 py-3 w-full bg-violet-800 text-violet-300 outline-none font-normal border border-[transparent] focus:border-violet-300 placeholder:text-violet-300"
+									class="dark-input peer text-sm rounded-md h-12 px-5 py-3 w-full bg-violet-800 text-violet-300 outline-none font-normal border border-[transparent] focus:border-gray-500/30 placeholder:text-violet-300"
 									autocomplete="off"
 								/>
 								<label
@@ -996,7 +996,7 @@
 								id="email"
 								type="text"
 								placeholder=" "
-								class="dark-input peer text-sm rounded-md h-12 px-5 py-3 w-full bg-violet-800 text-violet-300 outline-none font-normal border border-[transparent] focus:border-violet-300 placeholder:text-violet-300"
+								class="dark-input peer text-sm rounded-md h-12 px-5 py-3 w-full bg-violet-800 text-violet-300 outline-none font-normal border border-[transparent] focus:border-gray-500/30 placeholder:text-violet-300"
 								autocomplete="off"
 							/>
 							<label
@@ -1026,10 +1026,12 @@
 						</p>
 						<div class="mb-3.5 relative">
 							<select
-								class="appearance-none border border-violet-300 text-violet-300 text-sm px-5 w-full h-12 bg-violet-800 select-none cursor-pointer shadow-none rounded-md outline-none"
+								class="peer appearance-none border border-[transparent] active:border-gray-500/30 text-violet-300 text-sm px-5 w-full h-12 bg-violet-800 select-none cursor-pointer shadow-none rounded-md outline-none"
 								name="company-size"
 								id="company-size"
+								required
 							>
+								<option disabled selected value class="hidden"></option>
 								<option value="1-49">1-49</option>
 								<option value="50-99">50-99</option>
 								<option value="100-249">100-249</option>
@@ -1040,7 +1042,7 @@
 							</select>
 							<label
 								for="email"
-								class="absolute left-4 top-0 scale-75 label-gradient -translate-y-1/2 pointer-events-none mb-3 text-sm text-violet-300 transition-all duration-100 px-1.5 peer-focus:top-0 peer-[&:not(:placeholder-shown)]:peer-focus:label-gradient peer-[&:not(:placeholder-shown)]: peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:scale-75 origin-left z-1"
+								class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-violet-300 transition-all duration-100 px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:label-gradient peer-valid:label-gradient peer-valid:scale-75 peer-focus:scale-75 origin-left z-1"
 							>
 								Company size
 							</label>
@@ -1062,10 +1064,12 @@
 						</div>
 						<div class="mb-3.5 relative">
 							<select
-								class="appearance-none border border-violet-300 text-violet-300 text-sm px-5 w-full h-12 bg-violet-800 select-none cursor-pointer shadow-none rounded-md outline-none"
+								class="peer appearance-none border border-[transparent] active:border-gray-500/30 text-violet-300 text-sm px-5 w-full h-12 bg-violet-800 select-none cursor-pointer shadow-none rounded-md outline-none"
 								name="help"
 								id="help"
+								required
 							>
+								<option disabled selected value class="hidden"></option>
 								<option value="Evaluate Jumpshare for my organization">
 									Evaluate Jumpshare for my organization
 								</option>
@@ -1084,7 +1088,7 @@
 							</select>
 							<label
 								for="help"
-								class="absolute left-4 top-0 scale-75 label-gradient -translate-y-1/2 pointer-events-none mb-3 text-sm text-violet-300 transition-all duration-100 px-1.5 peer-focus:top-0 peer-[&:not(:placeholder-shown)]:peer-focus:label-gradient peer-[&:not(:placeholder-shown)]: peer-[&:not(:placeholder-shown)]:scale-75 peer-focus:scale-75 origin-left z-1"
+								class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm text-violet-300 transition-all duration-100 px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:label-gradient peer-valid:label-gradient peer-valid:scale-75 peer-focus:scale-75 origin-left z-1"
 							>
 								How can we help you?
 							</label>
@@ -1106,7 +1110,7 @@
 						</div>
 						<div class="relative mb-4.5">
 							<textarea
-								class="peer bg-violet-800 rounded-md resize-none w-full h-[108px] px-3 py-2.5 text-violet-300 placeholder:text-violet-300 text-sm outline-none font-normal border border-[transparent] focus:border-violet-300"
+								class="peer bg-violet-800 rounded-md resize-none w-full h-[108px] px-3 py-2.5 text-violet-300 placeholder:text-violet-300 text-sm outline-none font-normal border border-[transparent] focus:border-gray-500/30"
 								name="text"
 								id="text"
 								placeholder=" "
