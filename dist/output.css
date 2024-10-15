@@ -7775,6 +7775,11 @@ input:-webkit-autofill:active {
   line-height: 1.25rem;
 }
 
+.before\:opacity-0::before {
+  content: var(--tw-content);
+  opacity: 0;
+}
+
 .before\:content-\[attr\(data-text\)\]::before {
   --tw-content: attr(data-text);
   content: var(--tw-content);
@@ -7978,6 +7983,11 @@ input:-webkit-autofill:active {
   content: var(--tw-content);
   --tw-text-opacity: 1 !important;
   color: rgb(47 118 255 / var(--tw-text-opacity)) !important;
+}
+
+.peer:checked ~ .peer-checked\:before\:opacity-100::before {
+  content: var(--tw-content);
+  opacity: 1;
 }
 
 .peer:checked ~ .peer-checked\:after\:\!hidden::after {
