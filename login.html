@@ -327,6 +327,12 @@
 					</div>
 				</div>
 			</section>
+			<div
+				id="toast"
+				class="toast fixed opacity-0 -top-10 whitespace-nowrap left-1/2 -translate-x-1/2 rounded-md px-5 py-2.5 text-white text-sm bg-blue-500 transition-all duration-500"
+			>
+				<p>Some text copied to clipboard!</p>
+			</div>
 		</main>
 		<script>
 			'use strict'
@@ -430,9 +436,24 @@
 					}
 				})
 
+				function hideToast(id) {
+					const toast = document.querySelector(id)
+					toast.style.top = '-40px'
+					toast.style.opacity = 0
+				}
+				function showToast(id) {
+					const toast = document.querySelector(id)
+					toast.style.top = '16px'
+					toast.style.opacity = 1
+					let timerID = setTimeout(() => {
+						hideToast(id)
+						clearTimeout(timerID)
+					}, 2000)
+				}
+
 				document.getElementById('sign-form').addEventListener('submit', e => {
 					e.preventDefault()
-
+					showToast('#toast')
 					validInput(emailInput, emailParInvalid, validInp.email)
 					validInput(
 						passwordInput,
