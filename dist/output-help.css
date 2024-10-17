@@ -10114,7 +10114,10 @@ body {
 #sidebar .nav-list .active a:hover,
 #sidebar h3,
 .icon-arrow:before {
-	color: rgb(19, 12, 62) !important;
+	color: #130c3e !important;
+}
+#fullArticle strong {
+	color: #130c3e !important;
 }
 #sidebar h3 {
 	font-size: 15px;

@@ -65,6 +65,14 @@
 			padding-bottom: 2.75rem;
 		}
 	}
+	@media screen and (max-height: 600px) {
+		.popup-signup-left {
+			@apply overflow-y-auto self-start h-full;
+		}
+		.popup-signup-left > div {
+			@apply h-max;
+		}
+	}
 	.custom-marker li::marker {
 		color: rgba(18, 35, 69, 0.5);
 	}
