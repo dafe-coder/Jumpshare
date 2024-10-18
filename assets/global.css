@@ -132,7 +132,7 @@
 	@apply pl-7 relative cursor-pointer before:left-[-1px] before:top-0 before:absolute before:size-4.5 before:hidden after:absolute after:left-0 after:top-[1px] after:block after:size-4 after:content-[''] after:border after:border-gray-600 after:rounded-sm;
 }
 .dark-header .expand > a {
-	@apply lg:text-black;
+	@apply lg:text-white;
 }
 
 input:-internal-autofill-selected {

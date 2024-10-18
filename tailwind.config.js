@@ -153,6 +153,8 @@ module.exports = {
 				'card-dark': '0px 1px 7px rgba(15, 28, 53, 0.04)',
 				'card-dark-contact':
 					'0px 2.85px 18.335px 3.8px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1.02317px rgba(255, 255, 255, 0.04)',
+				'card-dark-menu':
+					'0px 11.4701px 23.7768px -5.01619px rgba(255, 255, 255, 0.07), 0px 2px 7px -1px rgba(255, 255, 255, 0.04), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.12)',
 				'card-orange':
 					'0px 4px 4px -5px rgba(30, 12, 4, 0.25), 0px 0px 0px 1px rgba(34, 14, 5, 0.08), 0px 1px 7px rgba(30, 12, 4, 0.04)',
 				'card-white':
@@ -314,11 +316,15 @@ module.exports = {
 						backgroundColor: `rgba(${hexToRgb(theme('colors.violet[600]'))}, 0.9)`,
 					},
 				},
-				'.btn-dark': {
-					backgroundColor: '#161723',
+				'.btn-dark-contact': {
+					backgroundColor: '#131320',
 					color: theme('colors.white'),
 					boxShadow:
 						'0px 0px 0px 1px rgba(255, 255, 255, 0.12), 0px 1px 2px rgba(18, 35, 69, 0.05), 0px 5px 4.5px -1px rgba(18, 35, 69, 0.04)',
+					color: theme('colors.white'),
+					'&:hover': {
+						backgroundColor: '#161625',
+					},
 				},
 				'.btn-vivid-blue': {
 					boxShadow:

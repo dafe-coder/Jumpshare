@@ -1983,9 +1983,13 @@ body {
 }
 
 .btn-dark {
-  background-color: #161723;
+  box-shadow: 0 1px 2px 0 rgba(18, 35, 69, 0.08), 0 0 0 1px rgba(10, 22, 44, 0.8), 0 2px 4.3px -1px rgba(12, 25, 50, 0.4);
+  background-color: #122345;
   color: #fff;
-  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.12), 0px 1px 2px rgba(18, 35, 69, 0.05), 0px 5px 4.5px -1px rgba(18, 35, 69, 0.04);
+}
+
+.btn-dark:hover {
+  background-color: rgba(18, 35, 69, 0.9);
 }
 
 .btn-violet {
@@ -1996,6 +2000,16 @@ body {
 
 .btn-violet:hover {
   background-color: rgba(148, 82, 255, 0.9);
+}
+
+.btn-dark-contact {
+  background-color: #131320;
+  color: #fff;
+  box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.12), 0px 1px 2px rgba(18, 35, 69, 0.05), 0px 5px 4.5px -1px rgba(18, 35, 69, 0.04);
+}
+
+.btn-dark-contact:hover {
+  background-color: #161625;
 }
 
 .btn-vivid-blue {
@@ -2708,10 +2722,6 @@ body {
 
 .z-50 {
   z-index: 50;
-}
-
-.-z-50 {
-  z-index: -50;
 }
 
 .float-start {
@@ -5906,6 +5916,10 @@ body {
   fill: #091329;
 }
 
+.stroke-violet-400 {
+  stroke: #9F99B2;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -7652,7 +7666,7 @@ body {
 @media (min-width: 1024px) {
   .dark-header .expand > a {
     --tw-text-opacity: 1;
-    color: rgb(0 0 0 / var(--tw-text-opacity));
+    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 
@@ -7832,10 +7846,27 @@ input:-webkit-autofill:active {
   width: 1px;
 }
 
+.after\:\!bg-gray-400::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(232 233 237 / var(--tw-bg-opacity)) !important;
+}
+
 .after\:bg-gray-400::after {
   content: var(--tw-content);
   --tw-bg-opacity: 1;
   background-color: rgb(232 233 237 / var(--tw-bg-opacity));
+}
+
+.after\:\!bg-\[\#E8E9ED\]::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(232 233 237 / var(--tw-bg-opacity)) !important;
+}
+
+.after\:bg-gray-400\/60::after {
+  content: var(--tw-content);
+  background-color: rgb(232 233 237 / 0.6);
 }
 
 .autofill\:bg-white:-webkit-autofill {
@@ -7858,6 +7889,11 @@ input:-webkit-autofill:active {
   border-color: rgb(153 156 178 / var(--tw-border-opacity));
 }
 
+.hover\:bg-\[\#131320\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(19 19 32 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gray-100\/75:hover {
   background-color: rgb(251 251 253 / 0.75);
 }
@@ -7876,8 +7912,26 @@ input:-webkit-autofill:active {
   background-color: rgb(98 89 235 / 0.9);
 }
 
+.hover\:bg-violet-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 5 21 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-white\/10:hover {
   background-color: rgb(255 255 255 / 0.1);
+}
+
+.hover\:bg-violet-900\/75:hover {
+  background-color: rgb(6 5 21 / 0.75);
+}
+
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#131320BF\]:hover {
+  background-color: #131320BF;
 }
 
 .hover\:font-bold:hover {
@@ -7887,6 +7941,11 @@ input:-webkit-autofill:active {
 .hover\:text-black:hover {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:underline:hover {
@@ -8415,6 +8474,11 @@ input:-webkit-autofill:active {
     --tw-text-opacity: 1;
     color: rgb(153 156 178 / var(--tw-text-opacity));
   }
+
+  .max-lg\:hover\:text-white:hover {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
 }
 
 @media (max-width: 940px) {
@@ -8835,6 +8899,11 @@ input:-webkit-autofill:active {
     order: 9;
   }
 
+  .max-sm\:mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .max-sm\:my-4 {
     margin-top: 1rem;
     margin-bottom: 1rem;
@@ -9087,6 +9156,10 @@ input:-webkit-autofill:active {
     height: 30%;
   }
 
+  .max-sm\:max-h-\[30rem\] {
+    max-height: 30rem;
+  }
+
   .max-sm\:min-h-\[50px\] {
     min-height: 50px;
   }
@@ -9121,6 +9194,10 @@ input:-webkit-autofill:active {
 
   .max-sm\:max-w-\[19rem\] {
     max-width: 19rem;
+  }
+
+  .max-sm\:max-w-\[200px\] {
+    max-width: 200px;
   }
 
   .max-sm\:max-w-\[20rem\] {
@@ -9292,6 +9369,10 @@ input:-webkit-autofill:active {
 
   .max-sm\:pt-24 {
     padding-top: 6rem;
+  }
+
+  .max-sm\:pt-3 {
+    padding-top: 0.75rem;
   }
 
   .max-sm\:pt-4 {
