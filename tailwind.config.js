@@ -13,6 +13,7 @@ const hexToRgb = hex => {
 }
 
 module.exports = {
+	darkMode: 'selector',
 	content: ['./**/*.{html,js}'],
 	theme: {
 		container: {
