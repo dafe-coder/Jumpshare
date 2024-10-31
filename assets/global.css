@@ -33,15 +33,15 @@
 		font-weight: 600;
 		font-display: swap;
 		src:
-			url('/res/css/fonts/fonts/GeneralSans-Semibold.woff2') format('woff2'),
-			url('/res/css/fonts/fonts/GeneralSans-Semibold.woff') format('woff'),
-			url('/res/css/fonts/fonts/GeneralSans-Semibold.otf') format('opentype');
+			url('/res/css/fonts/GeneralSans-Semibold.woff2') format('woff2'),
+			url('/res/css/fonts/GeneralSans-Semibold.woff') format('woff'),
+			url('/res/css/fonts/GeneralSans-Semibold.otf') format('opentype');
 	}
 	@font-face {
 		font-family: 'GeneralSans-Variable';
 		src:
-			url('/res/css/fonts/fonts/GeneralSans-Variable.woff2') format('woff2'),
-			url('/res/css/fonts/fonts/GeneralSans-Variable.woff') format('woff');
+			url('/res/css/fonts/GeneralSans-Variable.woff2') format('woff2'),
+			url('/res/css/fonts/GeneralSans-Variable.woff') format('woff');
 		font-weight: 200 700;
 		font-display: swap;
 		font-style: normal;
@@ -52,9 +52,9 @@
 		font-weight: 500;
 		font-display: swap;
 		src:
-			url('/res/css/fonts/fonts/GeneralSans-Medium.woff2') format('woff2'),
-			url('/res/css/fonts/fonts/GeneralSans-medium.woff') format('woff'),
-			url('/res/css/fonts/fonts/GeneralSans-Medium.otf') format('opentype');
+			url('/res/css/fonts/GeneralSans-Medium.woff2') format('woff2'),
+			url('/res/css/fonts/GeneralSans-medium.woff') format('woff'),
+			url('/res/css/fonts/GeneralSans-Medium.otf') format('opentype');
 	}
 	@font-face {
 		font-family: 'Inter';
