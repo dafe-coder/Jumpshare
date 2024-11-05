@@ -79,6 +79,15 @@ module.exports = {
 				500: '#047857',
 			},
 		},
+		fontFamily: {
+			sans: ['Inter', ...defaultTheme.fontFamily.sans],
+			'sans-semi': ['GeneralSans-semibold', ...defaultTheme.fontFamily.sans],
+			'sans-variable': [
+				'GeneralSans-Variable',
+				...defaultTheme.fontFamily.sans,
+			],
+			'sans-medium': ['GeneralSans-medium', ...defaultTheme.fontFamily.sans],
+		},
 		extend: {
 			screens: {
 				xxl: '1360px',
@@ -102,14 +111,7 @@ module.exports = {
 			ringWidth: {
 				2.5: '2.5px',
 			},
-			fontFamily: {
-				'sans-semi': ['GeneralSans-semibold', ...defaultTheme.fontFamily.sans],
-				'sans-variable': [
-					'GeneralSans-Variable',
-					...defaultTheme.fontFamily.sans,
-				],
-				'sans-medium': ['GeneralSans-medium', ...defaultTheme.fontFamily.sans],
-			},
+
 			fontSize: {
 				'6xl': ['3rem', '3.75rem'], // 48px 60px
 				'4.5xl': ['2.5rem', '125%'],
@@ -209,12 +211,6 @@ module.exports = {
 				8: '0.08',
 			},
 		},
-	},
-	fontFamily: {
-		inter: ['Inter'],
-		'sans-medium': ['GeneralSans-semibold', ...defaultTheme.fontFamily.sans],
-		'sans-variable': ['GeneralSans-Variable', ...defaultTheme.fontFamily.sans],
-		'sans-semi': ['GeneralSans-semibold', ...defaultTheme.fontFamily.sans],
 	},
 	plugins: [
 		require('tailwindcss'),
@@ -425,7 +421,7 @@ module.exports = {
 					letterSpacing: '-0.16px',
 					color: theme('colors.blue[900]'),
 					fontWeight: 500,
-					fontFamily: 'GeneralSans-medium',
+					fontFamily: theme('fontFamily.sans-medium'),
 					borderRadius: '99999px',
 					padding: '0 0.87rem', // 0.87rem
 					height: '2.25rem', // 36px
@@ -442,13 +438,13 @@ module.exports = {
 					color: theme('colors.violet[600]'),
 					backgroundColor: `rgba(${hexToRgb(theme('colors.violet[600]'))}, 0.15)`,
 					fontWeight: 500,
-					fontFamily: 'GeneralSans-medium',
+					fontFamily: theme('fontFamily.sans-medium'),
 					borderRadius: '99999px',
 					padding: '0 0.5rem', // 8px
 					height: '1.4375rem', // 23px
 				},
 				'.tag-filled': {
-					fontFamily: 'GeneralSans-semibold',
+					fontFamily: theme('fontFamily.sans-semi'),
 					backgroundColor: theme('colors.green[25]'),
 					padding: '2px 0.625rem',
 					borderRadius: '6px',
@@ -581,7 +577,7 @@ module.exports = {
 				'.card-title': {
 					fontSize: '1.375rem',
 					lineHeight: '1.65rem',
-					fontFamily: 'GeneralSans-semibold',
+					fontFamily: theme('fontFamily.sans-semi'),
 					color: theme('colors.blue[950]'),
 					'@media not all and (min-width: 480px)': {
 						fontSize: '1rem !important',
@@ -589,7 +585,7 @@ module.exports = {
 					},
 				},
 				'.h2': {
-					fontFamily: 'GeneralSans-Variable',
+					fontFamily: theme('fontFamily.sans-variable'),
 					fontSize: '3rem', // 48px
 					textAlign: 'center',
 					fontWeight: 600,
@@ -604,7 +600,7 @@ module.exports = {
 					},
 				},
 				'.h3': {
-					fontFamily: 'GeneralSans-Variable',
+					fontFamily: theme('fontFamily.sans-variable'),
 					fontSize: '2rem', // 32px
 					fontWeight: 600,
 					lineHeight: '2.4rem',
@@ -618,7 +614,7 @@ module.exports = {
 			}),
 				addBase({
 					h1: {
-						fontFamily: 'GeneralSans-Variable',
+						fontFamily: theme('fontFamily.sans-variable'),
 						fontSize: '3.25rem', // 52px
 						fontWeight: 600,
 						lineHeight: '3.81rem',
@@ -632,7 +628,7 @@ module.exports = {
 						},
 					},
 					h2: {
-						fontFamily: 'GeneralSans-Variable',
+						fontFamily: theme('fontFamily.sans-variable'),
 						fontSize: '3rem', // 48px
 						textAlign: 'center',
 						fontWeight: 600,
@@ -647,7 +643,7 @@ module.exports = {
 						},
 					},
 					h3: {
-						fontFamily: 'GeneralSans-Variable',
+						fontFamily: theme('fontFamily.sans-variable'),
 						fontSize: '2rem', // 32px
 						fontWeight: 600,
 						lineHeight: '2.4rem',
@@ -663,7 +659,7 @@ module.exports = {
 						letterSpacing: '-0.22px',
 						lineHeight: '1.65rem',
 						fontWeight: 600,
-						fontFamily: 'GeneralSans-Variable',
+						fontFamily: theme('fontFamily.sans-variable'),
 						color: theme('colors.blue[950]'),
 						'@media not all and (min-width: 640px)': {
 							fontSize: '1rem',
