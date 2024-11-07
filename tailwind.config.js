@@ -48,7 +48,7 @@ module.exports = {
 				950: '#1e0c04',
 			},
 			red: {
-				500: '#EC2C58',
+				500: '#E61320',
 			},
 			blue: {
 				50: '#E9F1F6',
@@ -111,7 +111,6 @@ module.exports = {
 			ringWidth: {
 				2.5: '2.5px',
 			},
-
 			fontSize: {
 				'6xl': ['3rem', '3.75rem'], // 48px 60px
 				'4.5xl': ['2.5rem', '125%'],
@@ -157,7 +156,7 @@ module.exports = {
 				'card-dark-contact':
 					'0px 2.85px 18.335px 3.8px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1.02317px rgba(255, 255, 255, 0.04)',
 				'card-dark-menu':
-					'0px 11.4701px 23.7768px -5.01619px rgba(255, 255, 255, 0.07), 0px 2px 7px -1px rgba(255, 255, 255, 0.04)',
+					'0px 11.4701px 23.7768px -5.01619px rgba(255, 255, 255, 0.07), 0px 2px 7px -1px rgba(255, 255, 255, 0.04), inset 0px 0px 0px 1px rgba(255, 255, 255, 0.12)',
 				'card-orange':
 					'0px 4px 4px -5px rgba(30, 12, 4, 0.25), 0px 0px 0px 1px rgba(34, 14, 5, 0.08), 0px 1px 7px rgba(30, 12, 4, 0.04)',
 				'card-white':
