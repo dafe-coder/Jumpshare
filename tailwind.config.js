@@ -95,8 +95,11 @@ module.exports = {
 				xs: '480px', // phones
 			},
 			animation: {
-				fade: 'fadeIn .3s ease-in-out forwards',
+				fade: 'fadeIn .3s ease forwards',
 				fadeOut: 'fadeOut .3s ease-in-out forwards',
+				fadeScaleIn: 'fadeScaleIn .8s ease-in-out forwards',
+				rotateUp: 'rotateUp .5s ease forwards',
+				slideUp: 'slideUp .9s ease forwards',
 			},
 			keyframes: {
 				fadeIn: {
@@ -106,6 +109,18 @@ module.exports = {
 				fadeOut: {
 					from: { opacity: 1 },
 					to: { opacity: 0 },
+				},
+				fadeScaleIn: {
+					from: { opacity: 0, transform: 'scale(1.05)' },
+					to: { opacity: 1, transform: 'scale(1)' },
+				},
+				rotateUp: {
+					from: { marginBottom: '-80px', transform: 'rotate(5deg)' },
+					to: { marginBottom: '0px', transform: 'rotate(0deg)' },
+				},
+				slideUp: {
+					from: { opacity: 0, transform: 'translateY(20px)' },
+					to: { opacity: 1, transform: 'translateY(0)' },
 				},
 			},
 			ringWidth: {

@@ -4434,6 +4434,10 @@ body {
   border-collapse: separate;
 }
 
+.origin-bottom-left {
+  transform-origin: bottom left;
+}
+
 .origin-left {
   transform-origin: left;
 }
@@ -4527,7 +4531,7 @@ body {
 }
 
 .animate-fade {
-  animation: fadeIn .3s ease-in-out forwards;
+  animation: fadeIn .3s ease forwards;
 }
 
 @keyframes fadeOut {
@@ -4542,6 +4546,38 @@ body {
 
 .animate-fadeOut {
   animation: fadeOut .3s ease-in-out forwards;
+}
+
+@keyframes fadeScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeScaleIn {
+  animation: fadeScaleIn .8s ease-in-out forwards;
+}
+
+@keyframes rotateUp {
+  from {
+    margin-bottom: -80px;
+    transform: rotate(5deg);
+  }
+
+  to {
+    margin-bottom: 0px;
+    transform: rotate(0deg);
+  }
+}
+
+.animate-rotateUp {
+  animation: rotateUp .5s ease forwards;
 }
 
 .cursor-pointer {

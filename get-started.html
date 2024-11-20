@@ -64,6 +64,26 @@
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="./dist/output.css" />
+		<link
+			rel="preload"
+			href="./assets/images/onboarding/step-2.png"
+			as="image"
+		/>
+		<link
+			rel="preload"
+			href="./assets/images/onboarding/step-2-2x.png"
+			as="image"
+		/>
+		<link
+			rel="preload"
+			href="./assets/images/onboarding/step-3.png"
+			as="image"
+		/>
+		<link
+			rel="preload"
+			href="./assets/images/onboarding/step-3-2x.png"
+			as="image"
+		/>
 	</head>
 
 	<body>
@@ -320,32 +340,36 @@
 							id="step-2"
 							class="relative w-full max-w-[30.5rem] hidden flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start max-md:pb-11 screen-h-800-py-28"
 						>
-							<div class="max-w-[29rem] w-full">
-								<h1
-									class="font-sans-variable mb-3 text-4.5xl/[136%] max-sm:text-3xl max-sm:text-left"
-								>
-									Download Jumpshare to get started
-								</h1>
-								<div class="mt-6 w-full">
-									<a
-										id="go-step-3"
-										href="#"
-										class="btn btn-primary btn-m w-[27.1875rem] max-xs:w-full"
+							<div
+								class="max-w-[29rem] w-full animate-rotateUp origin-bottom-left"
+							>
+								<div class="animate-fade" style="animation-duration: 0.6s">
+									<h1
+										class="font-sans-variable mb-3 text-4.5xl/[136%] max-sm:text-3xl max-sm:text-left"
 									>
-										<svg
-											width="25"
-											height="25"
-											viewBox="0 0 25 25"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
+										Download Jumpshare to get started
+									</h1>
+									<div class="mt-6 w-full">
+										<a
+											id="go-step-3"
+											href="#"
+											class="btn btn-primary btn-m w-[27.1875rem] max-xs:w-full"
 										>
-											<path
-												d="M12.5 16.5L7.5 11.5L8.9 10.05L11.5 12.65V4.5H13.5V12.65L16.1 10.05L17.5 11.5L12.5 16.5ZM6.5 20.5C5.95 20.5 5.47933 20.3043 5.088 19.913C4.69667 19.5217 4.50067 19.0507 4.5 18.5V15.5H6.5V18.5H18.5V15.5H20.5V18.5C20.5 19.05 20.3043 19.521 19.913 19.913C19.5217 20.305 19.0507 20.5007 18.5 20.5H6.5Z"
-												fill="white"
-											/>
-										</svg>
-										Download Jumpshare
-									</a>
+											<svg
+												width="25"
+												height="25"
+												viewBox="0 0 25 25"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M12.5 16.5L7.5 11.5L8.9 10.05L11.5 12.65V4.5H13.5V12.65L16.1 10.05L17.5 11.5L12.5 16.5ZM6.5 20.5C5.95 20.5 5.47933 20.3043 5.088 19.913C4.69667 19.5217 4.50067 19.0507 4.5 18.5V15.5H6.5V18.5H18.5V15.5H20.5V18.5C20.5 19.05 20.3043 19.521 19.913 19.913C19.5217 20.305 19.0507 20.5007 18.5 20.5H6.5Z"
+													fill="white"
+												/>
+											</svg>
+											Download Jumpshare
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -353,41 +377,47 @@
 							id="step-3"
 							class="hidden relative w-full max-w-[30.5rem] flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start max-md:pb-11 screen-h-800-py-28"
 						>
-							<div class="max-w-[29rem] w-full">
-								<h1
-									class="font-sans-variable mb-3 text-4.5xl/[136%] max-sm:text-3xl max-sm:text-left"
-								>
-									We’re now downloading Jumpshare...
-								</h1>
-								<p class="text-sm text-left text-blue-900/80 max-sm:text-left">
-									Install Jumpshare to finish up.
-								</p>
-								<div class="mt-6 w-full">
-									<a
-										href="#"
-										class="btn btn-primary btn-m w-[27.1875rem] max-xs:w-full"
+							<div
+								class="max-w-[29rem] w-full animate-rotateUp origin-bottom-left"
+							>
+								<div class="animate-fade" style="animation-duration: 0.6s">
+									<h1
+										class="font-sans-variable mb-3 text-4.5xl/[136%] max-sm:text-3xl max-sm:text-left"
 									>
-										Continue to web dashboard
-										<svg
-											width="24"
-											height="25"
-											viewBox="0 0 24 25"
-											fill="none"
-											xmlns="http://www.w3.org/2000/svg"
+										We’re now downloading Jumpshare...
+									</h1>
+									<p
+										class="text-sm text-left text-blue-900/80 max-sm:text-left"
+									>
+										Install Jumpshare to finish up.
+									</p>
+									<div class="mt-6 w-full">
+										<a
+											href="#"
+											class="btn btn-primary btn-m w-[27.1875rem] max-xs:w-full"
 										>
-											<path
-												d="M20.7806 13.0306L14.0306 19.7806C13.8899 19.9213 13.699 20.0003 13.5 20.0003C13.301 20.0003 13.1101 19.9213 12.9694 19.7806C12.8286 19.6398 12.7496 19.449 12.7496 19.2499C12.7496 19.0509 12.8286 18.86 12.9694 18.7193L18.4397 13.2499H3.75C3.55109 13.2499 3.36032 13.1709 3.21967 13.0303C3.07902 12.8896 3 12.6988 3 12.4999C3 12.301 3.07902 12.1103 3.21967 11.9696C3.36032 11.8289 3.55109 11.7499 3.75 11.7499H18.4397L12.9694 6.28055C12.8286 6.13982 12.7496 5.94895 12.7496 5.74993C12.7496 5.55091 12.8286 5.36003 12.9694 5.2193C13.1101 5.07857 13.301 4.99951 13.5 4.99951C13.699 4.99951 13.8899 5.07857 14.0306 5.2193L20.7806 11.9693C20.8504 12.039 20.9057 12.1217 20.9434 12.2127C20.9812 12.3038 21.0006 12.4014 21.0006 12.4999C21.0006 12.5985 20.9812 12.6961 20.9434 12.7871C20.9057 12.8782 20.8504 12.9609 20.7806 13.0306Z"
-												fill="white"
-											/>
-										</svg>
-									</a>
-								</div>
-								<div class="mt-6 w-full">
-									<a
-										class="text-blue-500 font-medium font-sans-variable text-sm"
-										href="#"
-										>Restart download</a
-									>
+											Continue to web dashboard
+											<svg
+												width="24"
+												height="25"
+												viewBox="0 0 24 25"
+												fill="none"
+												xmlns="http://www.w3.org/2000/svg"
+											>
+												<path
+													d="M20.7806 13.0306L14.0306 19.7806C13.8899 19.9213 13.699 20.0003 13.5 20.0003C13.301 20.0003 13.1101 19.9213 12.9694 19.7806C12.8286 19.6398 12.7496 19.449 12.7496 19.2499C12.7496 19.0509 12.8286 18.86 12.9694 18.7193L18.4397 13.2499H3.75C3.55109 13.2499 3.36032 13.1709 3.21967 13.0303C3.07902 12.8896 3 12.6988 3 12.4999C3 12.301 3.07902 12.1103 3.21967 11.9696C3.36032 11.8289 3.55109 11.7499 3.75 11.7499H18.4397L12.9694 6.28055C12.8286 6.13982 12.7496 5.94895 12.7496 5.74993C12.7496 5.55091 12.8286 5.36003 12.9694 5.2193C13.1101 5.07857 13.301 4.99951 13.5 4.99951C13.699 4.99951 13.8899 5.07857 14.0306 5.2193L20.7806 11.9693C20.8504 12.039 20.9057 12.1217 20.9434 12.2127C20.9812 12.3038 21.0006 12.4014 21.0006 12.4999C21.0006 12.5985 20.9812 12.6961 20.9434 12.7871C20.9057 12.8782 20.8504 12.9609 20.7806 13.0306Z"
+													fill="white"
+												/>
+											</svg>
+										</a>
+									</div>
+									<div class="mt-6 w-full">
+										<a
+											class="text-blue-500 font-medium font-sans-variable text-sm"
+											href="#"
+											>Restart download</a
+										>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -412,14 +442,14 @@
 								class="relative w-full lazy-image"
 								data-src="./assets/images/onboarding/step-1.png"
 								data-srcset="./assets/images/onboarding/step-1.png 1x, 
-							./assets/images/onboarding/step-1-2x.png 2x,
-							"
+								./assets/images/onboarding/step-1-2x.png 2x,
+								"
 								alt="step 1"
 							/>
 						</div>
 						<img
 							id="step-2-image"
-							class="hidden relative max-w-[30rem] w-full lazy-image"
+							class="hidden relative max-w-[30rem] w-full lazy-image animate-fadeScaleIn"
 							data-src="./assets/images/onboarding/step-2.png"
 							data-srcset="./assets/images/onboarding/step-2.png 1x, 
 							./assets/images/onboarding/step-2-2x.png 2x,
@@ -428,7 +458,7 @@
 						/>
 						<img
 							id="step-3-image"
-							class="hidden relative max-w-[36.375rem] w-full lazy-image"
+							class="hidden relative max-w-[36.375rem] w-full lazy-image animate-fadeScaleIn"
 							data-src="./assets/images/onboarding/step-3.png"
 							data-srcset="./assets/images/onboarding/step-3.png 1x, 
 							./assets/images/onboarding/step-3-2x.png 2x,
