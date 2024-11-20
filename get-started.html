@@ -111,265 +111,278 @@
 							id="step-1"
 							class="relative w-full max-w-[30.5rem] flex flex-col justify-center items-start h-full max-md:pt-28 max-md:pb-11 max-sm:justify-start screen-h-800-py-28"
 						>
-							<div class="max-w-[29rem] w-full">
-								<h1
-									class="font-sans-variable mb-3 text-4.5xl max-sm:text-3xl max-sm:text-left"
+							<div
+								class="max-w-[29rem] w-full animate-rotateUp origin-bottom-left"
+							>
+								<div
+									class="animate-fade opacity-0"
+									style="animation-duration: 0.6s"
 								>
-									Name your workspace
-								</h1>
+									<h1
+										class="font-sans-variable mb-3 text-4.5xl max-sm:text-3xl max-sm:text-left"
+									>
+										Name your workspace
+									</h1>
+								</div>
+							</div>
+							<div
+								class="animate-slideUp opacity-0 translate-y-5"
+								style="animation-delay: 0.4s"
+							>
 								<p class="text-sm text-left text-blue-900/80">
 									Use your company name if you plan to invite teammates, or your
 									own name for personal use. Keep it simple!
 								</p>
-							</div>
-							<form action="#" class="relative mt-8 w-full max-xs:mt-6">
-								<input
-									id="workspace-name"
-									type="text"
-									class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 max-w-[20.875rem] w-full text-blue-900 max-xs:max-w-full outline-none focus:border-blue-500 hover:border-gray-700"
-									required
-								/>
-								<label
-									for="workspace-name"
-									class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm font-medium font-sans-variable text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:text-blue-500 peer-focus:scale-75 peer-valid:scale-75 origin-left"
-								>
-									Workspace name
-								</label>
-							</form>
-							<div class="mt-8 w-full max-xs:mt-6">
-								<p class="mb-3 text-sm font-medium font-sans-variable">
-									What type of work do you do?
-								</p>
-								<ul class="flex flex-wrap gap-3 w-full">
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="sales"
-											class="peer hidden"
-										/>
-										<label
-											for="sales"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Sales"
-										>
-											Sales
-										</label>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="marketing"
-											class="peer hidden"
-										/>
-										<label
-											for="marketing"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Marketing"
-											>Marketing</label
-										>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="customer-support"
-											class="peer hidden"
-										/>
-										<label
-											for="customer-support"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Customer Support"
-											>Customer Support</label
-										>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="product"
-											class="peer hidden"
-										/>
-										<label
-											for="product"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Product"
-											>Product</label
-										>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="executive"
-											class="peer hidden"
-										/>
-										<label
-											for="executive"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Executive"
-											>Executive</label
-										>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="operations"
-											class="peer hidden"
-										/>
-										<label
-											for="operations"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Operations"
-											>Operations</label
-										>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="design"
-											class="peer hidden"
-										/>
-										<label
-											for="design"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Design"
-											>Design</label
-										>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="engineering"
-											class="peer hidden"
-										/>
-										<label
-											for="engineering"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Engineering"
-											>Engineering</label
-										>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="human-resources"
-											class="peer hidden"
-										/>
-										<label
-											for="human-resources"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Human Resources"
-											>Human Resources</label
-										>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="education"
-											class="peer hidden"
-										/>
-										<label
-											for="education"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Education"
-											>Education</label
-										>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="personal"
-											class="peer hidden"
-										/>
-										<label
-											for="personal"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Personal"
-											>Personal</label
-										>
-									</li>
-									<li>
-										<input
-											name="type-of-work"
-											type="radio"
-											id="other"
-											class="peer hidden"
-										/>
-										<label
-											for="other"
-											class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
-											data-text="Other"
-											>Other</label
-										>
-									</li>
-								</ul>
-							</div>
-							<div class="mt-6 w-full">
-								<a
-									id="go-step-2"
-									href="#"
-									class="btn btn-primary btn-m w-[12.5rem] max-xs:w-full"
-									>Continue
-									<svg
-										width="19"
-										height="19"
-										viewBox="0 0 19 19"
-										fill="none"
-										xmlns="http://www.w3.org/2000/svg"
+								<form action="#" class="relative mt-8 w-full max-xs:mt-6">
+									<input
+										id="workspace-name"
+										type="text"
+										class="peer border border-gray-600 text-sm rounded-md h-12 px-5 py-3 max-w-[20.875rem] w-full text-blue-900 max-xs:max-w-full outline-none focus:border-blue-500 hover:border-gray-700"
+										required
+									/>
+									<label
+										for="workspace-name"
+										class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none mb-3 text-sm font-medium font-sans-variable text-blue-900/60 transition-all duration-100 bg-white px-1.5 peer-focus:top-0 peer-valid:top-0 peer-focus:text-blue-500 peer-focus:scale-75 peer-valid:scale-75 origin-left"
 									>
-										<path
-											d="M4.25 9.5H14.75M14.75 9.5L9.5 4.25M14.75 9.5L9.5 14.75"
-											stroke="white"
-											stroke-width="1.36111"
-											stroke-linecap="round"
-											stroke-linejoin="round"
-										/>
-									</svg>
-								</a>
+										Workspace name
+									</label>
+								</form>
+								<div class="mt-8 w-full max-xs:mt-6">
+									<p class="mb-3 text-sm font-medium font-sans-variable">
+										What type of work do you do?
+									</p>
+									<ul class="flex flex-wrap gap-3 w-full">
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="sales"
+												class="peer hidden"
+											/>
+											<label
+												for="sales"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Sales"
+											>
+												Sales
+											</label>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="marketing"
+												class="peer hidden"
+											/>
+											<label
+												for="marketing"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Marketing"
+												>Marketing</label
+											>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="customer-support"
+												class="peer hidden"
+											/>
+											<label
+												for="customer-support"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Customer Support"
+												>Customer Support</label
+											>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="product"
+												class="peer hidden"
+											/>
+											<label
+												for="product"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Product"
+												>Product</label
+											>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="executive"
+												class="peer hidden"
+											/>
+											<label
+												for="executive"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Executive"
+												>Executive</label
+											>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="operations"
+												class="peer hidden"
+											/>
+											<label
+												for="operations"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Operations"
+												>Operations</label
+											>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="design"
+												class="peer hidden"
+											/>
+											<label
+												for="design"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Design"
+												>Design</label
+											>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="engineering"
+												class="peer hidden"
+											/>
+											<label
+												for="engineering"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Engineering"
+												>Engineering</label
+											>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="human-resources"
+												class="peer hidden"
+											/>
+											<label
+												for="human-resources"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Human Resources"
+												>Human Resources</label
+											>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="education"
+												class="peer hidden"
+											/>
+											<label
+												for="education"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Education"
+												>Education</label
+											>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="personal"
+												class="peer hidden"
+											/>
+											<label
+												for="personal"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Personal"
+												>Personal</label
+											>
+										</li>
+										<li>
+											<input
+												name="type-of-work"
+												type="radio"
+												id="other"
+												class="peer hidden"
+											/>
+											<label
+												for="other"
+												class="relative flex cursor-pointer justify-center items-center py-2 px-5 text-sm font-sans-variable border border-gray-600 rounded-md peer-checked:bg-blue-500/8 peer-checked:before:font-medium peer-checked:border-blue-100 hover:bg-gray-100/75 before:content-[attr(data-text)] before:opacity-0 peer-checked:before:opacity-100 before:absolute before:top-1/2 before:-translate-y-1/2 before:z-1 before:left-1/2 before:-translate-x-1/2 peer-checked:before:!text-blue-500 peer-checked:text-[transparent] before:whitespace-nowrap before:text-sm"
+												data-text="Other"
+												>Other</label
+											>
+										</li>
+									</ul>
+								</div>
+								<div class="mt-6 w-full">
+									<a
+										id="go-step-2"
+										href="#"
+										class="btn btn-primary btn-m w-[12.5rem] max-xs:w-full"
+										>Continue
+										<svg
+											width="19"
+											height="19"
+											viewBox="0 0 19 19"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
+										>
+											<path
+												d="M4.25 9.5H14.75M14.75 9.5L9.5 4.25M14.75 9.5L9.5 14.75"
+												stroke="white"
+												stroke-width="1.36111"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											/>
+										</svg>
+									</a>
+								</div>
 							</div>
 						</div>
 						<div
 							id="step-2"
 							class="relative w-full max-w-[30.5rem] hidden flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start max-md:pb-11 screen-h-800-py-28"
 						>
-							<div
-								class="max-w-[29rem] w-full animate-rotateUp origin-bottom-left"
-							>
-								<div class="animate-fade" style="animation-duration: 0.6s">
-									<h1
-										class="font-sans-variable mb-3 text-4.5xl/[136%] max-sm:text-3xl max-sm:text-left"
-									>
+							<div class="max-w-[29rem] w-full">
+								<h1
+									class="font-sans-variable text-4.5xl/[136%] max-sm:text-3xl max-sm:text-left animate-rotateUp origin-bottom-left"
+								>
+									<span class="animate-fade" style="animation-duration: 0.6s">
 										Download Jumpshare to get started
-									</h1>
-									<div class="mt-6 w-full">
-										<a
-											id="go-step-3"
-											href="#"
-											class="btn btn-primary btn-m w-[27.1875rem] max-xs:w-full"
+									</span>
+								</h1>
+								<div
+									class="mt-6 mt-3 w-full animate-slideUp translate-y-5 opacity-0"
+									style="animation-delay: 0.4s"
+								>
+									<a
+										id="go-step-3"
+										href="#"
+										class="btn btn-primary btn-m w-[27.1875rem] max-xs:w-full"
+									>
+										<svg
+											width="25"
+											height="25"
+											viewBox="0 0 25 25"
+											fill="none"
+											xmlns="http://www.w3.org/2000/svg"
 										>
-											<svg
-												width="25"
-												height="25"
-												viewBox="0 0 25 25"
-												fill="none"
-												xmlns="http://www.w3.org/2000/svg"
-											>
-												<path
-													d="M12.5 16.5L7.5 11.5L8.9 10.05L11.5 12.65V4.5H13.5V12.65L16.1 10.05L17.5 11.5L12.5 16.5ZM6.5 20.5C5.95 20.5 5.47933 20.3043 5.088 19.913C4.69667 19.5217 4.50067 19.0507 4.5 18.5V15.5H6.5V18.5H18.5V15.5H20.5V18.5C20.5 19.05 20.3043 19.521 19.913 19.913C19.5217 20.305 19.0507 20.5007 18.5 20.5H6.5Z"
-													fill="white"
-												/>
-											</svg>
-											Download Jumpshare
-										</a>
-									</div>
+											<path
+												d="M12.5 16.5L7.5 11.5L8.9 10.05L11.5 12.65V4.5H13.5V12.65L16.1 10.05L17.5 11.5L12.5 16.5ZM6.5 20.5C5.95 20.5 5.47933 20.3043 5.088 19.913C4.69667 19.5217 4.50067 19.0507 4.5 18.5V15.5H6.5V18.5H18.5V15.5H20.5V18.5C20.5 19.05 20.3043 19.521 19.913 19.913C19.5217 20.305 19.0507 20.5007 18.5 20.5H6.5Z"
+												fill="white"
+											/>
+										</svg>
+										Download Jumpshare
+									</a>
 								</div>
 							</div>
 						</div>
@@ -377,15 +390,18 @@
 							id="step-3"
 							class="hidden relative w-full max-w-[30.5rem] flex-col justify-center items-start h-full max-md:pt-28 max-sm:justify-start max-md:pb-11 screen-h-800-py-28"
 						>
-							<div
-								class="max-w-[29rem] w-full animate-rotateUp origin-bottom-left"
-							>
-								<div class="animate-fade" style="animation-duration: 0.6s">
-									<h1
-										class="font-sans-variable mb-3 text-4.5xl/[136%] max-sm:text-3xl max-sm:text-left"
-									>
+							<div class="max-w-[29rem] w-full">
+								<h1
+									class="font-sans-variable text-4.5xl/[136%] max-sm:text-3xl max-sm:text-left animate-rotateUp origin-bottom-left"
+								>
+									<span class="animate-fade" style="animation-duration: 0.6s">
 										We’re now downloading Jumpshare...
-									</h1>
+									</span>
+								</h1>
+								<div
+									class="mt-3 animate-slideUp translate-y-5 opacity-0"
+									style="animation-delay: 0.4s"
+								>
 									<p
 										class="text-sm text-left text-blue-900/80 max-sm:text-left"
 									>
@@ -429,23 +445,25 @@
 							id="step-1-image"
 							class="absolute left-[70px] top-1/2 -translate-y-1/2 w-[584px] max-md:hidden"
 						>
-							<div class="absolute top-[90px] z-1 left-[91px]">
-								<p
-									id="workspace-image-name"
-									class="font-semibold font-sans-variable text-sm"
-								>
-									Your Workspace
-								</p>
-								<p class="text-[#717D82] text-[0.8125rem] mt-1">26 members</p>
+							<div class="animate-fadeScaleIn opacity-0">
+								<div class="absolute top-[90px] z-1 left-[91px]">
+									<p
+										id="workspace-image-name"
+										class="font-semibold font-sans-variable text-sm"
+									>
+										Your Workspace
+									</p>
+									<p class="text-[#717D82] text-[0.8125rem] mt-1">26 members</p>
+								</div>
+								<img
+									class="relative w-full lazy-image"
+									data-src="./assets/images/onboarding/step-1.png"
+									data-srcset="./assets/images/onboarding/step-1.png 1x, 
+									./assets/images/onboarding/step-1-2x.png 2x,
+									"
+									alt="step 1"
+								/>
 							</div>
-							<img
-								class="relative w-full lazy-image"
-								data-src="./assets/images/onboarding/step-1.png"
-								data-srcset="./assets/images/onboarding/step-1.png 1x, 
-								./assets/images/onboarding/step-1-2x.png 2x,
-								"
-								alt="step 1"
-							/>
 						</div>
 						<img
 							id="step-2-image"
