@@ -164,19 +164,6 @@
 			href="./assets/images/main-bg.jpg"
 			type="image/png"
 		/>
-		<link
-			rel="preload"
-			id="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-			as="style"
-			onload="this.rel='stylesheet'"
-		/>
-		<noscript>
-			<link
-				rel="stylesheet"
-				href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-			/>
-		</noscript>
 	</head>
 
 	<body>
@@ -1264,8 +1251,7 @@
 						<div class="flex justify-center">
 							<a
 								href="/screen-recorder"
-								class="btn-long-hover-right btn-long mx-auto mb-4 wow animate__animated animate__fadeInAndSlideInUp"
-								style="opacity: 0"
+								class="show-elem-slideUp btn-long-hover-right btn-long mx-auto mb-4"
 							>
 								<span class="-mt-px">Screen Recording</span>
 								<svg
@@ -1555,7 +1541,7 @@
 						<div class="flex justify-center">
 							<a
 								href="/ai"
-								class="btn-long-hover-right btn-long mx-auto mb-4 btn-gradient wow animate__animated animate__fadeInAndSlideInUp"
+								class="show-elem-slideUp btn-long-hover-right btn-long mx-auto mb-4 btn-gradient"
 							>
 								Jumpshare AI
 								<svg
@@ -1718,7 +1704,7 @@
 						<div class="flex justify-center">
 							<a
 								href="/screenshot-tool"
-								class="btn-long-hover-right btn-long mx-auto mb-2 bg-orange-500 wow animate__animated animate__fadeInAndSlideInUp"
+								class="show-elem-slideUp btn-long-hover-right btn-long mx-auto mb-2 bg-orange-500"
 							>
 								Screenshot Capture
 								<svg
@@ -1968,7 +1954,7 @@
 						<div class="flex justify-center">
 							<a
 								href="/file-sharing-collaboration"
-								class="btn-long-hover-right btn-long mx-auto mb-4 bg-blue-500 wow animate__animated animate__fadeInAndSlideInUp"
+								class="show-elem-slideUp btn-long-hover-right btn-long mx-auto mb-4 bg-blue-500"
 							>
 								File Sharing & Collaboration
 								<svg
@@ -3229,17 +3215,41 @@
 			</div>
 		</div>
 	</body>
-	<script
-		defer
-		src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
-	></script>
+
 	<script>
 		'use strict'
 		document.addEventListener('DOMContentLoaded', () => {
 			// Lazy images
 			const lazyImages = document.querySelectorAll('.lazy-image')
+			const showElemSlideUp = document.querySelectorAll('.show-elem-slideUp')
 
 			if ('IntersectionObserver' in window) {
+				if (showElemSlideUp?.length > 0) {
+					function createObserver() {
+						const observer = new IntersectionObserver(
+							entries => {
+								entries.forEach(entry => {
+									console.log(entries)
+
+									if (entry.isIntersecting && entry.intersectionRatio > 0) {
+										entry.target.classList.add('active')
+									}
+								})
+							},
+							{
+								root: null,
+								rootMargin: '0px 0px -100px 0px',
+								threshold: 0,
+							}
+						)
+
+						showElemSlideUp.forEach(element => {
+							observer.observe(element)
+						})
+					}
+					createObserver()
+				}
+
 				const imageObserver = new IntersectionObserver(
 					(entries, observer) => {
 						entries.forEach(entry => {
@@ -3267,6 +3277,13 @@
 					img.srcset = img.getAttribute('data-srcset')
 					img.classList.remove('lazy-image')
 				})
+				console.log(showElemSlideUp)
+
+				if (showElemSlideUp?.length > 0) {
+					showElemSlideUp.forEach(element => {
+						element.classList.add('disabled')
+					})
+				}
 			}
 
 			// show modal
@@ -3324,9 +3341,6 @@
 					}, 10)
 				}
 			})
-
-			// Wow animate
-			new WOW().init()
 
 			// Header Scroll animate
 			let headerID = null

@@ -83,6 +83,19 @@
 	.custom-marker li::marker {
 		color: rgba(18, 35, 69, 0.5);
 	}
+	.show-elem-slideUp {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all ease-in-out 0.8s;
+	}
+	.show-elem-slideUp.active {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	.show-elem-slideUp.disabled {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 img:not([src])::before,
