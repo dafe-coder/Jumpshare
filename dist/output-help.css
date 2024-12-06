@@ -357,7 +357,7 @@ legend {
 ol,
 ul,
 menu {
-	list-style: none;
+	/* list-style: none; */
 	margin: 0;
 	padding: 0;
 }
@@ -10214,4 +10214,15 @@ body {
 	.category-list {
 		grid-template-columns: 1fr !important;
 	}
+}
+ol ul {
+	padding-left: 1.3em;
+	padding-top: 0.6em;
+}
+
+header ul,
+header ol,
+footer ul,
+footer ol {
+	list-style: none !important;
 }
