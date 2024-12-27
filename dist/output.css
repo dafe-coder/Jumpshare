@@ -9922,6 +9922,16 @@ input:-webkit-autofill:active {
   background-color: rgb(6 5 21 / var(--tw-bg-opacity));
 }
 
+.dark\:bg-white:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.dark\:\!bg-white:where(.dark, .dark *) {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+
 .dark\:fill-\[\#999CB2\]:where(.dark, .dark *) {
   fill: #999CB2;
 }
@@ -9958,9 +9968,21 @@ input:-webkit-autofill:active {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.before\:dark\:\!bg-white:where(.dark, .dark *)::before {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
+}
+
 .dark\:after\:bg-violet-400\/60:where(.dark, .dark *)::after {
   content: var(--tw-content);
   background-color: rgb(159 153 178 / 0.6);
+}
+
+.after\:dark\:\!bg-white:where(.dark, .dark *)::after {
+  content: var(--tw-content);
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
 
 .dark\:hover\:bg-\[\#131320\]:hover:where(.dark, .dark *) {
