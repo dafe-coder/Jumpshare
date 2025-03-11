@@ -327,6 +327,13 @@ module.exports = {
 						backgroundColor: `rgba(${hexToRgb(theme('colors.violet[600]'))}, 0.9)`,
 					},
 				},
+				'.btn-violet-500': {
+					backgroundColor: theme('colors.violet[500]'),
+					color: theme('colors.white'),
+					'&:hover': {
+						backgroundColor: `rgba(${hexToRgb(theme('colors.violet[500]'))}, 0.9)`,
+					},
+				},
 				'.btn-dark-contact': {
 					backgroundColor: '#131320',
 					color: theme('colors.white'),
