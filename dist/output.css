@@ -2522,6 +2522,10 @@ body {
   bottom: 0px;
 }
 
+.bottom-16 {
+  bottom: 4rem;
+}
+
 .bottom-17 {
   bottom: 4.5rem;
 }
@@ -2728,22 +2732,6 @@ body {
 
 .top-\[calc\(100\%_\+_6px\)\] {
   top: calc(100% + 6px);
-}
-
-.-bottom-0 {
-  bottom: -0px;
-}
-
-.bottom-10 {
-  bottom: 2.5rem;
-}
-
-.bottom-12 {
-  bottom: 3rem;
-}
-
-.bottom-16 {
-  bottom: 4rem;
 }
 
 .isolate {
@@ -3409,6 +3397,10 @@ body {
   height: 33rem;
 }
 
+.h-\[34\.375rem\] {
+  height: 34.375rem;
+}
+
 .h-\[34\.5rem\] {
   height: 34.5rem;
 }
@@ -3419,6 +3411,10 @@ body {
 
 .h-\[36\.1rem\] {
   height: 36.1rem;
+}
+
+.h-\[404px\] {
+  height: 404px;
 }
 
 .h-\[485px\] {
@@ -3437,44 +3433,20 @@ body {
   height: 5px;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-px {
-  height: 1px;
-}
-
-.h-\[30\.3rem\] {
-  height: 30.3rem;
-}
-
-.h-\[64\%\] {
-  height: 64%;
-}
-
-.h-\[404px\] {
-  height: 404px;
-}
-
 .h-\[67\%\] {
   height: 67%;
-}
-
-.h-\[69\%\] {
-  height: 69%;
 }
 
 .h-\[68\%\] {
   height: 68%;
 }
 
-.h-\[550px\] {
-  height: 550px;
+.h-full {
+  height: 100%;
 }
 
-.h-\[34\.375rem\] {
-  height: 34.375rem;
+.h-px {
+  height: 1px;
 }
 
 .max-h-0 {
@@ -3697,6 +3669,10 @@ body {
   width: 31rem;
 }
 
+.w-\[32rem\] {
+  width: 32rem;
+}
+
 .w-\[34rem\] {
   width: 34rem;
 }
@@ -3711,6 +3687,10 @@ body {
 
 .w-\[45rem\] {
   width: 45rem;
+}
+
+.w-\[46\.875rem\] {
+  width: 46.875rem;
 }
 
 .w-\[460px\] {
@@ -3735,6 +3715,10 @@ body {
 
 .w-\[49\.8vw\] {
   width: 49.8vw;
+}
+
+.w-\[49rem\] {
+  width: 49rem;
 }
 
 .w-\[51\.67\%\] {
@@ -3852,34 +3836,6 @@ body {
 .w-max {
   width: -moz-max-content;
   width: max-content;
-}
-
-.w-\[511px\] {
-  width: 511px;
-}
-
-.w-\[32rem\] {
-  width: 32rem;
-}
-
-.w-\[800px\] {
-  width: 800px;
-}
-
-.w-\[50rem\] {
-  width: 50rem;
-}
-
-.w-\[49rem\] {
-  width: 49rem;
-}
-
-.w-\[750px\] {
-  width: 750px;
-}
-
-.w-\[46\.875rem\] {
-  width: 46.875rem;
 }
 
 .min-w-\[1200px\] {
@@ -4094,6 +4050,10 @@ body {
   max-width: 25.4rem;
 }
 
+.max-w-\[25\.5rem\] {
+  max-width: 25.5rem;
+}
+
 .max-w-\[25rem\] {
   max-width: 25rem;
 }
@@ -4212,6 +4172,10 @@ body {
 
 .max-w-\[33\.6rem\] {
   max-width: 33.6rem;
+}
+
+.max-w-\[33\.875rem\] {
+  max-width: 33.875rem;
 }
 
 .max-w-\[34\.1875rem\] {
@@ -4429,26 +4393,6 @@ body {
 .max-w-max {
   max-width: -moz-max-content;
   max-width: max-content;
-}
-
-.max-w-\[408px\] {
-  max-width: 408px;
-}
-
-.max-w-\[25\.5rem\] {
-  max-width: 25.5rem;
-}
-
-.max-w-\[452px\] {
-  max-width: 452px;
-}
-
-.max-w-\[542px\] {
-  max-width: 542px;
-}
-
-.max-w-\[33\.875rem\] {
-  max-width: 33.875rem;
 }
 
 .flex-shrink {
@@ -4693,6 +4637,26 @@ body {
 
 .translate-y-5 {
   --tw-translate-y: 1.25rem;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-\[48\%\] {
+  --tw-translate-y: -48%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-\[50\%\] {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-\[43\%\] {
+  --tw-translate-y: -43%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-\[44\%\] {
+  --tw-translate-y: -44%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -5990,11 +5954,6 @@ body {
 
 .bg-\[\#161723\]\/70 {
   background-color: rgb(22 23 35 / 0.7);
-}
-
-.bg-\[\#6B5EEC\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 94 236 / var(--tw-bg-opacity));
 }
 
 .bg-\[\#EDF6FA\] {
